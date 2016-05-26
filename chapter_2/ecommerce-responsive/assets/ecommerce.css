@@ -12,3 +12,7 @@
     width: 100%;
     display: block;
 }
+
+body {
+    padding-top: 50px;
+}
