@@ -6,7 +6,7 @@ import {NavbarComponent} from './shared/navbar/navbar.component';
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
-  viewProviders: [NavbarComponent]
+  directives: [NavbarComponent]
 })
 export class AppComponent {}
 
