@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 export class NavItem {
   // Navigation link
@@ -25,6 +25,4 @@ export class NavbarComponent {
     {href: '#', label: 'Login', active: false}
   ];
 }
-
-// const navItems: Array = [];
 
