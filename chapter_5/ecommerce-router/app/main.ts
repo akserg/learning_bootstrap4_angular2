@@ -3,11 +3,7 @@
  */
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {provide} from '@angular/core';
-import {
-    ROUTER_DIRECTIVES,
-    provideRouter,
-    RouterConfig,
-} from '@angular/router';
+import {provideRouter, RouterConfig} from '@angular/router';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
 
 /*
@@ -23,7 +19,7 @@ import {CheckoutComponent} from './checkout/checkout.component';
  * Routes
  */
 const routes: RouterConfig = [
-  { path: '', redirectTo: 'welcome', terminal: true },
+  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
   { path: 'product', component: ProductComponent },
@@ -32,11 +28,18 @@ const routes: RouterConfig = [
 ];
 
 /*
+ * Routes Provider
+ */
+const APP_ROUTER_PROVIDER = [
+    // Installs our routes
+    provideRouter(routes)
+];
+
+/*
  * Bootstrap out application
  */
 bootstrap(AppComponent, [
-    // Installs our routes
-    provideRouter(routes),
+    APP_ROUTER_PROVIDER,
     // Provide the # based strategy
     provide(LocationStrategy, { useClass: HashLocationStrategy })
 ]);
