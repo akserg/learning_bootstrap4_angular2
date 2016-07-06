@@ -1,5 +1,11 @@
+/*
+ * Angular Imports
+ */
 import {Component, Input, Output, EventEmitter} from '@angular/core';
 
+/*
+ * Components
+ */
 import {Category} from './category';
 
 @Component({
