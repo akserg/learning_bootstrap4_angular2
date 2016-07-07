@@ -4,7 +4,7 @@
     <div class="card-block">
         <h4 class="card-title">{{category.title}}</h4>
         <p class="card-text">{{category.desc}}</p>
-        <a class="btn btn-primary" (click)="browse()">Browse</a>
+        <a class="btn btn-primary" [routerLink]="['/products', category.id]">Browse</a>
     </div>
     </div>
 </div>
