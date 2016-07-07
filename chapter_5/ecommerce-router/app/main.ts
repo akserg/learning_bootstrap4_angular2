@@ -21,10 +21,10 @@ import {CheckoutComponent} from './checkout/checkout.component';
 const routes: RouterConfig = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'products', component: ProductListComponent },
-  { path: 'product', component: ProductComponent },
-  { path: 'cart', component: CartComponent },
-  { path: 'checkout', component: CheckoutComponent }
+  { path: 'products/:id', component: ProductListComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'cart/:id', component: CartComponent },
+  { path: 'checkout/:id', component: CheckoutComponent }
 ];
 
 /*
