@@ -3,8 +3,6 @@
  */
 import {Component} from '@angular/core';
 
-import {CategoryListComponent} from '../shared/category/index';
-
 /*
  * Components
  */
@@ -12,7 +10,7 @@ import {CategoryListComponent} from '../shared/category/index';
 @Component({
   selector: 'db-products',
   templateUrl: 'app/product/product-list.component.html',
-  directives: [CategoryListComponent]
+  directives: []
 })
 export class ProductListComponent {
 }

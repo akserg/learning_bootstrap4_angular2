@@ -11,7 +11,9 @@ import {LocationStrategy, HashLocationStrategy} from '@angular/common';
  */
 import {AppComponent} from './app.component';
 import {WelcomeComponent} from './welcome/welcome.component';
-import {ProductListComponent} from './product/product-list.component';
+import {ProductListComponent, ProductComponent} from './product/index';
+import {CartComponent} from './cart/cart.component';
+import {CheckoutComponent} from './checkout/checkout.component';
 
 /*
  * Routes
@@ -19,7 +21,10 @@ import {ProductListComponent} from './product/product-list.component';
 const routes: RouterConfig = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'products/:id', component: ProductListComponent }
+  { path: 'products/:id', component: ProductListComponent },
+  { path: 'product/:id', component: ProductComponent },
+  { path: 'cart/:id', component: CartComponent },
+  { path: 'checkout/:id', component: CheckoutComponent }
 ];
 
 /*
