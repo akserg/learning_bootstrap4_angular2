@@ -1,5 +1,5 @@
 body {
-    padding-top: 55px;
+    padding-top: 60px;
 }
 
 .product-menu {
@@ -30,6 +30,3 @@ body {
     background-color: #f5f5f5;
 }
 
-.search-card-input {
-    padding: 5px 0px 5px 0px;
-}

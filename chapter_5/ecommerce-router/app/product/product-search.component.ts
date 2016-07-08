@@ -1,7 +1,8 @@
 /*
  * Angular Imports
  */
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 /*
  * Components
@@ -13,6 +14,12 @@ import {Product} from './product';
     templateUrl: 'app/product/product-search.component.html'
 })
 export class ProductSearchComponent {
-    @Output() select: EventEmitter<Product> = new EventEmitter<Product>();
+
+    constructor(private router: Router) {}
+
+    searchProduct(value: string) {
+        console.log('Search Product for', value);
+        this.router.navigate(['/products'], { queryParams: { search: value} });
+    }
 }
 

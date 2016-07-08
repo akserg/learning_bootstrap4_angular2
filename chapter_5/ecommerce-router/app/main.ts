@@ -19,7 +19,7 @@ import {ProductListComponent} from './product/product-list.component';
 const routes: RouterConfig = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'products/:id', component: ProductListComponent }
+  { path: 'products', component: ProductListComponent }
 ];
 
 /*

@@ -3,7 +3,7 @@
     <div class="card-block">
         <div class="list-group list-group-flush">
             <a class="list-group-item" *ngFor="let category of categories"
-               [routerLink]="['/products', category.id]">{{category.title}}</a>
+               (click)="filterProducts(category)">{{category.title}}</a>
         </div>
     </div>
 </div>

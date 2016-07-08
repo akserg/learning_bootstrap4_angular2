@@ -1,18 +1,28 @@
 /*
  * Angular Imports
  */
-import {Component, Input, Output, EventEmitter} from '@angular/core';
+import {Component} from '@angular/core';
 
 /*
  * Components
  */
-import {Product} from './product';
+import {Product, getProducts} from './product';
 
 @Component({
     selector: 'db-product-grid',
     templateUrl: 'app/product/product-grid.component.html'
 })
 export class ProductGridComponent {
-    @Output() select: EventEmitter<Product> = new EventEmitter<Product>();
+    products: Product[] = [];
+    productsInLastRow: Product[] = [];
+
+    constructor() {
+        this.products = getProducts();
+        let num = this.products.length;
+        let productsInGrid = Math.ceil(num / 3);
+        let productsInLastRow = this.products.length - productsInGrid;
+        // Copy products in last row of grid
+        productsInLastRow
+    }
 }
 
