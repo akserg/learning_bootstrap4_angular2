@@ -1,7 +1,9 @@
-<ul class="list-group">
-    <li class="list-group-item">These Boots Are Made For Walking</li>
-    <li class="list-group-item">Eleanor, Put Your Boots On</li>
-    <li class="list-group-item">Puss 'n' Boots</li>
-    <li class="list-group-item">Die With Your Boots On</li>
-    <li class="list-group-item">Fairies Wear Boots</li>
-</ul>
+<div class="card">
+    <div class="card-header">Categories</div>
+    <div class="card-block">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item" *ngFor="let category of categories"
+               [routerLink]="['/products', category.id]">{{category.title}}</a>
+        </div>
+    </div>
+</div>
