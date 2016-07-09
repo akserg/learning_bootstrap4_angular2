@@ -18,7 +18,6 @@ export class ProductSearchComponent {
     constructor(private router: Router) {}
 
     searchProduct(value: string) {
-        console.log('Search Product for', value);
         this.router.navigate(['/products'], { queryParams: { search: value} });
     }
 }
