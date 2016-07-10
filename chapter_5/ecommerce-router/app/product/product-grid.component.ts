@@ -7,22 +7,37 @@ import {Component} from '@angular/core';
  * Components
  */
 import {Product, getProducts} from './product';
+import {ProductDeskComponent} from './product-desk.component';
 
 @Component({
     selector: 'db-product-grid',
-    templateUrl: 'app/product/product-grid.component.html'
+    templateUrl: 'app/product/product-grid.component.html',
+    directives: [ProductDeskComponent]
 })
 export class ProductGridComponent {
-    products: Product[] = [];
-    productsInLastRow: Product[] = [];
+    products: any = [];
 
     constructor() {
-        this.products = getProducts();
-        let num = this.products.length;
-        let productsInGrid = Math.ceil(num / 3);
-        let productsInLastRow = this.products.length - productsInGrid;
-        // Copy products in last row of grid
-        productsInLastRow
+        let index = 0;
+        let products: Product[] = getProducts();
+        let length = products.length;
+
+        this.products = [];
+
+        while (length) {
+            let row: Product[] = [];
+            if (length >= 3) {
+                for (let i = 0; i < 3; i++) {
+                    row.push(products[index++]);
+                }
+                this.products.push(row);
+                length -= 3;
+            } else {
+                for (; length > 0; length--) {
+                    row.push(products[index++]);
+                }
+                this.products.push(row);
+            }
+        }
     }
 }
-
