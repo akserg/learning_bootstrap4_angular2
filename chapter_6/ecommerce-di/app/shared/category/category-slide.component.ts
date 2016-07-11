@@ -6,7 +6,7 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 /*
  * Components
  */
-import {Category} from './category';
+import {Category} from './category.service';
 
 @Component({
     selector: 'db-category-slide',

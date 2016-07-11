@@ -33,5 +33,5 @@ const APP_ROUTER_PROVIDER = [
  * Bootstrap out application
  */
 bootstrap(AppComponent, [
-    APP_ROUTER_PROVIDER,
+    APP_ROUTER_PROVIDER
 ]);

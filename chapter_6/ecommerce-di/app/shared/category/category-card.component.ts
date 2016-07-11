@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
 /*
  * Components
  */
-import {Category} from './category';
+import {Category} from './category.service';
 
 @Component({
     selector: 'db-category-card',
