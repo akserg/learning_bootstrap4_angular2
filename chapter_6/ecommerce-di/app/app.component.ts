@@ -13,14 +13,15 @@ import {FooterComponent} from './shared/footer/footer.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {ProductListComponent} from './product/product-list.component';
 
-import {CategoryService} from './shared/category/category.service';
+import {CategoryService} from './category/category.service';
+import {ProductService} from './product/product.service';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
   directives: [ROUTER_DIRECTIVES, NavbarComponent, FooterComponent],
   precompile: [WelcomeComponent, ProductListComponent],
-  providers: [CategoryService]
+  providers: [CategoryService, ProductService]
 })
 export class AppComponent {
 }

@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 /*
  * Components
  * */
-import {CategoryListComponent} from '../shared/category/index';
+import {CategoryListComponent} from '../category/index';
 import {ProductSearchComponent} from './product-search.component';
 import {ProductGridComponent} from './product-grid.component';
 

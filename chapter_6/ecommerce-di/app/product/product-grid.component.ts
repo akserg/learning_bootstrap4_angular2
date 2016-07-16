@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
 /*
  * Components
  */
-import {Product, getProducts} from './product';
+import {Product, ProductService} from './product.service';
 import {ProductDeskComponent} from './product-desk.component';
 
 @Component({
@@ -18,7 +18,7 @@ import {ProductDeskComponent} from './product-desk.component';
 export class ProductGridComponent {
     products: any = [];
 
-    constructor(private router: Router) {
+    constructor(private router: Router, private productService: ProductService) {
         this.router
             .routerState
             .queryParams
@@ -26,7 +26,7 @@ export class ProductGridComponent {
                 let category: string = params['category'];
                 let search: string = params['search'];
                 // Return filtered data from getProducts function
-                let products: Product[] = getProducts(category, search);
+                let products: Product[] = this.productService.getProducts(category, search);
                 // Transform products to appropriate data
                 // to display
                 this.products = this.transform(products);

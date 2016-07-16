@@ -7,7 +7,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 /*
  * Components
  */
-import {Product} from './product';
+import {Product} from './product.service';
 
 @Component({
     selector: 'db-product-desk',

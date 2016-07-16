@@ -11,7 +11,7 @@ import {Category, CategoryService} from './category.service';
 
 @Component({
     selector: 'db-category-list',
-    templateUrl: 'app/shared/category/category-list.component.html'
+    templateUrl: 'app/category/category-list.component.html'
 })
 export class CategoryListComponent {
 

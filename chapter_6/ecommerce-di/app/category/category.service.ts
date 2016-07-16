@@ -13,6 +13,8 @@ export class Category {
     imageL: string;
 }
 
+
+
 @Injectable()
 export class CategoryService {
     categories: Category[] = [
@@ -43,3 +45,9 @@ export class CategoryNotFoundException extends Error {
         super(message);
     }
 }
+
+// constructor(@Inject(LANGUAGES) languages: string[]) {
+//   console.log(languages);
+//   // Log: "['en','fr']"
+// }
+

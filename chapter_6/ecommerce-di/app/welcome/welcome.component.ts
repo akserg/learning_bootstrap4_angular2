@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 /*
  * Components
  */
-import {Category, CategoryCardComponent, CategorySlideComponent, CategoryService} from '../shared/category/index';
+import {Category, CategoryCardComponent, CategorySlideComponent, CategoryService} from '../category/index';
 
 @Component({
   selector: 'db-welcome',
