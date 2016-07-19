@@ -1,7 +1,13 @@
+
+/*
+ * Angular Imports
+ */
+import {Component} from '@angular/core';
+
 /*
  * Components
  */
-import {Component} from '@angular/core';
+import {CartComponent} from '../../cart/cart.component';
 
 export class NavItem {
   // Navigation link
@@ -14,7 +20,8 @@ export class NavItem {
 
 @Component({
   selector: 'db-navbar',
-  templateUrl: 'app/shared/navbar/navbar.component.html'
+  templateUrl: 'app/shared/navbar/navbar.component.html',
+  directives: [CartComponent]
 })
 export class NavbarComponent {
   // App name

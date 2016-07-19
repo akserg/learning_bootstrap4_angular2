@@ -1,0 +1,36 @@
+<div *ngIf="cartCount">
+    <div class="table-responsive">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Count</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of cartItems">
+                    <td>{{item.product.title}}</td>
+                    <td>{{item.product.price}}</td>
+                    <td>x{{item.count}}</td>
+                    <td>${{item.amount}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="total pull-right ng-binding">
+                <b>Total: </b> ${{cartAmount}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <!--<a [routerLink]="['/checkout']" class="btn btn-success pull-right check-b"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>-->
+            <a href="#" class="btn btn-success pull-right check-b"><i class="glyphicon glyphicon-shopping-cart"></i> Checkout</a>
+        </div>
+    </div>
+</div>
+<div class="emty-cart" *ngIf="!cartCount">The shopping cart is empty!</div>

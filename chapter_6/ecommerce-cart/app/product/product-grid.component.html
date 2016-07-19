@@ -1,1 +1,1 @@
-<db-product-desk *ngFor="let row of products" [products]="row"></db-product-desk>
+<db-product-desk *ngFor="let row of products" [products]="row" (addToCart)="addToCart($event)"></db-product-desk>

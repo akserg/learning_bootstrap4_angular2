@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from '@angular/core';
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
 /*
@@ -16,6 +16,7 @@ import {Product} from './product.service';
 })
 export class ProductDeskComponent {
     @Input() products: Product[];
+    @Output() addToCart: EventEmitter<Product> = new EventEmitter<Product>();
 
     setClasses(product: Product) {
         return {
@@ -26,6 +27,7 @@ export class ProductDeskComponent {
 
     buy(product: Product) {
         console.log('We bought', product.title);
+        this.addToCart.emit(product);
     }
 }
 

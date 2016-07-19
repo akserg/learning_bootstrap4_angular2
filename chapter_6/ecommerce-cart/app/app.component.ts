@@ -15,13 +15,14 @@ import {ProductListComponent} from './product/product-list.component';
 
 import {CategoryService} from './category/category.service';
 import {ProductService} from './product/product.service';
+import {CartService} from './cart/cart.service';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
   directives: [ROUTER_DIRECTIVES, NavbarComponent, FooterComponent],
   precompile: [WelcomeComponent, ProductListComponent],
-  providers: [CategoryService, ProductService]
+  providers: [CategoryService, ProductService, CartService]
 })
 export class AppComponent {
 }
