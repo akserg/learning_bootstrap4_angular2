@@ -7,7 +7,7 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 /*
  * Components
  */
-import {CartItem, CartService} from './cart.service';
+import {CartItem, CartModel, CartService} from './cart.service';
 
 @Component({
     selector: 'db-cart',
@@ -15,14 +15,11 @@ import {CartItem, CartService} from './cart.service';
     directives: [ROUTER_DIRECTIVES]
 })
 export class CartComponent {
-    cartCount: number = 0;
-    cartAmount: number = 0;
-    cartItems: CartItem[] = [];
 
-    constructor(private cartService: CartService) {
-        this.cartCount = this.cartService.getCount();
-        this.cartAmount = this.cartService.getAmount();
-        this.cartItems = this.cartService.getItems();
+    constructor(private cart: CartModel, private cartService: CartService) { }
+
+    removeCartItem(item: CartItem) {
+        this.cartService.removeItem(item);
     }
 }
 

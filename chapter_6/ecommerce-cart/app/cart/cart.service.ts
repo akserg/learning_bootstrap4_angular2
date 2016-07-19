@@ -9,32 +9,16 @@ export interface CartItem {
 }
 
 @Injectable()
+export class CartModel {
+    count: number = 0;
+    amount: number = 0;
+    items: CartItem[] = [];
+}
+
+@Injectable()
 export class CartService {
 
-    private count: number = 0;
-    private amount: number = 0;
-    private items: CartItem[] = [];
-
-    /**
-     * Get items in the cart
-     */
-    getItems(): CartItem[] {
-        return this.items;
-    }
-
-    /**
-     * Get ammount of all items in the cart
-     */
-    getAmount(): number {
-        return this.amount;
-    }
-
-    /**
-     * Get number of all items in the cart
-     */
-    getCount(): number {
-        return this.count;
-    }
+    constructor(private model: CartModel) {}
 
     /**
      * This method adds the new product or increases the number
@@ -60,12 +44,12 @@ export class CartService {
                 amount: product.price
             };
             // Add item to items
-            this.items.push(item);
+            this.model.items.push(item);
         }
         // Increase count in the cart
-        this.count++;
+        this.model.count++;
         // Increase ammount in the cart
-        this.amount += product.price;
+        this.model.amount += product.price;
     }
 
     /**
@@ -87,19 +71,32 @@ export class CartService {
                 this.remove(item);
             }
             // Decrease count in the cart
-            this.count--;
+            this.model.count--;
             // Decrease ammount in the cart
-            this.amount -= product.price;
+            this.model.amount -= product.price;
         }
+    }
+
+    /**
+     * Remove item from the cart.
+     * It updates the amount and count of items in the cart.
+     */
+    removeItem(item: CartItem) {
+        // Delete item from items
+        this.remove(item);
+        // Decrease count in the cart
+        this.model.count -= item.count;
+        // Decrease ammount in the cart
+        this.model.amount -= item.amount;
     }
 
     /**
      * This method returns cart item by product id or null.
      */
     private findItem(id: string): CartItem {
-        for (let i = 0; i < this.items.length; i++) {
-            if (this.items[i].product.id === id) {
-                return this.items[i];
+        for (let i = 0; i < this.model.items.length; i++) {
+            if (this.model.items[i].product.id === id) {
+                return this.model.items[i];
             }
         }
         return null;
@@ -110,11 +107,11 @@ export class CartService {
      */
     private remove(item: CartItem) {
         // Find the index of product
-        let indx: number = this.items.indexOf(item);
+        let indx: number = this.model.items.indexOf(item);
         // Check was item found
         if (indx !== -1) {
             // Remove element from array
-            this.items.splice(indx, 1);
+            this.model.items.splice(indx, 1);
         }
     }
 }

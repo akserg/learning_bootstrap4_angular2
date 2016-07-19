@@ -37,3 +37,45 @@ body {
 .card-deck-wrapper {
     padding-bottom: 1rem;
 }
+
+.table-cart {
+	text-align: center;
+	width: 100%;
+}
+
+/*.table-cart td span {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}*/
+
+.table-cart tr {
+	border-bottom:1px solid gray;
+}
+
+.table-cart tr td {
+	padding: 8px;
+    vertical-align: middle !important;
+}
+
+.total {
+	margin: 5px;
+}
+
+.check-b {
+	margin: 0 5px 5px 0;
+}
+
+.emty-cart {
+	text-align: center;
+}
+
+.delete-cart{
+	background: url(./trash_16x16.gif) no-repeat 0 0;
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+.delete-cart:hover{
+	cursor: pointer;
+}
