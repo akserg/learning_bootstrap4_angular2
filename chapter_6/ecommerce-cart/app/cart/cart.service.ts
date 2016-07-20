@@ -8,8 +8,7 @@ export interface CartItem {
     amount: number;
 }
 
-@Injectable()
-export class CartModel {
+export class Cart {
     count: number = 0;
     amount: number = 0;
     items: CartItem[] = [];
@@ -18,7 +17,7 @@ export class CartModel {
 @Injectable()
 export class CartService {
 
-    constructor(private model: CartModel) {}
+    cart: Cart = new Cart();
 
     /**
      * This method adds the new product or increases the number
@@ -28,7 +27,7 @@ export class CartService {
     addProduct(product: Product) {
         // Find CartItem in items
         let item: CartItem = this.findItem(product.id);
-        // Check was product found?
+        // Check was it found?
         if (item) {
             // Item was found.
             // Increase the count of the same products
@@ -44,12 +43,12 @@ export class CartService {
                 amount: product.price
             };
             // Add item to items
-            this.model.items.push(item);
+            this.cart.items.push(item);
         }
         // Increase count in the cart
-        this.model.count++;
+        this.cart.count++;
         // Increase ammount in the cart
-        this.model.amount += product.price;
+        this.cart.amount += product.price;
     }
 
     /**
@@ -57,25 +56,25 @@ export class CartService {
      * in the cart or removes the last product.
      * It updates the amount and count of items in the cart.
      */
-    removeProduct(product: Product) {
-        // Find CartItem in items
-        let item: CartItem = this.findItem(product.id);
-        // Check is item found?
-        if (item) {
-            // Decrease the count
-            item.count--;
-            // Check was that the last product?
-            if (!item.count) {
-                // It was last product
-                // Delete item from items
-                this.remove(item);
-            }
-            // Decrease count in the cart
-            this.model.count--;
-            // Decrease ammount in the cart
-            this.model.amount -= product.price;
+removeProduct(product: Product) {
+    // Find CartItem in items
+    let item: CartItem = this.findItem(product.id);
+    // Check is item found?
+    if (item) {
+        // Decrease the count
+        item.count--;
+        // Check was that the last product?
+        if (!item.count) {
+            // It was last product
+            // Delete item from items
+            this.remove(item);
         }
+        // Decrease count in the cart
+        this.cart.count--;
+        // Decrease ammount in the cart
+        this.cart.amount -= product.price;
     }
+}
 
     /**
      * Remove item from the cart.
@@ -85,18 +84,18 @@ export class CartService {
         // Delete item from items
         this.remove(item);
         // Decrease count in the cart
-        this.model.count -= item.count;
+        this.cart.count -= item.count;
         // Decrease ammount in the cart
-        this.model.amount -= item.amount;
+        this.cart.amount -= item.amount;
     }
 
     /**
      * This method returns cart item by product id or null.
      */
     private findItem(id: string): CartItem {
-        for (let i = 0; i < this.model.items.length; i++) {
-            if (this.model.items[i].product.id === id) {
-                return this.model.items[i];
+        for (let i = 0; i < this.cart.items.length; i++) {
+            if (this.cart.items[i].product.id === id) {
+                return this.cart.items[i];
             }
         }
         return null;
@@ -105,13 +104,13 @@ export class CartService {
     /**
      * This method removes existing cart item.
      */
-    private remove(item: CartItem) {
-        // Find the index of product
-        let indx: number = this.model.items.indexOf(item);
-        // Check was item found
-        if (indx !== -1) {
-            // Remove element from array
-            this.model.items.splice(indx, 1);
-        }
+private remove(item: CartItem) {
+    // Find the index of cart item
+    let indx: number = this.cart.items.indexOf(item);
+    // Check was item found
+    if (indx !== -1) {
+        // Remove element from array
+        this.cart.items.splice(indx, 1);
     }
+}
 }
