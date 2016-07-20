@@ -54,15 +54,15 @@ body {
 }
 
 .table-cart tr td {
-	padding: 8px;
+	padding: 4px;
     vertical-align: middle !important;
 }
 
-.total {
+.total-cart {
 	margin: 5px;
 }
 
-.check-b {
+.btn-cart {
 	margin: 0 5px 5px 0;
 }
 
@@ -70,12 +70,3 @@ body {
 	text-align: center;
 }
 
-.delete-cart{
-	background: url(./trash_16x16.gif) no-repeat 0 0;
-	display: block;
-	height: 16px;
-	width: 16px;
-}
-.delete-cart:hover{
-	cursor: pointer;
-}
