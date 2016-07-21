@@ -47,7 +47,7 @@ export class CartService {
         }
         // Increase count in the cart
         this.cart.count++;
-        // Increase ammount in the cart
+        // Increase amount in the cart
         this.cart.amount += product.price;
     }
 
@@ -71,7 +71,7 @@ removeProduct(product: Product) {
         }
         // Decrease count in the cart
         this.cart.count--;
-        // Decrease ammount in the cart
+        // Decrease amount in the cart
         this.cart.amount -= product.price;
     }
 }
@@ -85,7 +85,7 @@ removeProduct(product: Product) {
         this.remove(item);
         // Decrease count in the cart
         this.cart.count -= item.count;
-        // Decrease ammount in the cart
+        // Decrease amount in the cart
         this.cart.amount -= item.amount;
     }
 
