@@ -10,11 +10,11 @@ import {ROUTER_DIRECTIVES} from '@angular/router';
 import {Product} from './product.service';
 
 @Component({
-    selector: 'db-product-desk',
-    templateUrl: 'app/product/product-desk.component.html',
+    selector: 'db-product-card',
+    templateUrl: 'app/product/product-card.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
-export class ProductDeskComponent {
+export class ProductCardComponent {
     @Input() products: Product[];
     @Output() addToCart: EventEmitter<Product> = new EventEmitter<Product>();
 

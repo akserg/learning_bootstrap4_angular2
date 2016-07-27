@@ -8,13 +8,13 @@ import {Router} from '@angular/router';
  * Components
  */
 import {Product, ProductService} from './product.service';
-import {ProductDeskComponent} from './product-desk.component';
+import {ProductCardComponent} from './product-card.component';
 import {CartService} from '../cart/cart.service';
 
 @Component({
     selector: 'db-product-grid',
     templateUrl: 'app/product/product-grid.component.html',
-    directives: [ProductDeskComponent],
+    directives: [ProductCardComponent],
 })
 export class ProductGridComponent {
     products: any = [];
