@@ -1,20 +1,14 @@
-/*
- * Angular Imports
- */
 import {Component, Input} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
 
-/*
- * Components
- */
 import {Product} from './product';
 
 @Component({
-    selector: 'db-product-desk',
-    templateUrl: 'app/product/product-desk.component.html',
+    selector: 'db-product-card',
+    templateUrl: 'app/product/product-card.component.html',
     directives: [ROUTER_DIRECTIVES]
 })
-export class ProductDeskComponent {
+export class ProductCardComponent {
     @Input() products: Product[];
 
     setClasses(product: Product) {
@@ -28,4 +22,3 @@ export class ProductDeskComponent {
         console.log('We bought', product.title);
     }
 }
-

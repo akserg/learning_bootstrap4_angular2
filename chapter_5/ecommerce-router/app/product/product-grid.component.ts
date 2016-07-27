@@ -7,12 +7,12 @@ import {Component} from '@angular/core';
  * Components
  */
 import {Product, getProducts} from './product';
-import {ProductDeskComponent} from './product-desk.component';
+import {ProductCardComponent} from './product-card.component';
 
 @Component({
     selector: 'db-product-grid',
     templateUrl: 'app/product/product-grid.component.html',
-    directives: [ProductDeskComponent]
+    directives: [ProductCardComponent]
 })
 export class ProductGridComponent {
     products: any = [];

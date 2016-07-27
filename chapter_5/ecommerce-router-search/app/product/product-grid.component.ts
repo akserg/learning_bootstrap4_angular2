@@ -8,12 +8,12 @@ import {Router} from '@angular/router';
  * Components
  */
 import {Product, getProducts} from './product';
-import {ProductDeskComponent} from './product-desk.component';
+import {ProductCardComponent} from './product-card.component';
 
 @Component({
     selector: 'db-product-grid',
     templateUrl: 'app/product/product-grid.component.html',
-    directives: [ProductDeskComponent]
+    directives: [ProductCardComponent]
 })
 export class ProductGridComponent {
     products: any = [];
@@ -30,6 +30,7 @@ export class ProductGridComponent {
                 // Transform products to appropriate data
                 // to display
                 this.products = this.transform(products);
+                // this.products = getProducts(category, search);
             });
     }
 
