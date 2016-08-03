@@ -3,35 +3,19 @@
  */
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {provide} from '@angular/core';
-import {provideRouter, RouterConfig} from '@angular/router';
+import {disableDeprecatedForms, provideForms} from '@angular/forms';
 
 /*
  * Components
  */
+import {APP_ROUTER_PROVIDER} from './app.routes';
 import {AppComponent} from './app.component';
-import {WelcomeComponent} from './welcome/welcome.component';
-import {ProductListComponent} from './product/product-list.component';
-
-/*
- * Routes
- */
-const routes: RouterConfig = [
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'products', component: ProductListComponent }
-];
-
-/*
- * Routes Provider
- */
-const APP_ROUTER_PROVIDER = [
-    // Installs our routes
-    provideRouter(routes)
-];
 
 /*
  * Bootstrap out application
  */
 bootstrap(AppComponent, [
-    APP_ROUTER_PROVIDER
+    APP_ROUTER_PROVIDER,
+    disableDeprecatedForms(),
+    provideForms()
 ]);

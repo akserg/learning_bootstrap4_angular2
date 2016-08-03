@@ -17,6 +17,12 @@ body {
     display: block;
 }
 
+.product-img {
+    height: 300px;
+    width: 100%;
+    display: block;
+}
+
 .marketing {
     background-color: #f6eee3;
 }
