@@ -9,6 +9,7 @@ import {provideRouter, RouterConfig} from '@angular/router';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {ProductListComponent} from './product/product-list.component';
 import {ProductViewComponent} from './product/product-view.component';
+import {CartViewComponent} from './cart/cart-view.component';
 
 /*
  * Routes
@@ -17,7 +18,8 @@ const routes: RouterConfig = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
-  { path: 'product/:id', component: ProductViewComponent }
+  { path: 'product/:id', component: ProductViewComponent },
+  { path: 'cart', component: CartViewComponent }
 ];
 
 /*

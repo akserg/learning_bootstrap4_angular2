@@ -108,6 +108,15 @@ export class CartService {
     }
 
     /**
+     * This method remove all products and clean ammount and items.
+     */
+    clearCart() {
+        this.cart.items = [];
+        this.cart.amount = 0;
+        this.cart.count = 0;
+    }
+
+    /**
      * This method removes existing cart item.
      */
     private remove(item: CartItem) {
