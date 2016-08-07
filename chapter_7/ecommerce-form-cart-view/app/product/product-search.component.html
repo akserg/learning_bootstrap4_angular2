@@ -2,7 +2,7 @@
     <div class="card-header">Quick Shop</div>
     <div class="input-group">
         <input #search type="text" class="form-control" placeholder="Search for..." 
-              (keyup)="searchChanged(search.value)">
+              [formControl]="seachControl">
         <span class="input-group-btn">
             <button class="btn btn-secondary" type="button" 
                    [disabled]="disabled"

@@ -3,16 +3,26 @@
  */
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
+import {REACTIVE_FORM_DIRECTIVES, FormControl} from '@angular/forms';
 
 @Component({
     selector: 'db-product-search',
-    templateUrl: 'app/product/product-search.component.html'
+    templateUrl: 'app/product/product-search.component.html',
+    directives: [REACTIVE_FORM_DIRECTIVES]
 })
 export class ProductSearchComponent {
 
     disabled: boolean = true;
+    seachControl: FormControl;
 
     constructor(private router: Router) {}
+
+    ngOnInit() {
+        this.seachControl = new FormControl();
+        this.seachControl.valueChanges.subscribe((value: string) => {
+            this.searchChanged(value);
+        });
+    }
 
     searchProduct(value: string) {
         this.router.navigate(['/products'], { queryParams: { search: value} });

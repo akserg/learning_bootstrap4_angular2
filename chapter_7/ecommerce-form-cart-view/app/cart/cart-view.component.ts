@@ -3,7 +3,6 @@
  */
 import {Component, Input} from '@angular/core';
 import {ROUTER_DIRECTIVES} from '@angular/router';
-import {FormGroup, FormControl, Validators, REACTIVE_FORM_DIRECTIVES} from '@angular/forms';
 
 /*
  * Components
@@ -14,34 +13,32 @@ import {CartItemCountComponent} from './cart-item-count.component';
 @Component({
     selector: 'db-cart-view',
     templateUrl: 'app/cart/cart-view.component.html',
-    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
+    directives: [ROUTER_DIRECTIVES]
 })
 export class CartViewComponent {
 
     private cart: Cart;
-    form: FormGroup;
 
     constructor(private cartService: CartService) {
         this.cart = this.cartService.cart;
-        this.form = this.createForm();
     }
 
     clearCart() {
         this.cartService.clearCart();
     }
 
-    update($event) {
-        console.log($event);
-        return $event;
-    }
-
-    createForm() {
-        let group: any = {};
-
-        this.cart.items.forEach((item: CartItem) => {
-            group[item.product.id] =  new FormControl(item.count || '', Validators.required);
-        });
-        return new FormGroup(group);
+    update(value, item: CartItem) {
+        let res = value - item.count;
+        if (res > 0) {
+            for (let i = 0; i < res; i++) {
+                this.cartService.addProduct(item.product);
+            }
+        } else if (res < 0) {
+            for (let i = 0; i < -res; i++) {
+                this.cartService.removeProduct(item.product);
+            }
+        }
+        return value;
     }
 }
 

@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-md-9">
             <div *ngIf="cart.count">
-                <form [formGroup]="form">
+                <form #form="ngForm">
                     <div class="table-responsive">
                         <table class="table table-sm table-striped table-bordered table-cart">
                             <tbody>
@@ -16,10 +16,9 @@
                                     <td>{{item.product.title}}</td>
                                     <td>{{item.product.price | currency:'USD':true:'1.2-2'}}</td>
                                     <td>
-                                        <!--<db-cart-item-count [name]="{{item.product.id}}" [count]="item.count"></db-cart-item-count>-->
-                                        <input type="number" name="{{item.product.id}}" min="0" 
-                                        [ngModel]="item.count"
-                                        (ngModelChange)="item.count = update($event)">
+                                        <input type="number" name="{{item.product.id}}" min="1" 
+                                                [ngModel]="item.count"
+                                                (ngModelChange)="item.count = update($event, item)">
                                     </td>
                                     <td>{{item.amount | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
