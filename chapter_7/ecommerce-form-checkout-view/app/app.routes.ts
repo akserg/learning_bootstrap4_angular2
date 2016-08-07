@@ -1,16 +1,16 @@
 /*
  * Angular Imports
  */
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {provide} from '@angular/core';
 import {provideRouter, RouterConfig} from '@angular/router';
 
 /*
  * Components
  */
-import {AppComponent} from './app.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 import {ProductListComponent} from './product/product-list.component';
+import {ProductViewComponent} from './product/product-view.component';
+import {CartViewComponent} from './cart/cart-view.component';
+import {CheckoutViewComponent} from './checkout/checkout-view.component';
 
 /*
  * Routes
@@ -18,20 +18,16 @@ import {ProductListComponent} from './product/product-list.component';
 const routes: RouterConfig = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
-  { path: 'products', component: ProductListComponent }
+  { path: 'products', component: ProductListComponent },
+  { path: 'product/:id', component: ProductViewComponent },
+  { path: 'cart', component: CartViewComponent },
+  { path: 'checkout', component: CheckoutViewComponent },
 ];
 
 /*
  * Routes Provider
  */
-const APP_ROUTER_PROVIDER = [
+export const APP_ROUTER_PROVIDER = [
     // Installs our routes
     provideRouter(routes)
 ];
-
-/*
- * Bootstrap out application
- */
-bootstrap(AppComponent, [
-    APP_ROUTER_PROVIDER
-]);

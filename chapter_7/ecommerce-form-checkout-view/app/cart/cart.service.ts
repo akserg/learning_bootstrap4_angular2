@@ -4,7 +4,7 @@ import {Product} from '../product/product.service';
 
 export interface CartItem {
     product: Product;
-    count:  number;
+    count: number;
     amount: number;
 }
 
@@ -24,7 +24,7 @@ export class CartService {
      * of the same products in the cart.
      * It updates the amount and count of items in the cart.
      */
-    addProduct(product: Product) {
+    addProduct(product: Product): CartItem {
         // Find CartItem in items
         let item: CartItem = this.findItem(product.id);
         // Check was it found?
@@ -49,6 +49,7 @@ export class CartService {
         this.cart.count++;
         // Increase amount in the cart
         this.cart.amount += product.price;
+        return item;
     }
 
     /**
@@ -56,25 +57,30 @@ export class CartService {
      * in the cart or removes the last product.
      * It updates the amount and count of items in the cart.
      */
-removeProduct(product: Product) {
-    // Find CartItem in items
-    let item: CartItem = this.findItem(product.id);
-    // Check is item found?
-    if (item) {
-        // Decrease the count
-        item.count--;
-        // Check was that the last product?
-        if (!item.count) {
-            // It was last product
-            // Delete item from items
-            this.remove(item);
+    removeProduct(product: Product): CartItem {
+        // Find CartItem in items
+        let item: CartItem = this.findItem(product.id);
+        // Check is item found?
+        if (item) {
+            // Decrease the count
+            item.count--;
+            // Substract price
+            item.amount -= product.price;
+            // Check was that the last product?
+            if (!item.count) {
+                // It was last product
+                // Delete item from items
+                this.remove(item);
+                // We must return null
+                item = null;
+            }
+            // Decrease count in the cart
+            this.cart.count--;
+            // Decrease amount in the cart
+            this.cart.amount -= product.price;
         }
-        // Decrease count in the cart
-        this.cart.count--;
-        // Decrease amount in the cart
-        this.cart.amount -= product.price;
+        return item;
     }
-}
 
     /**
      * Remove item from the cart.
@@ -92,7 +98,7 @@ removeProduct(product: Product) {
     /**
      * This method returns cart item by product id or null.
      */
-    private findItem(id: string): CartItem {
+    findItem(id: string): CartItem {
         for (let i = 0; i < this.cart.items.length; i++) {
             if (this.cart.items[i].product.id === id) {
                 return this.cart.items[i];
@@ -102,15 +108,24 @@ removeProduct(product: Product) {
     }
 
     /**
+     * This method remove all products and clean ammount and items.
+     */
+    clearCart() {
+        this.cart.items = [];
+        this.cart.amount = 0;
+        this.cart.count = 0;
+    }
+
+    /**
      * This method removes existing cart item.
      */
-private remove(item: CartItem) {
-    // Find the index of cart item
-    let indx: number = this.cart.items.indexOf(item);
-    // Check was item found
-    if (indx !== -1) {
-        // Remove element from array
-        this.cart.items.splice(indx, 1);
+    private remove(item: CartItem) {
+        // Find the index of cart item
+        let indx: number = this.cart.items.indexOf(item);
+        // Check was item found
+        if (indx !== -1) {
+            // Remove element from array
+            this.cart.items.splice(indx, 1);
+        }
     }
-}
 }

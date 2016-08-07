@@ -7,7 +7,7 @@ export interface Product {
     title: string;
     // Price
     price: number;
-    // MArk product with specialproce
+    // Mark product with specialproce
     isSpecial: boolean;
     // Description
     desc: string;

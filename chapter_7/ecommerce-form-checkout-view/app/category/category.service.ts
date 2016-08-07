@@ -45,9 +45,3 @@ export class CategoryNotFoundException extends Error {
         super(message);
     }
 }
-
-// constructor(@Inject(LANGUAGES) languages: string[]) {
-//   console.log(languages);
-//   // Log: "['en','fr']"
-// }
-
