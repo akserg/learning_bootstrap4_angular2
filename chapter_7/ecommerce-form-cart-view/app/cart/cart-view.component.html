@@ -16,10 +16,10 @@
                                     <td>{{item.product.title}}</td>
                                     <td>{{item.product.price | currency:'USD':true:'1.2-2'}}</td>
                                     <td>
-                                        <db-cart-item-count [name]="{{item.product.id}}" [count]="item.count"></db-cart-item-count>
-                                        <!--<input type="number" name="{{item.product.id}}" min="0" 
+                                        <!--<db-cart-item-count [name]="{{item.product.id}}" [count]="item.count"></db-cart-item-count>-->
+                                        <input type="number" name="{{item.product.id}}" min="0" 
                                         [ngModel]="item.count"
-                                        (ngModelChange)="item.count = update($event)">-->
+                                        (ngModelChange)="item.count = update($event)">
                                     </td>
                                     <td>{{item.amount | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
