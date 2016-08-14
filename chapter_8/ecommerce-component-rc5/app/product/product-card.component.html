@@ -9,8 +9,8 @@
                 <h4 class="card-text">Price: ${{product.price}}</h4>
             </div>
             <div class="card-footer text-xs-center">
-                <a class="btn btn-primary" (click)="buy(product)">Buy Now</a>
-                <a class="btn btn-secondary" [routerLink]="['/product', product.id]">More Info</a>
+                <button class="btn btn-primary" (click)="buy(product)">Buy Now</button>
+                <button class="btn btn-secondary" [routerLink]="['/product', product.id]">More Info</button>
             </div>
             <div class="card-block">
                 <p class="card-text">{{product.desc}}</p>
