@@ -10,7 +10,7 @@ import {ChildComponent} from './child.component';
      {{title}}
     </div>
     <div class="parent__content">
-        <ng-content select="child"></ng-content>
+        <ng-content></ng-content>
     </div>
   </div>`,
   styles: [`
@@ -24,22 +24,21 @@ export class ParentComponent implements AfterContentInit, AfterContentChecked {
   @Input() title: string;
 
   // Query for a CONTENT child of type `ChildComponent`
-  @ContentChild('child') 
-  contentChild: ChildComponent;
+  @ContentChild(ChildComponent) contentChild: ChildComponent;
 
   ngAfterContentInit() {
     // contentChild is set after the content has been initialized
-    console.log('AfterContentInit');
-    this.title = 'AfterContentInit';
+    console.log('AfterContentInit. Child is', this.contentChild.status);
+    this.title = 'Parent';
   }
 
   ngAfterContentChecked() {
+    console.log('AfterContentChecked. Child is', this.contentChild.status);
     // contentChild is updated after the content has been checked
-    if (this.title === this.contentChild.desc) {
+    if (this.contentChild.status == 'Ready') {
       console.log('AfterContentChecked (no change)');
     } else {
-      this.contentChild.desc = this.title;
-      console.log('AfterContentChecked');
+      this.contentChild.status = 'Ready';
     }
   }
 }
