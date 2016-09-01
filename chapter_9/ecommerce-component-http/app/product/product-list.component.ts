@@ -3,20 +3,8 @@
  */
 import {Component} from '@angular/core';
 
-/*
- * Components
- * */
-import {CategoryListComponent} from '../category/index';
-import {ProductSearchComponent} from './product-search.component';
-import {ProductGridComponent} from './product-grid.component';
-
-/*
- * Components
- */
-
 @Component({
   selector: 'db-products',
-  templateUrl: 'app/product/product-list.component.html',
-  directives: [ProductSearchComponent, CategoryListComponent, ProductGridComponent]
+  templateUrl: 'app/product/product-list.component.html'
 })
 export class ProductListComponent {}

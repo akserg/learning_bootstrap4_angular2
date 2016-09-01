@@ -4,11 +4,6 @@
  */
 import {Component} from '@angular/core';
 
-/*
- * Components
- */
-import {CartMenuComponent} from '../cart/cart-menu.component';
-
 export class NavItem {
   // Navigation link
   href: string;
@@ -20,8 +15,7 @@ export class NavItem {
 
 @Component({
   selector: 'db-navbar',
-  templateUrl: 'app/navbar/navbar.component.html',
-  directives: [CartMenuComponent]
+  templateUrl: 'app/navbar/navbar.component.html'
 })
 export class NavbarComponent {
   // App name

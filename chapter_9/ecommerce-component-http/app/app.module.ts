@@ -10,7 +10,9 @@ import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
 
 import {WelcomeComponent} from './welcome/welcome.component';
-import {ProductListComponent, ProductViewComponent} from './product/index';
+import {CategoryListComponent, CategoryTitlePipe, CategoryCardComponent, CategorySlideComponent} from './category/index';
+import {ProductListComponent, ProductViewComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent} from './product/index';
+import {CartMenuComponent} from './cart/cart-menu.component';
 import {CartViewComponent} from './cart/cart-view.component';
 import {CheckoutViewComponent} from './checkout/checkout-view.component';
 
@@ -28,8 +30,10 @@ import {routing}  from './app.routes';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule, routing],
-  declarations: [AppComponent, NavbarComponent, FooterComponent, WelcomeComponent, 
-    ProductListComponent, ProductViewComponent, CartViewComponent, CheckoutViewComponent],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, WelcomeComponent, CategoryListComponent,
+    ProductListComponent, ProductViewComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent, 
+    CartMenuComponent, CartViewComponent, CategoryCardComponent, CategorySlideComponent, CheckoutViewComponent,
+    CategoryTitlePipe],
   providers: [CategoryService, ProductService, CartService],
   bootstrap: [AppComponent]
 })

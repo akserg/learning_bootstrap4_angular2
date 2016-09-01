@@ -2,26 +2,23 @@
  * Angular Imports
  */
 import {Component} from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 /*
  * Components
  */
 import {Product, ProductService} from './product.service';
-import {ProductCardComponent} from './product-card.component';
 import {CartService} from '../cart/cart.service';
 
 @Component({
     selector: 'db-product-grid',
-    templateUrl: 'app/product/product-grid.component.html',
-    directives: [ProductCardComponent],
+    templateUrl: 'app/product/product-grid.component.html'
 })
 export class ProductGridComponent {
     products: any = [];
 
-    constructor(private router: Router, private productService: ProductService, private cartService: CartService) {
-        this.router
-            .routerState
+    constructor(private route: ActivatedRoute, private productService: ProductService, private cartService: CartService) {
+        this.route
             .queryParams
             .subscribe(params => {
                 let category: string = params['category'];
