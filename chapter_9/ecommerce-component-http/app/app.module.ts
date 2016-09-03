@@ -9,12 +9,10 @@ import {AppComponent}  from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {FooterComponent} from './footer/footer.component';
 import {CartModule} from './cart/cart.module';
+import {CategoryModule} from './category/category.module';
 
 import {WelcomeComponent} from './welcome/welcome.component';
-import {CategoryListComponent, CategoryTitlePipe, CategoryCardComponent, CategorySlideComponent} from './category/index';
 import {ProductListComponent, ProductViewComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent} from './product/index';
-// import {CartMenuComponent} from './cart/cart-menu.component';
-// import {CartViewComponent} from './cart/cart-view.component';
 import {CheckoutViewComponent} from './checkout/checkout-view.component';
 
 /*
@@ -30,12 +28,11 @@ import {CartService} from './cart/cart.service';
 import {routing}  from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, routing, CartModule],
-  declarations: [AppComponent, NavbarComponent, FooterComponent, WelcomeComponent, CategoryListComponent,
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule, routing, CartModule, CategoryModule],
+  declarations: [AppComponent, NavbarComponent, FooterComponent, WelcomeComponent, 
     ProductListComponent, ProductViewComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent, 
-    /*CartMenuComponent, CartViewComponent,*/ CategoryCardComponent, CategorySlideComponent, CheckoutViewComponent,
-    CategoryTitlePipe],
-  providers: [CategoryService, ProductService, CartService],
+    CheckoutViewComponent],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
