@@ -1,9 +1,0 @@
-/*
- * Exports
- */
-export * from './product.service';
-export * from './product-search.component';
-export * from './product-list.component';
-export * from './product-card.component';
-export * from './product-grid.component';
-export * from './product-view.component';

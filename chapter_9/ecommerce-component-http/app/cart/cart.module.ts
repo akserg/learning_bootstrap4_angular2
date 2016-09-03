@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {CartItemCountComponent} from './cart-item-count.component';
@@ -9,7 +9,7 @@ import {CartViewComponent} from './cart-view.component';
 import {CartService} from './cart.service';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, RouterModule],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
     declarations: [CartItemCountComponent, CartMenuComponent, CartViewComponent],
     exports: [CartMenuComponent, CartViewComponent, CartItemCountComponent],
     providers: [CartService]

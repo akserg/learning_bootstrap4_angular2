@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 /*
  * Components
  */
-import {Category, CategoryService} from '../category/index';
+import {Category, CategoryService} from '../category/category.service';
 
 @Component({
   selector: 'db-welcome',
