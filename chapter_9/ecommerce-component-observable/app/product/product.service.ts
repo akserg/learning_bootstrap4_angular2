@@ -42,9 +42,7 @@ export class ProductService {
         }
         return this.http
             .get(url)
-            .map((response: Response) => {
-                return response.json().data as Product[];
-            })
+            .map((response: Response) => response.json().data as Product[])
             .catch(this.handleError);
     }
 
