@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 /*
@@ -14,20 +14,25 @@ import {CartService} from '../cart/cart.service';
     selector: 'db-product-grid',
     templateUrl: 'app/product/product-grid.component.html'
 })
-export class ProductGridComponent {
+export class ProductGridComponent implements OnInit {
     products: any = [];
 
-    constructor(private route: ActivatedRoute, private productService: ProductService, private cartService: CartService) {
+    constructor(private route: ActivatedRoute, private productService: ProductService, private cartService: CartService) {}
+
+    ngOnInit(): void {
         this.route
             .queryParams
             .subscribe(params => {
                 let category: string = params['category'];
                 let search: string = params['search'];
+                // Clear view before request
+                this.products = [];
                 // Return filtered data from getProducts function
-                let products: Product[] = this.productService.getProducts(category, search);
-                // Transform products to appropriate data
-                // to display
-                this.products = this.transform(products);
+                this.productService.getProducts(category, search).then((products: Product[]) => {
+                    // Transform products to appropriate data
+                    // to display
+                    this.products = this.transform(products);
+                });
             });
     }
 

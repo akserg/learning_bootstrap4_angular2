@@ -10,7 +10,7 @@
             </div>
             <div class="card-footer text-xs-center">
                 <button class="btn btn-primary" (click)="buy(product)">Buy Now</button>
-                <button class="btn btn-secondary" [routerLink]="['/product', product.id]">More Info</button>
+                <a class="btn btn-secondary" [routerLink]="['/product', product.id]">More Info</a>
             </div>
             <div class="card-block">
                 <p class="card-text">{{product.desc}}</p>

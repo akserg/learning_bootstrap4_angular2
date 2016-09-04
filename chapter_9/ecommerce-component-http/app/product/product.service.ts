@@ -1,3 +1,8 @@
+import {Injectable} from '@angular/core';
+import {Headers, Http, Response} from '@angular/http';
+
+import 'rxjs/add/operator/toPromise';
+
 export interface Product {
     // Unique Id
     id: string;
@@ -17,30 +22,53 @@ export interface Product {
     imageL: string;
 }
 
+@Injectable()
 export class ProductService {
 
-    getProducts(category?: string, search?: string) {
-        if (category) {
-            return this.products.filter((product: Product, index: number, array: Product[]) => {
-                return product.categoryId === category;
-            });
-        } else if (search) {
-            let lowSearch = search.toLowerCase();
-            return this.products.filter((product: Product, index: number, array: Product[]) => {
-                return product.title.toLowerCase().indexOf(lowSearch) != -1;
-            });
-        } else {
-            return this.products;
-        }
+    // URL to Products web api
+    private productsUrl = 'app/products'; 
+
+    constructor(private http: Http) {}
+
+    getProducts(category?: string, search?: string): Promise<Product[]> {
+        return this.http
+            .get(this.productsUrl)
+            .toPromise()
+            .then((response: Response) => {
+                let products: Product[] = response.json().data as Product[];
+                if (category) {
+                    // Filter by category id
+                    return products.filter((product: Product, index: number, array: Product[]) => {
+                        return product.categoryId === category;
+                    });
+                } else if (search) {
+                    // Filter by search string
+                    let lowSearch = search.toLowerCase();
+                    return products.filter((product: Product, index: number, array: Product[]) => {
+                        return product.title.toLowerCase().indexOf(lowSearch) != -1;
+                    });
+                } else {
+                    // Return all as is
+                    return products;
+                }
+            })
+            .catch(this.handleError);
     }
 
-    getProduct(id: string): Product {
-        for (let i = 0; i < this.products.length; i++) {
-            if (this.products[i].id === id) {
-                return this.products[i];
-            }
-        }
-        throw new ProductNotFoundException(`Product ${id} not found`);
+    getProduct(id: string): Promise<Product> {
+        return this.http
+            .get(this.productsUrl)
+            .toPromise()
+            .then((response: Response) => {
+                let products: Product[] = response.json().data as Product[];
+                return products.find((product: Product) => product.id === id);
+            })
+            .catch(this.handleError);
+    }
+
+    private handleError(error: any): Promise<any> {
+        window.alert(`An error occurred: ${error}`);
+        return Promise.reject(error.message || error);
     }
 }
 

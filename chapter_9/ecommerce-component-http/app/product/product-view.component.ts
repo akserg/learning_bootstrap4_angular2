@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 
 /*
@@ -14,7 +14,7 @@ import {Cart, CartItem, CartService} from '../cart/cart.service';
     selector: 'db-product-view',
     templateUrl: 'app/product/product-view.component.html'
 })
-export class ProductViewComponent {
+export class ProductViewComponent implements OnInit {
 
     product: Product;
     cartItem: CartItem;
@@ -29,14 +29,16 @@ export class ProductViewComponent {
 
     constructor(private route: ActivatedRoute, 
                 private productService: ProductService, 
-                private cartService: CartService) {
+                private cartService: CartService) { }
+    
+    ngOnInit(): void {
         this.route
             .params
             .subscribe(params => {
                 // Get the product id
                 let id: string = params['id'];
                 // Return the product from ProductService
-                this.product = this.productService.getProduct(id);
+                this.productService.getProduct(id).then((product:Product) => this.product = product);
                 // Return the cart item
                 this.cartItem = this.cartService.findItem(id);
             });
