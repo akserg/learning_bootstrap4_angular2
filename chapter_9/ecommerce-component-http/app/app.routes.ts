@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
-  { path: 'product/:id', component: ProductViewComponent },
+  { path: 'products/:id', component: ProductViewComponent },
   { path: 'cart', component: CartViewComponent },
   { path: 'checkout', component: CheckoutViewComponent },
 ];

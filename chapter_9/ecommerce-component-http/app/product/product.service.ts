@@ -30,36 +30,24 @@ export class ProductService {
     constructor(private http: Http) {}
 
     getProducts(category?: string, search?: string): Promise<Product[]> {
+        let url = this.productsUrl;
+        if (category) {
+            url += `/?categoryId=${category}`;
+        } else if (search) {
+            url += `/?title=${search}`;
+        }
         return this.http
-            .get(this.productsUrl)
+            .get(url)
             .toPromise()
-            .then((response: Response) => {
-                let products: Product[] = response.json().data as Product[];
-                if (category) {
-                    // Filter by category id
-                    return products.filter((product: Product) =>
-                        product.categoryId === category);
-                } else if (search) {
-                    // Filter by search string
-                    let lowSearch = search.toLowerCase();
-                    return products.filter((product: Product) =>
-                        product.title.toLowerCase().indexOf(lowSearch) != -1);
-                } else {
-                    // Return all as is
-                    return products;
-                }
-            })
+            .then((response: Response) => response.json().data as Product[])
             .catch(this.handleError);
     }
 
     getProduct(id: string): Promise<Product> {
         return this.http
-            .get(this.productsUrl)
+            .get(this.productsUrl + `/${id}`)
             .toPromise()
-            .then((response: Response) => {
-                let products: Product[] = response.json().data as Product[];
-                return products.find((product: Product) => product.id === id);
-            })
+            .then((response: Response) => response.json().data as Product)
             .catch(this.handleError);
     }
 
