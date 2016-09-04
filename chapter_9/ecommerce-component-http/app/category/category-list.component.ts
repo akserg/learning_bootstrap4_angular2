@@ -15,7 +15,7 @@ import {Category, CategoryService} from './category.service';
 })
 export class CategoryListComponent implements OnInit {
 
-    categories: Category[];
+    categories: Category[] = [];
 
     constructor(private router: Router, private categoryService: CategoryService) { }
 

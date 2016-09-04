@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Headers, Http, Response} from '@angular/http';
-
 import 'rxjs/add/operator/toPromise';
 
 export class Category {
@@ -16,33 +15,25 @@ export class Category {
     imageL: string;
 }
 
-
-
 @Injectable()
 export class CategoryService {
     
     // URL to Categories web api
     private categoriesUrl = 'app/categories'; 
-    // URL to Category web api
-    private categoryUrl = 'app/category';
     // We keep categories in cache variable
-    private categories: Category[];
+    private categories: Category[] = [];
 
     constructor(private http: Http) {}
 
     getCategories(): Promise<Category[]> {
-        if (this.categories) {
-            return Promise.resolve(this.categories);
-        } else {
-            return this.http
-                .get(this.categoriesUrl)
-                .toPromise()
-                .then((response: Response) => {
-                    this.categories = response.json().data as Category[];
-                    return this.categories;
-                })
-                .catch(this.handleError);
-        }
+        return this.http
+            .get(this.categoriesUrl)
+            .toPromise()
+            .then((response: Response) => {
+                this.categories = response.json().data as Category[];
+                return this.categories;
+            })
+            .catch(this.handleError);
     }
 
     getCategory(id: string): Category {
@@ -51,17 +42,11 @@ export class CategoryService {
                 return this.categories[i];
             }
         }
-        throw new CategoryNotFoundException(`Category ${id} not found`);
+        return null;
     }
 
     private handleError(error: any): Promise<any> {
         window.alert(`An error occurred: ${error}`);
         return Promise.reject(error.message || error);
-    }
-}
-
-export class CategoryNotFoundException extends Error {
-    constructor(message?: string) {
-        super(message);
     }
 }

@@ -1,6 +1,5 @@
 import {Injectable} from '@angular/core';
 import {Headers, Http, Response} from '@angular/http';
-
 import 'rxjs/add/operator/toPromise';
 
 export interface Product {
@@ -38,15 +37,13 @@ export class ProductService {
                 let products: Product[] = response.json().data as Product[];
                 if (category) {
                     // Filter by category id
-                    return products.filter((product: Product, index: number, array: Product[]) => {
-                        return product.categoryId === category;
-                    });
+                    return products.filter((product: Product) =>
+                        product.categoryId === category);
                 } else if (search) {
                     // Filter by search string
                     let lowSearch = search.toLowerCase();
-                    return products.filter((product: Product, index: number, array: Product[]) => {
-                        return product.title.toLowerCase().indexOf(lowSearch) != -1;
-                    });
+                    return products.filter((product: Product) =>
+                        product.title.toLowerCase().indexOf(lowSearch) != -1);
                 } else {
                     // Return all as is
                     return products;
@@ -69,11 +66,5 @@ export class ProductService {
     private handleError(error: any): Promise<any> {
         window.alert(`An error occurred: ${error}`);
         return Promise.reject(error.message || error);
-    }
-}
-
-export class ProductNotFoundException extends Error {
-    constructor(message?: string) {
-        super(message);
     }
 }

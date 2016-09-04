@@ -23,11 +23,7 @@ export class CategoryTitlePipe implements PipeTransform {
     constructor(private categoryService: CategoryService) { }
 
     transform(value: string): string {
-        if (value) {
-            let category: Category = this.categoryService.getCategory(value);
-            return category ? category.title : '';
-        } else {
-            return '';
-        }
+        let category: Category = this.categoryService.getCategory(value);
+        return category ? category.title : '';
     }
 }
