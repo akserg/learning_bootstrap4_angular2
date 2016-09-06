@@ -10,8 +10,6 @@ import {Router} from '@angular/router';
 })
 export class ProductSearchComponent {
 
-    disabled: boolean = true;
-    
     constructor(private router: Router) {}
 
     searchProduct(value: string) {

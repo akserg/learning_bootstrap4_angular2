@@ -6,6 +6,7 @@ import {ActivatedRoute} from '@angular/router';
 
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/debounceTime';
+import 'rxjs/add/operator/distinctUntilChanged';
 
 /*
  * Components
@@ -26,6 +27,7 @@ export class ProductGridComponent implements OnInit {
         this.route
             .queryParams
             .debounceTime(300) // wait for 300ms pause in events
+            .distinctUntilChanged() // only changed values pass
             .subscribe(params => {
                 let category: string = params['category'];
                 let search: string = params['search'];

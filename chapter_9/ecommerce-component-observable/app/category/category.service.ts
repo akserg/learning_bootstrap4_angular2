@@ -48,8 +48,10 @@ export class CategoryService {
         return null;
     }
 
-    private handleError(error: any): Promise<any> {
-        window.alert(`An error occurred: ${error}`);
-        return Promise.reject(error.message || error);
+    private handleError(error: any): Observable<any> {
+        let errMsg = (error.message) ? error.message : error.status ? 
+            `${error.status} - ${error.statusText}` : 'Server error';
+        window.alert(`An error occurred: ${errMsg}`);
+        return Observable.throw(errMsg);
     }
 }
