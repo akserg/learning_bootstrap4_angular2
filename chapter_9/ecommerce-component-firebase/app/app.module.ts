@@ -28,8 +28,23 @@ import {CheckoutViewComponent} from './checkout/checkout-view.component';
  */
 import {routing}  from './app.routes';
 
+/*
+ * Angular Firebase
+ */
+import {AngularFireModule} from 'angularfire2';
+import * as firebase from 'firebase';
+
+// Initialize Firebase
+export var firebaseConfig = {
+  apiKey: "AIzaSyDDrc42huFLZqnG-pAg1Ly9VnFtVx3m-Cg",
+  authDomain: "ecommerce-a99fc.firebaseapp.com",
+  databaseURL: "https://ecommerce-a99fc.firebaseio.com",
+  storageBucket: "ecommerce-a99fc.appspot.com",
+};
+
 @NgModule({
   imports: [HttpModule,
+            AngularFireModule.initializeApp(firebaseConfig),
             InMemoryWebApiModule.forRoot(InMemoryDataService),
             BrowserModule, FormsModule, ReactiveFormsModule, 
             routing, CartModule, CategoryModule, ProductModule],
