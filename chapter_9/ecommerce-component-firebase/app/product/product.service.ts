@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
-import {Headers, Http, Response} from '@angular/http';
+// import {Headers, Http, Response} from '@angular/http';
+import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/toPromise';
@@ -29,9 +30,10 @@ export interface Product {
 export class ProductService {
 
     // URL to Products web api
-    private productsUrl = 'app/products'; 
+    private productsUrl = 'products'; //app/products'; 
 
-    constructor(private http: Http) {}
+    // constructor(private http: Http) {}
+    constructor(private af: AngularFire) {}
 
     getProducts(category?: string, search?: string): Observable<Product[]> {
         let url = this.productsUrl;
@@ -40,16 +42,22 @@ export class ProductService {
         } else if (search) {
             url += `/?title=${search}`;
         }
-        return this.http
-            .get(url)
-            .map((response: Response) => response.json().data as Product[])
+        // return this.http
+        //     .get(url)
+        //     .map((response: Response) => response.json().data as Product[])
+        //     .catch(this.handleError);
+        return this.af.database
+            .list(this.productsUrl)
             .catch(this.handleError);
     }
 
     getProduct(id: string): Observable<Product> {
-        return this.http
-            .get(this.productsUrl + `/${id}`)
-            .map((response: Response) => response.json().data as Product)
+        // return this.http
+        //     .get(this.productsUrl + `/${id}`)
+        //     .map((response: Response) => response.json().data as Product)
+        //     .catch(this.handleError);
+        return this.af.database
+            .object(this.productsUrl + `/${id}`)
             .catch(this.handleError);
     }
 
