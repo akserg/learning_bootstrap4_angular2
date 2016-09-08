@@ -3,10 +3,6 @@ import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
 
-// Imports for loading & configuring the in-memory web api
-import {InMemoryWebApiModule} from 'angular2-in-memory-web-api';
-import {InMemoryDataService}  from './in-memory-data.service';
-
 /**
  * Modules
  */
@@ -45,7 +41,6 @@ export var firebaseConfig = {
 @NgModule({
   imports: [HttpModule,
             AngularFireModule.initializeApp(firebaseConfig),
-            InMemoryWebApiModule.forRoot(InMemoryDataService),
             BrowserModule, FormsModule, ReactiveFormsModule, 
             routing, CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 

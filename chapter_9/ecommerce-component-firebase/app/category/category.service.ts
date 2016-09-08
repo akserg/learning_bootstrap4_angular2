@@ -1,10 +1,7 @@
 import {Injectable} from '@angular/core';
-// import {Headers, Http, Response} from '@angular/http';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/toPromise';
-import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 export class Category {
@@ -24,21 +21,13 @@ export class Category {
 export class CategoryService {
     
     // URL to Categories web api
-    private categoriesUrl = 'categories'; //app/categories'; 
+    private categoriesUrl = 'categories'; 
     // We keep categories in cache variable
     private categories: Category[] = [];
 
-    // constructor(private http: Http) {}
     constructor(private af: AngularFire) {}
 
     getCategories(): Observable<Category[]> {
-        // return this.http
-        //     .get(this.categoriesUrl)
-        //     .map((response: Response) => {
-        //         this.categories = response.json().data as Category[];
-        //         return this.categories;
-        //     })
-        //     .catch(this.handleError);
         return this.af.database
             .list(this.categoriesUrl)
             .catch(this.handleError);
