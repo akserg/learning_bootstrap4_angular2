@@ -2,6 +2,7 @@ import {Injectable} from '@angular/core';
 import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/empty';
 
 export interface Product {
     // Unique Id
@@ -31,15 +32,24 @@ export class ProductService {
     constructor(private af: AngularFire) {}
 
     getProducts(category?: string, search?: string): Observable<Product[]> {
-        let url = this.productsUrl;
-        if (category) {
-            url += `/?categoryId=${category}`;
-        } else if (search) {
-            url += `/?title=${search}`;
+        if (category || search) {
+            let query = <any>{};
+            if (category) {
+                query.orderByChild = 'categoryId';
+                query.equalTo = category;
+            } else {
+                query.orderByChild = 'title';
+                query.startAt = search.toUpperCase();
+                query.endAt = query.startAt + '\uf8ff';
+            }
+            return this.af.database
+                .list(this.productsUrl, {
+                    query: query
+                })
+                .catch(this.handleError);
+        } else {
+            return Observable.empty();
         }
-        return this.af.database
-            .list(this.productsUrl)
-            .catch(this.handleError);
     }
 
     getProduct(id: string): Observable<Product> {
