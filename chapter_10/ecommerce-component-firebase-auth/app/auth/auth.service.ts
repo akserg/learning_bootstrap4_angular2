@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {AuthProviders, FirebaseAuth, FirebaseAuthState} from 'angularfire2';
+import { Injectable } from '@angular/core';
+import { AuthProviders, FirebaseAuth, FirebaseAuthState, AuthMethods } from 'angularfire2';
 
 @Injectable()
 export class AuthService {
@@ -7,6 +7,7 @@ export class AuthService {
 
   constructor(public firebaseAuth: FirebaseAuth) {
     firebaseAuth.subscribe((state: FirebaseAuthState) => {
+      console.log('state', state);
       this.authState = state;
     });
   }
@@ -20,7 +21,13 @@ export class AuthService {
   }
 
   signIn(email: string, password: string): firebase.Promise<FirebaseAuthState> {
-    return this.firebaseAuth.login({email: email, password: password});
+    return this.firebaseAuth.login({ 
+      email: email, 
+      password: password 
+    },{
+      provider: AuthProviders.Password,
+      method: AuthMethods.Password,
+    });
   }
 
   signOut(): void {

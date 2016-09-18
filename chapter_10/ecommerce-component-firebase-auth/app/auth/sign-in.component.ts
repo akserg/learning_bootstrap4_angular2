@@ -11,7 +11,8 @@ import {AuthService} from './auth.service';
 
 @Component({
     selector: 'db-signin',
-    templateUrl: 'app/auth/sign-in.component.html'
+    //templateUrl: 'app/auth/sign-in.component.html'
+    template: `Hello`
 })
 export class SignInComponent {
     model: any = {};

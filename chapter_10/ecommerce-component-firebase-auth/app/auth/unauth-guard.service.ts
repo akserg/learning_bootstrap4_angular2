@@ -20,7 +20,8 @@ import 'rxjs/add/operator/take';
 import {AuthService} from './auth.service';
 
 @Injectable()
-export class AuthGuardService implements CanActivate {
+export class UnAuthGuardService implements CanActivate {
+
   constructor(private auth: AuthService, private router: Router) {}
 
   canActivate() {
@@ -28,12 +29,12 @@ export class AuthGuardService implements CanActivate {
       .take(1)
       .map((authState: FirebaseAuthState) => {
         console.log('authState', authState);
-        return !!authState;
+        return !authState;
       })
       .do((authenticated) => {
         console.log('authenticated', authenticated);
-        if (!authenticated) {
-          this.router.navigate(['/signin']);
+        if (authenticated) {
+          this.router.navigate(['/welcome']);
         }
       });
   }
