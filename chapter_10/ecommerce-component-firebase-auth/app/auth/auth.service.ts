@@ -10,6 +10,7 @@ export class AuthService {
       console.log('state', state);
       this.authState = state;
     });
+    this.signOut();
   }
 
   get authenticated(): boolean {

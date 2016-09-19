@@ -19,7 +19,9 @@ export class SignInComponent {
     loading = false;
     error = '';
 
-    constructor(private auth: AuthService, private router: Router) { }
+    constructor(private auth: AuthService, private router: Router) { 
+        console.log('SignInComponent');
+    }
 
     signIn(): void {
         this.loading = true;

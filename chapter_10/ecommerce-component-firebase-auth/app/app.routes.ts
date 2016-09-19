@@ -22,7 +22,7 @@ import { UnAuthGuardService } from './auth/unauth-guard.service';
 const routes: Routes = [
   // { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: '', component: SignInComponent, canActivate: [UnAuthGuardService] },
-  { path: 'signin', component: SignInComponent, canActivate: [UnAuthGuardService] },
+  // { path: 'signin', component: SignInComponent, canActivate: [UnAuthGuardService] },
   { path: 'welcome', component: WelcomeComponent, canActivate: [AuthGuardService] },
   { path: 'products', component: ProductListComponent, canActivate: [AuthGuardService] },
   { path: 'products/:id', component: ProductViewComponent, canActivate: [AuthGuardService] },

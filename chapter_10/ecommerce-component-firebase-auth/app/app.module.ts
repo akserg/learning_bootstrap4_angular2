@@ -9,6 +9,7 @@ import { HttpModule } from '@angular/http';
 import { CartModule } from './cart/cart.module';
 import { CategoryModule } from './category/category.module';
 import { ProductModule } from './product/product.module';
+import { AuthModule } from './auth/auth.module';
 
 /*
  * Components
@@ -20,9 +21,9 @@ import { SignInComponent } from './auth/sign-in.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { CheckoutViewComponent } from './checkout/checkout-view.component';
 
-import { AuthService } from './auth/auth.service';
-import { AuthGuardService } from './auth/auth-guard.service';
-import { UnAuthGuardService } from './auth/unauth-guard.service';
+// import { AuthService } from './auth/auth.service';
+// import { AuthGuardService } from './auth/auth-guard.service';
+// import { UnAuthGuardService } from './auth/unauth-guard.service';
 
 /*
  * Routing
@@ -53,10 +54,10 @@ const firebaseAuthConfig = {
   imports: [HttpModule,
     AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
     BrowserModule, FormsModule, ReactiveFormsModule,
-    routing, CartModule, CategoryModule, ProductModule],
+    routing, CartModule, CategoryModule, ProductModule,
+    AuthModule.forRoot()],
   declarations: [AppComponent, NavbarComponent, FooterComponent,
-    SignInComponent, WelcomeComponent, CheckoutViewComponent],
-  providers: [UnAuthGuardService, AuthGuardService, AuthService],
+    WelcomeComponent, CheckoutViewComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

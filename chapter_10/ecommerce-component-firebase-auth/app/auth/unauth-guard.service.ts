@@ -26,16 +26,16 @@ export class UnAuthGuardService implements CanActivate {
 
   canActivate() {
     return this.auth.firebaseAuth
-      .take(1)
       .map((authState: FirebaseAuthState) => {
         console.log('authState', authState);
         return !authState;
       })
-      .do((authenticated) => {
-        console.log('authenticated', authenticated);
-        if (authenticated) {
-          this.router.navigate(['/welcome']);
-        }
-      });
+      // .do((authenticated) => {
+      //   console.log('authenticated', authenticated);
+      //   if (authenticated) {
+      //     this.router.navigate(['/welcome']);
+      //   }
+      // })
+      .take(1);
   }
 }
