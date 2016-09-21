@@ -32,9 +32,7 @@ export class ProductGridComponent implements OnInit {
             .subscribe(params => {
                 let category: string = params['category'];
                 let search: string = params['search'];
-                console.log('Hello');
-                let observer: Observable<Product[]> = this.productService.getProducts(category, search);
-                this.products = observer.map(this.transform);
+                this.products = this.productService.getProducts(category, search).map(this.transform);
             });
     }
 
