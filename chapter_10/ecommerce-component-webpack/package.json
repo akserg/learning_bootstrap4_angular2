@@ -5,7 +5,7 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --inline --colors --watch --display-error-details --display-cached  --port 9000 --hot",
+    "start": "webpack-dev-server",
     "build": "webpack",
     "postinstall": "typings install"
   },
