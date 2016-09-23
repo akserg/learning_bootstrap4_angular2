@@ -13,8 +13,6 @@ import {AppModule} from './app/app.module';
  * Import styles
  */
 import './assets/ecommerce.scss';
-// import '../node_modules/bootstrap/dist/css/bootstrap.css';
-
 
 if (process.env.NODE_ENV === 'production') {
   enableProdMode();

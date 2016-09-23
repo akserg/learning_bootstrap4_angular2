@@ -5,6 +5,6 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'db-products',
-  templateUrl: require('./product-list.component.html')
+  template: require('./product-list.component.html')
 })
 export class ProductListComponent {}

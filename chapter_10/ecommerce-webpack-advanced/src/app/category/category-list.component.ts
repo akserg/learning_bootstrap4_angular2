@@ -12,7 +12,7 @@ import {Category, CategoryService} from './category.service';
 
 @Component({
     selector: 'db-category-list',
-    templateUrl: require('./category-list.component.html')
+    template: require('./category-list.component.html')
 })
 export class CategoryListComponent implements OnInit {
 
