@@ -10,7 +10,7 @@ import {Cart, CartService} from './cart.service';
 
 @Component({
     selector: 'db-cart-menu',
-    templateUrl: 'app/cart/cart-menu.component.html'
+    templateUrl: require('./cart-menu.component.html')
 })
 export class CartMenuComponent {
 

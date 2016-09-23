@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+// import {HttpModule} from '@angular/http';
 
 /**
  * Modules
@@ -39,7 +39,7 @@ export var firebaseConfig = {
 };
 
 @NgModule({
-  imports: [HttpModule,
+  imports: [/*HttpModule,*/
             AngularFireModule.initializeApp(firebaseConfig),
             BrowserModule, FormsModule, ReactiveFormsModule, 
             routing, CartModule, CategoryModule, ProductModule],

@@ -15,7 +15,7 @@ export class NavItem {
 
 @Component({
   selector: 'db-navbar',
-  templateUrl: 'app/navbar/navbar.component.html'
+  templateUrl: require('./navbar.component.html')
 })
 export class NavbarComponent {
   // App name
