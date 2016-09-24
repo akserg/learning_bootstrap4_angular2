@@ -1,23 +1,23 @@
 /*
  * Angular Imports
  */
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {Component, OnInit} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
 
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/debounceTime';
-import 'rxjs/add/operator/distinctUntilChanged';
-import 'rxjs/add/operator/map';
+import {Observable} from "rxjs/Observable";
+import "rxjs/add/operator/debounceTime";
+import "rxjs/add/operator/distinctUntilChanged";
+import "rxjs/add/operator/map";
 
 /*
  * Components
  */
-import {Product, ProductService} from './product.service';
-import {CartService} from '../cart/cart.service';
+import {Product, ProductService} from "./product.service";
+import {CartService} from "../cart/cart.service";
 
 @Component({
-    selector: 'db-product-grid',
-    template: require('./product-grid.component.html')
+    selector: "db-product-grid",
+    template: require("./product-grid.component.html")
 })
 export class ProductGridComponent implements OnInit {
     products: Observable<Product[]>;
@@ -27,11 +27,11 @@ export class ProductGridComponent implements OnInit {
     ngOnInit(): void {
         this.route
             .queryParams
-            .debounceTime(300) // wait for 300ms pause in events
+            .debounceTime(300) // wait for 300 ms pause in events
             .distinctUntilChanged() // only changed values pass
             .subscribe(params => {
-                let category: string = params['category'];
-                let search: string = params['search'];
+                let category: string = params["category"];
+                let search: string = params["search"];
                 this.products = this.productService.getProducts(category, search).map(this.transform);
             });
     }
@@ -61,7 +61,7 @@ export class ProductGridComponent implements OnInit {
         return products;
     }
 
-    addToCart(product:Product) {
+    addToCart(product: Product) {
         this.cartService.addProduct(product);
     }
 }

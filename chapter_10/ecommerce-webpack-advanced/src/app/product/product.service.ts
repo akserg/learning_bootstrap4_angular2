@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/observable/empty';
+import {Injectable} from "@angular/core";
+import {AngularFire, FirebaseListObservable} from "angularfire2";
+import {Observable} from "rxjs/Observable";
+import "rxjs/add/operator/catch";
+import "rxjs/add/observable/empty";
 
 export interface Product {
     // Unique Id
@@ -27,7 +27,7 @@ export interface Product {
 export class ProductService {
 
     // URL to Products web api
-    private productsUrl = 'products'; 
+    private productsUrl = "products";
 
     constructor(private af: AngularFire) {}
 
@@ -35,12 +35,12 @@ export class ProductService {
         if (category || search) {
             let query = <any>{};
             if (category) {
-                query.orderByChild = 'categoryId';
+                query.orderByChild = "categoryId";
                 query.equalTo = category;
             } else {
-                query.orderByChild = 'title';
+                query.orderByChild = "title";
                 query.startAt = search.toUpperCase();
-                query.endAt = query.startAt + '\uf8ff';
+                query.endAt = query.startAt + "\uf8ff";
             }
             return this.af.database
                 .list(this.productsUrl, {
@@ -59,8 +59,8 @@ export class ProductService {
     }
 
     private handleError(error: any): Observable<any> {
-        let errMsg = (error.message) ? error.message : error.status ? 
-            `${error.status} - ${error.statusText}` : 'Server error';
+        let errMsg = (error.message) ? error.message : error.status ?
+            `${error.status} - ${error.statusText}` : "Server error";
         window.alert(`An error occurred: ${errMsg}`);
         return Observable.throw(errMsg);
     }

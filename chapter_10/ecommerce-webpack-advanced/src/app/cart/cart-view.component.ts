@@ -1,17 +1,17 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from '@angular/core';
+import {Component, Input} from "@angular/core";
 
 /*
  * Components
  */
-import {Cart, CartItem, CartService} from './cart.service';
-import {CartItemCountComponent} from './cart-item-count.component';
+import {Cart, CartItem, CartService} from "./cart.service";
+import {CartItemCountComponent} from "./cart-item-count.component";
 
 @Component({
-    selector: 'db-cart-view',
-    template: require('./cart-view.component.html')
+    selector: "db-cart-view",
+    template: require("./cart-view.component.html")
 })
 export class CartViewComponent {
 

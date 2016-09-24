@@ -1,17 +1,17 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from '@angular/core';
-import {Router} from '@angular/router';
+import {Component, Input} from "@angular/core";
+import {Router} from "@angular/router";
 
 /*
  * Components
  */
-import {Category} from './category.service';
+import {Category} from "./category.service";
 
 @Component({
-    selector: 'db-category-card',
-    template: require('./category-card.component.html')
+    selector: "db-category-card",
+    template: require("./category-card.component.html")
 })
 export class CategoryCardComponent {
     @Input() category: Category;
@@ -19,7 +19,7 @@ export class CategoryCardComponent {
     constructor(private router: Router) {}
 
     filterProducts(category: Category) {
-        this.router.navigate(['/products'], { queryParams: { category: category.id} });
+        this.router.navigate(["/products"], { queryParams: { category: category.id} });
     }
 }
 

@@ -1,16 +1,16 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from '@angular/core';
+import {Component, Input} from "@angular/core";
 
 /*
  * Components
  */
-import {Cart, CartService} from './cart.service';
+import {Cart, CartService} from "./cart.service";
 
 @Component({
-    selector: 'db-cart-menu',
-    template: require('./cart-menu.component.html')
+    selector: "db-cart-menu",
+    template: require("./cart-menu.component.html")
 })
 export class CartMenuComponent {
 

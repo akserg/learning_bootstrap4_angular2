@@ -1,6 +1,6 @@
-import {Injectable} from '@angular/core';
+import {Injectable} from "@angular/core";
 
-import {Product} from '../product/product.service';
+import {Product} from "../product/product.service";
 
 export interface CartItem {
     product: Product;

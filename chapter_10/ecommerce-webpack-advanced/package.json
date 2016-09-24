@@ -15,21 +15,12 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --display-chunks --progress",
     "clean:coverage": "del-cli ./coverage",
-    "clean:target": "del-cli ./target",
-    "coverage:html": "remap-istanbul -i ./coverage/json/coverage.json -o ./coverage/html -t html",
-    "coverage:lcov": "remap-istanbul -i ./coverage/json/coverage.json -o ./coverage/lcov/coverage.lcov -t lcovonly",
-    "coveralls": "coveralls < ./coverage/lcov/coverage.lcov",
-    "lint": "run-s lint:js lint:ts",
-    "lint:js": "eslint -c .eslintrc.yml *.js ./server",
+    "clean:dist": "del-cli ./dist",
+    "lint": "run-s lint:ts",
     "lint:ts": "tslint './src/**/*.ts'",
-    "posttest": "run-s coverage:html coverage:lcov",
-    "prebuild": "run-s clean:target test",
-    "pretest": "run-s clean:coverage lint",
-    "server": "cross-env NODE_ENV=development nodemon -w 'server/**/*.*' ./server/main.js",
+    "prebuild": "run-s clean:dist lint",
     "server:dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "start": "npm run server:dev",
-    "test": "cross-env NODE_ENV=test karma start --single-run --coverage",
-    "test:watch": "cross-env NODE_ENV=test karma start --reporters dots"
+    "start": "npm run server:dev"
   },
   "dependencies": {
     "@angular/common": "2.0.0",

@@ -2,7 +2,7 @@
 /*
  * Angular Imports
  */
-import {Component} from '@angular/core';
+import {Component} from "@angular/core";
 
 export class NavItem {
   // Navigation link
@@ -14,19 +14,19 @@ export class NavItem {
 }
 
 @Component({
-  selector: 'db-navbar',
-  template: require('./navbar.component.html')
+  selector: "db-navbar",
+  template: require("./navbar.component.html")
 })
 export class NavbarComponent {
   // App name
-  appName: string = 'Dream Bean';
+  appName: string = "Dream Bean";
 
   // Navgation items
   navItems: NavItem[] = [
-    {href: '#', label: 'Home', active: true},
-    {href: '#', label: 'Checkout', active: false},
-    {href: '#', label: 'Create Account', active: false},
-    {href: '#', label: 'Login', active: false}
+    {href: "#", label: "Home", active: true},
+    {href: "#", label: "Checkout", active: false},
+    {href: "#", label: "Create Account", active: false},
+    {href: "#", label: "Login", active: false}
   ];
 }
 

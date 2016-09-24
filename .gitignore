@@ -17,6 +17,7 @@ coverage
 !make.js
 !bundles/*.js
 typings
+**/dist
 
 #################
 ## JetBrains

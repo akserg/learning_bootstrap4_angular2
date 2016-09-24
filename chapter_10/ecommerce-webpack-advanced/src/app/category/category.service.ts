@@ -1,8 +1,8 @@
-import {Injectable} from '@angular/core';
-import {AngularFire, FirebaseListObservable} from 'angularfire2';
+import {Injectable} from "@angular/core";
+import {AngularFire, FirebaseListObservable} from "angularfire2";
 
-import {Observable} from 'rxjs/Observable';
-import 'rxjs/add/operator/catch';
+import {Observable} from "rxjs/Observable";
+import "rxjs/add/operator/catch";
 
 export class Category {
     //  Unique Id
@@ -19,9 +19,9 @@ export class Category {
 
 @Injectable()
 export class CategoryService {
-    
+
     // URL to Categories web api
-    private categoriesUrl = 'categories'; 
+    private categoriesUrl = "categories";
     // We keep categories in cache variable
     private categories: Category[] = [];
 
@@ -43,8 +43,8 @@ export class CategoryService {
     }
 
     private handleError(error: any): Observable<any> {
-        let errMsg = (error.message) ? error.message : error.status ? 
-            `${error.status} - ${error.statusText}` : 'Server error';
+        let errMsg = (error.message) ? error.message : error.status ?
+            `${error.status} - ${error.statusText}` : "Server error";
         window.alert(`An error occurred: ${errMsg}`);
         return Observable.throw(errMsg);
     }
