@@ -2,6 +2,10 @@ body {
     padding-top: 60px;
 }
 
+a {
+    cursor: pointer;
+}
+
 .product-menu {
     height: 50px;
     margin-top: 22px;
@@ -48,12 +52,6 @@ body {
 	text-align: center;
 	width: 100%;
 }
-
-/*.table-cart td span {
-	display: block;
-	margin: 0 auto;
-	text-align: center;
-}*/
 
 .table-cart tr {
 	border-bottom:1px solid gray;

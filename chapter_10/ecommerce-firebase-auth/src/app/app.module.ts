@@ -5,7 +5,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 /**
  * Modules
  */
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from "./auth/auth.module";
 import { CartModule } from "./cart/cart.module";
 import { CategoryModule } from "./category/category.module";
 import { ProductModule } from "./product/product.module";
@@ -27,7 +27,7 @@ import { routing } from "./app.routes";
 /*
  * Angular Firebase
  */
-import { AngularFireModule } from "angularfire2";
+import { AngularFireModule, AuthProviders, AuthMethods } from "angularfire2";
 import * as firebase from "firebase";
 
 // Initialize Firebase
@@ -38,9 +38,16 @@ export var firebaseConfig = {
   storageBucket: "ecommerce-a99fc.appspot.com",
 };
 
+// Initialize Firebase Authentication
+const firebaseAuthConfig = {
+  provider: AuthProviders.Password,
+  method: AuthMethods.Redirect
+};
+
+
 @NgModule({
   imports: [
-    AngularFireModule.initializeApp(firebaseConfig), AuthModule,
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig), AuthModule,
     BrowserModule, FormsModule, ReactiveFormsModule,
     routing, CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent,

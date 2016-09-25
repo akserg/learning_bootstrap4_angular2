@@ -1,26 +1,22 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { SignInComponent } from './sign-in.component';
-import { AuthGuard } from './auth.guard';
-import { UnauthGuard } from './unauth.guard';
-import { AuthService } from './auth.service';
+/*
+ * Angular Imports
+ */
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { Routes, RouterModule } from "@angular/router";
+/*
+ * Components
+ */
+import { SignInComponent } from "./sign-in.component";
+import { AuthGuard } from "./auth.guard";
+import { AuthService } from "./auth.service";
 
 @NgModule({
-  declarations: [
-    SignInComponent
-  ],
-  imports: [CommonModule],
-  providers: [
-    AuthGuard,
-    AuthService,
-    UnauthGuard
-  ]
+  declarations: [SignInComponent],
+  imports: [CommonModule, FormsModule, ReactiveFormsModule],
+  providers: [AuthGuard, AuthService]
 })
+export class AuthModule { }
 
-export class AuthModule {}
-
-export { AuthGuard };
-export { AuthService };
-export { UnauthGuard };
+export { AuthGuard, AuthService };
