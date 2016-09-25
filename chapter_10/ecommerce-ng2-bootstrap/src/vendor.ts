@@ -12,7 +12,3 @@ import "rxjs/add/operator/map";
 import "rxjs/add/operator/pluck";
 import "rxjs/add/operator/switchMap";
 import "rxjs/add/operator/take";
-
-// Bootstrap 4
-import "jquery";
-import "bootstrap-loader";

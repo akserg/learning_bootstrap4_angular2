@@ -8,8 +8,10 @@ import {CartMenuComponent} from "./cart-menu.component";
 import {CartViewComponent} from "./cart-view.component";
 import {CartService} from "./cart.service";
 
+import {DropdownModule} from 'ng2-bootstrap';
+
 @NgModule({
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule],
+    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, DropdownModule],
     declarations: [CartItemCountComponent, CartMenuComponent, CartViewComponent],
     exports: [CartMenuComponent, CartViewComponent, CartItemCountComponent],
     providers: [CartService]

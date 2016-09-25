@@ -1,12 +1,12 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 /*
  * Components
  */
-import {Cart, CartService} from "./cart.service";
+import { Cart, CartService } from "./cart.service";
 
 @Component({
     selector: "db-cart-menu",
