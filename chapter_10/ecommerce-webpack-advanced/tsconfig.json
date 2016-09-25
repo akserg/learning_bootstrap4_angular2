@@ -15,14 +15,11 @@
     "types": [
       "core-js",
       "firebase",
-      "jasmine",
       "node"
     ]
   },
-
   "exclude": [
     "node_modules",
-    "target",
-    "tmp"
+    "dist"
   ]
 }
