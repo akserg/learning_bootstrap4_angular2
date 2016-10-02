@@ -3,6 +3,7 @@ import {AngularFire, FirebaseListObservable} from 'angularfire2';
 import {Observable} from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/throw';
 
 export interface Product {
     // Unique Id
