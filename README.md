@@ -1,6 +1,17 @@
-Learning Web development with Bootstrap 4 and Angular 2
-=========================
+Source code for "Learning Web Development with Bootstrap and Angular, Second Edition", Packt Publishing 
+====================================================
 
-Contains code of the book: Learning Web development with Bootstrap 4 and Angular 2, by Sergey Akopkokhyants (Packt Publishing)
+## Overview
 
-Free Images from [Pixaboy](https://pixabay.com) published under [Creative Commons CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en) licence in behalf of [Terms of Service](https://pixabay.com/en/service/terms).
+This repository contains source code referenced in [Learning Web Development with Bootstrap and Angular, Second Edition] (https://www.packtpub.com) book. 
+
+ 
+## Organization
+
+The source code is organized by individual chapters. Code corresponding to each Chapter is found in the ChapterX folder where X represents the Chapter number. Each ChapterX folder further contains several sub folders - each of them referenced from the chapter.
+
+## Questions
+
+Please send your questions and comments to:
+ 
+ Sergey Akopkokhyants ([email](mailto:akserg@gmail.com))  
