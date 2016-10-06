@@ -3,12 +3,11 @@
  */
 import {Component} from '@angular/core';
 import {Router} from '@angular/router';
-import {REACTIVE_FORM_DIRECTIVES, FormControl} from '@angular/forms';
+import {FormControl} from '@angular/forms';
 
 @Component({
     selector: 'db-product-search',
-    templateUrl: 'app/product/product-search.component.html',
-    directives: [REACTIVE_FORM_DIRECTIVES]
+    templateUrl: 'app/product/product-search.component.html'
 })
 export class ProductSearchComponent {
 

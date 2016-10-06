@@ -1,21 +1,18 @@
 /*
  * Angular Imports
  */
-import {Component} from '@angular/core';
-import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 /*
  * Components Imports
  */
-import {Product, ProductService} from './product.service';
-import {Cart, CartItem, CartService} from '../cart/cart.service';
-import {CategoryTitlePipe} from '../category/index';
+import { Product, ProductService } from './product.service';
+import { Cart, CartItem, CartService } from '../cart/cart.service';
 
 @Component({
     selector: 'db-product-view',
-    templateUrl: 'app/product/product-view.component.html',
-    directives: [ROUTER_DIRECTIVES],
-    pipes: [CategoryTitlePipe]
+    templateUrl: 'app/product/product-view.component.html'
 })
 export class ProductViewComponent {
 
@@ -30,9 +27,9 @@ export class ProductViewComponent {
         return this.cartItem ? this.cartItem.amount : 0;
     }
 
-    constructor(private route: ActivatedRoute, 
-                private productService: ProductService, 
-                private cartService: CartService) {
+    constructor(private route: ActivatedRoute,
+        private productService: ProductService,
+        private cartService: CartService) {
         this.route
             .params
             .subscribe(params => {
