@@ -9,7 +9,6 @@ import {ActivatedRoute} from '@angular/router';
  */
 import {Product, ProductService} from './product.service';
 import {Cart, CartItem, CartService} from '../cart/cart.service';
-import {CategoryTitlePipe} from '../category/index';
 
 @Component({
     selector: 'db-product-view',

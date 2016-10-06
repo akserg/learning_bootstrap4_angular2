@@ -2,20 +2,17 @@
  * Angular Imports
  */
 import {Component} from '@angular/core';
-import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 /*
  * Components Imports
  */
 import {Product, ProductService} from './product.service';
 import {Cart, CartItem, CartService} from '../cart/cart.service';
-import {CategoryTitlePipe} from '../category/index';
 
 @Component({
     selector: 'db-product-view',
-    templateUrl: 'app/product/product-view.component.html',
-    directives: [ROUTER_DIRECTIVES],
-    pipes: [CategoryTitlePipe]
+    templateUrl: 'app/product/product-view.component.html'
 })
 export class ProductViewComponent {
 

@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {provideRouter, RouterConfig} from '@angular/router';
+import {Routes, RouterModule} from '@angular/router';
 
 /*
  * Components
@@ -13,17 +13,14 @@ import {ProductViewComponent} from './product/product-view.component';
 /*
  * Routes
  */
-const routes: RouterConfig = [
+const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
-  { path: 'product/:id', component: ProductViewComponent }
+  { path: 'products/:id', component: ProductViewComponent },
 ];
 
 /*
  * Routes Provider
  */
-export const APP_ROUTER_PROVIDER = [
-    // Installs our routes
-    provideRouter(routes)
-];
+export const routing = RouterModule.forRoot(routes);
