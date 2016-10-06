@@ -16,7 +16,7 @@
             <div *ngFor="let category of slideCategories;let first=first"
                     class="carousel-item" [ngClass]="{active: first}">
                 <db-category-slide
-                [category]="category" (select)="selectCategory($event)">
+                [category]="category">
                 </db-category-slide>
             </div>
         </div>
@@ -37,7 +37,7 @@
   <!-- /.row -->
   <div class="row">
     <db-category-card *ngFor="let category of cardCategories"
-      [category]="category" (select)="selectCategory($event)">
+      [category]="category">
     </db-category-card>
   </div>
   <!-- /.row -->

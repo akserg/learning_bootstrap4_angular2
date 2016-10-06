@@ -8,12 +8,10 @@ import {Router} from '@angular/router';
  * Components
  */
 import {Product, ProductService} from './product.service';
-import {ProductCardComponent} from './product-card.component';
 
 @Component({
     selector: 'db-product-grid',
-    templateUrl: 'app/product/product-grid.component.html',
-    directives: [ProductCardComponent]
+    templateUrl: 'app/product/product-grid.component.html'
 })
 export class ProductGridComponent {
     products: any = [];
@@ -21,6 +19,7 @@ export class ProductGridComponent {
     constructor(private router: Router, private productService: ProductService) {
         this.router
             .routerState
+            .root
             .queryParams
             .subscribe(params => {
                 let category: string = params['category'];
