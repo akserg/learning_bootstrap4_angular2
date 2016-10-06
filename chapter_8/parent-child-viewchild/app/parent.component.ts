@@ -1,4 +1,4 @@
-import {Component, Input, AfterViewInit, ViewChild} from '@angular/core';
+import {Component, Input, AfterViewInit, AfterViewChecked, ViewChild} from '@angular/core';
 
 import {ChildComponent} from './child.component';
 
@@ -20,13 +20,21 @@ import {ChildComponent} from './child.component';
     }
   `]
 })
-export class ParentComponent implements AfterViewInit {
+export class ParentComponent implements AfterViewInit, AfterViewChecked {
   @Input() title: string;
 
   @ViewChild(ChildComponent)
   private child: ChildComponent;
 
   ngAfterViewInit() {
-    this.child.desc = "You are mine";
+    // The viewChild is set after the view has been initialized
+    console.log("The viewChild is set", this.child.desc);
+  }
+
+  /**
+   * The viewChild is updated after the view has been checked
+   */
+  ngAfterViewChecked() {
+    console.log("The viewChild is checked", this.child.desc);
   }
 }

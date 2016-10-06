@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'my-child',
@@ -13,6 +13,10 @@ import {Component, Input} from '@angular/core';
     }
   `]
 })
-export class ChildComponent { 
-  @Input() desc: string;
+export class ChildComponent implements OnInit  { 
+  @Input() desc: string = "You are mine";
+
+  ngOnInit(): void {
+    this.desc = "You are checked";
+  }
 }
