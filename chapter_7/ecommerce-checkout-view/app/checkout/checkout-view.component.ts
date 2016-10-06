@@ -2,8 +2,7 @@
  * Angular Imports
  */
 import {Component, Input} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
-import {REACTIVE_FORM_DIRECTIVES, FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 
 /*
  * Components
@@ -13,8 +12,7 @@ import {CartItemCountComponent} from '../cart/cart-item-count.component';
 
 @Component({
     selector: 'db-checkout-view',
-    templateUrl: 'app/checkout/checkout-view.component.html',
-    directives: [ROUTER_DIRECTIVES, REACTIVE_FORM_DIRECTIVES]
+    templateUrl: 'app/checkout/checkout-view.component.html'
 })
 export class CheckoutViewComponent {
 

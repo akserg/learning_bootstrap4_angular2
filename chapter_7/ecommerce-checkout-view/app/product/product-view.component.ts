@@ -2,7 +2,7 @@
  * Angular Imports
  */
 import {Component} from '@angular/core';
-import {ActivatedRoute, ROUTER_DIRECTIVES} from '@angular/router';
+import {ActivatedRoute} from '@angular/router';
 
 /*
  * Components Imports
@@ -13,9 +13,7 @@ import {CategoryTitlePipe} from '../category/index';
 
 @Component({
     selector: 'db-product-view',
-    templateUrl: 'app/product/product-view.component.html',
-    directives: [ROUTER_DIRECTIVES],
-    pipes: [CategoryTitlePipe]
+    templateUrl: 'app/product/product-view.component.html'
 })
 export class ProductViewComponent {
 

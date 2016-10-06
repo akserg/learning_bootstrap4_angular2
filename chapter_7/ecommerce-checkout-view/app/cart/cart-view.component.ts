@@ -2,7 +2,6 @@
  * Angular Imports
  */
 import {Component, Input} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 /*
  * Components
@@ -12,8 +11,7 @@ import {CartItemCountComponent} from './cart-item-count.component';
 
 @Component({
     selector: 'db-cart-view',
-    templateUrl: 'app/cart/cart-view.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: 'app/cart/cart-view.component.html'
 })
 export class CartViewComponent {
 
