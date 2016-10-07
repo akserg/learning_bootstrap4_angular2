@@ -1,12 +1,10 @@
 import {Component, Input} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
 
 import {Product} from './product';
 
 @Component({
     selector: 'db-product-card',
-    templateUrl: 'app/product/product-card.component.html',
-    directives: [ROUTER_DIRECTIVES]
+    templateUrl: 'app/product/product-card.component.html'
 })
 export class ProductCardComponent {
     @Input() products: Product[];

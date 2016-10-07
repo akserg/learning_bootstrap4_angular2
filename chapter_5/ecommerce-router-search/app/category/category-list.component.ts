@@ -1,20 +1,21 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from '@angular/core';
+import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 /*
  * Components
  */
-import {Category} from './category';
+import {Category, getCategories} from './category';
 
 @Component({
-    selector: 'db-category-card',
-    templateUrl: 'app/shared/category/category-card.component.html'
+    selector: 'db-category-list',
+    templateUrl: 'app/category/category-list.component.html'
 })
-export class CategoryCardComponent {
-    @Input() category: Category;
+export class CategoryListComponent {
+
+    categories: Category[] = getCategories();
 
     constructor(private router: Router) {}
 

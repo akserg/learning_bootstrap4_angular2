@@ -1,37 +1,14 @@
 /*
  * Angular Imports
  */
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {provide} from '@angular/core';
-import {provideRouter, RouterConfig} from '@angular/router';
+import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
 /*
- * Components
+ * The app module
  */
-import {AppComponent} from './app.component';
-import {WelcomeComponent} from './welcome/welcome.component';
-import {ProductListComponent} from './product/product-list.component';
-
-/*
- * Routes
- */
-const routes: RouterConfig = [
-  { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-  { path: 'welcome', component: WelcomeComponent },
-  { path: 'products', component: ProductListComponent }
-];
-
-/*
- * Routes Provider
- */
-const APP_ROUTER_PROVIDER = [
-    // Installs our routes
-    provideRouter(routes)
-];
+import {AppModule} from './app.module';
 
 /*
  * Bootstrap out application
  */
-bootstrap(AppComponent, [
-    APP_ROUTER_PROVIDER,
-]);
+platformBrowserDynamic().bootstrapModule(AppModule);
