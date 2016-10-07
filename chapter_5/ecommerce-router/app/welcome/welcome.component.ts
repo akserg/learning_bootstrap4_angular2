@@ -6,12 +6,11 @@ import {Component} from '@angular/core';
 /*
  * Components
  */
-import {Category, CategoryCardComponent, CategorySlideComponent, getCategories, getCategory} from '../shared/category/index';
+import {Category, getCategories, getCategory} from '../category/category';
 
 @Component({
   selector: 'db-welcome',
-  templateUrl: 'app/welcome/welcome.component.html',
-  directives: [CategoryCardComponent, CategorySlideComponent]
+  templateUrl: 'app/welcome/welcome.component.html'
 })
 export class WelcomeComponent {
   // Slide Categories
