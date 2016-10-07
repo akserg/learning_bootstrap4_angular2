@@ -1,13 +1,13 @@
+/*
+ * Angular Imports
+ */
 import {Component} from '@angular/core';
-import {bootstrap} from '@angular/platform-browser-dynamic';
 
-import {NavbarComponent} from './shared/navbar/navbar.component';
-import {Category, CategoryCardComponent, CategorySlideComponent} from './shared/category/index';
+import {Category} from './category/category';
 
 @Component({
   selector: 'my-app',
-  templateUrl: 'app/app.component.html',
-  directives: [NavbarComponent, CategoryCardComponent, CategorySlideComponent]
+  templateUrl: 'app/app.component.html'
 })
 export class AppComponent {
   // Slide Categories

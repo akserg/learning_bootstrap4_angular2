@@ -13,17 +13,17 @@
               attr.data-slide-to="{{i}}" [ngClass]="{active: first}"></li>
         </ol>
 
-<!-- Content -->
-<div class="carousel-inner" role="listbox">
+        <!-- Content -->
+        <div class="carousel-inner" role="listbox">
 
-  <div *ngFor="let category of slideCategories;let first=first"
-        class="carousel-item" [ngClass]="{active: first}">
-    <db-category-slide
-      [category]="category" (select)="selectCategory($event)">
-    </db-category-slide>
-  </div>
+          <div *ngFor="let category of slideCategories;let first=first"
+                class="carousel-item" [ngClass]="{active: first}">
+            <db-category-slide
+              [category]="category" (select)="selectCategory($event)">
+            </db-category-slide>
+          </div>
 
-</div>
+        </div>
 
         <!-- Previous/Next controls -->
         <a class="left carousel-control" href="#welcome-products" role="button" data-slide="prev">
@@ -51,9 +51,7 @@
   <div class="container">
     <address>
       <strong>Contact Info</strong><br>
-      0000 Market St, Suite 000,<br>
-      San Francisco, CA 00000,<br>
-      (123) 456-7890, <a href="mailto:#">support@dream-bean.com</a>
+      0000 Market St, Suite 000, San Francisco, CA 00000, (123) 456-7890, <a href="mailto:#">support@dream-bean.com</a>
     </address>
   </div>
 </footer>
