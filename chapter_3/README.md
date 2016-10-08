@@ -21,6 +21,7 @@ The source code is organized by individual projects:
 - [3.ecommerce-input-group](3.ecommerce-input-group)
 - [4.ecommerce-list-group](4.ecommerce-list-group)
 - [5.ecommerce-grid-in-grid](5.ecommerce-grid-in-grid)
+- [6.ecommerce-dropdown](6.ecommerce-dropdown)
 
 ## Questions
 
