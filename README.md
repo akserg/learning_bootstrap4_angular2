@@ -12,6 +12,4 @@ The source code is organized by individual chapters. Code corresponding to each 
 
 ## Questions
 
-Please send your questions and comments to:
- 
- Sergey Akopkokhyants ([email](mailto:akserg@gmail.com))  
+Please send your questions and comments to author Sergey Akopkokhyants ([email](mailto:akserg@gmail.com))  
