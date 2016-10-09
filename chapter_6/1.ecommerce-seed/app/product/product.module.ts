@@ -8,14 +8,11 @@ import {ProductCardComponent} from './product-card.component';
 import {ProductSearchComponent} from './product-search.component';
 import {ProductGridComponent} from './product-grid.component';
 
-import {ProductService} from './product.service';
-
 import {CategoryModule} from '../category/category.module';
 
 @NgModule({
     imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, CategoryModule],
     declarations: [ProductListComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent],
-    exports: [ProductListComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent],
-    providers: [ProductService]
+    exports: [ProductListComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent]
 })
 export class ProductModule {}
