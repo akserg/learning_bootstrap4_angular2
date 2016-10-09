@@ -16,12 +16,13 @@ In this chapter, we continue to discover the world of Bootstrap 4. You meet new 
 ## Organization
 
 The source code is organized by individual projects:
-- [1.ecommerce-jumbotron](1.ecommerce-jumbotron)
-- [2.ecommerce-carousel](2.ecommerce-carousel)
-- [3.ecommerce-input-group](3.ecommerce-input-group)
-- [4.ecommerce-list-group](4.ecommerce-list-group)
-- [5.ecommerce-grid-in-grid](5.ecommerce-grid-in-grid)
-- [6.ecommerce-dropdown](6.ecommerce-dropdown)
+- [1.ecommerce-seed](1.ecommerce-seed)
+- [2.ecommerce-jumbotron](2.ecommerce-jumbotron)
+- [3.ecommerce-carousel](3.ecommerce-carousel)
+- [4.ecommerce-input-group](4.ecommerce-input-group)
+- [5.ecommerce-list-group](5.ecommerce-list-group)
+- [6.ecommerce-grid-in-grid](6.ecommerce-grid-in-grid)
+- [7.ecommerce-dropdown](7.ecommerce-dropdown)
 
 ## Questions
 
