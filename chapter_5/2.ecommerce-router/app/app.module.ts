@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
 
 /**
  * Modules
@@ -23,10 +22,10 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {routing}  from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, 
-            routing, CategoryModule, ProductModule],
-  declarations: [AppComponent, NavbarComponent, FooterComponent, 
-                WelcomeComponent],
+  imports: [BrowserModule, FormsModule, routing,
+            CategoryModule, ProductModule],
+  declarations: [AppComponent, NavbarComponent, FooterComponent,
+    WelcomeComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,5 +7,4 @@ import {Component} from '@angular/core';
   selector: 'db-footer',
   templateUrl: 'app/footer/footer.component.html'
 })
-export class FooterComponent {
-}
+export class FooterComponent { }
