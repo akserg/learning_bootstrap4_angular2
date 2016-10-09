@@ -1,4 +1,4 @@
-Source code for chapter 4 "Creating the Template" 
+Source code for chapter 5 "Creating the Template" 
 ====================================================
 
 This repository contains source code referenced in [Learning Web Development with Bootstrap and Angular, Second Edition] (https://www.packtpub.com) book.
