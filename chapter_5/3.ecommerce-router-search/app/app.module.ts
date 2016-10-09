@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {FormsModule} from '@angular/forms';
+import {LocationStrategy, HashLocationStrategy , PathLocationStrategy} from '@angular/common';
 
 /**
  * Modules
@@ -23,10 +23,11 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {routing}  from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, 
+  imports: [BrowserModule, FormsModule, 
             routing, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
