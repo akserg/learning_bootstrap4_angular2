@@ -8,7 +8,6 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
  * Components
  */
 import {Cart, CartItem, CartService} from '../cart/cart.service';
-import {CartItemCountComponent} from '../cart/cart-item-count.component';
 
 @Component({
     selector: 'db-checkout-view',
