@@ -7,7 +7,6 @@ import {Component, Input} from '@angular/core';
  * Components
  */
 import {Cart, CartItem, CartService} from './cart.service';
-import {CartItemCountComponent} from './cart-item-count.component';
 
 @Component({
     selector: 'db-cart-view',

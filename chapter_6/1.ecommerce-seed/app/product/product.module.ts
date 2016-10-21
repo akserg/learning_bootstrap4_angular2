@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {ProductListComponent} from './product-list.component';
@@ -11,7 +10,7 @@ import {ProductGridComponent} from './product-grid.component';
 import {CategoryModule} from '../category/category.module';
 
 @NgModule({
-    imports: [CommonModule, FormsModule, ReactiveFormsModule, RouterModule, CategoryModule],
+    imports: [CommonModule, RouterModule, CategoryModule],
     declarations: [ProductListComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent],
     exports: [ProductListComponent, ProductCardComponent, ProductSearchComponent, ProductGridComponent]
 })

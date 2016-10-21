@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 /**
  * Modules
@@ -23,8 +22,7 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {routing}  from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule, 
-            routing, CartModule, CategoryModule, ProductModule],
+  imports: [BrowserModule, routing, CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent],
   bootstrap: [AppComponent]

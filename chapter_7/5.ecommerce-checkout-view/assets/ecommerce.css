@@ -88,3 +88,10 @@ a:hover {
 	text-align: center;
 }
 
+.ng-valid[required], .ng-valid.required  {
+  border-left: 2px solid green;
+}
+
+.ng-invalid:not(form)  {
+  border-left: 2px solid red;
+}
