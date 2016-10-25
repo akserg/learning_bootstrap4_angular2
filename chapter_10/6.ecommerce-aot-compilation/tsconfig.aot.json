@@ -1,31 +1,39 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "lib": [
-      "dom",
-      "es5"
-    ],
+    "target": "es2015",
     "module": "es2015",
     "moduleResolution": "node",
-    "noEmitHelpers": true,
+    "declaration": false,
     "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "sourceMap": true,
-    "target": "es5",
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "typeRoots": [ "./node_modules/@types" ],
     "types": [
       "core-js",
       "firebase",
       "node",
       "moment"
+    ],
+    "lib": [
+      "dom",
+      "es5"
     ]
   },
+  "angularCompilerOptions": {
+    "debug": true
+  },
+  "compileOnSave": false,
+  "files": [
+    "src/main.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist"
-  ],
-  "angularCompilerOptions": {
-    "skipMetadataEmit" : true,
-    "debug": true
- }
+  ]
 }

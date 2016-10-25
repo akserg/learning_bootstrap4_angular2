@@ -2,12 +2,12 @@
  * Angular Imports
  */
 import { enableProdMode } from "@angular/core";
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { platformBrowser } from '@angular/platform-browser';
 
 /*
  * The app module
  */
-import { AppModuleNgFactory } from './app.module.ngfactory';
+import { AppModuleNgFactory } from "./app/app.module.ngfactory";
 
 /**
  * Import styles
@@ -21,4 +21,4 @@ if (process.env.NODE_ENV === "production") {
 /*
  * Bootstrap out application
  */
-platformBrowserDynamic().bootstrapModule(AppModuleNgFactory);
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);

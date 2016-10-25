@@ -11,7 +11,7 @@ import { Category, CategoryService } from "../category/category.service";
 
 @Component({
   selector: "db-welcome",
-  template: require("./welcome.component.html")
+  template: "./welcome.component.html"
 })
 export class WelcomeComponent implements OnInit {
   // Slide Categories

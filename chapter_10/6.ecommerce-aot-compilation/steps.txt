@@ -1,0 +1,84 @@
+1. 
+npm install @angular/compiler-cli @angular/platform-server --save-dev
+--------------
+2.
+npm install @ngtools/webpack angular2-template-loader source-map-explorer --save-dev
+--------------
+3.
+tsconfig.aot.json:
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "declaration": false,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "pretty": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noFallthroughCasesInSwitch": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "typeRoots": [ "./node_modules/@types" ],
+    "types": [
+      "core-js",
+      "firebase",
+      "node",
+      "moment"
+    ],
+    "lib": [
+      "dom",
+      "es5"
+    ]
+  },
+  "angularCompilerOptions": {
+    "debug": true
+  },
+  "compileOnSave": false,
+  "files": [
+    "app/main.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
+--------------
+4.
+"ngc": "ngc -p ./tsconfig.aot.json"
+--------------
+5.
+main.aot.ts:
+/*
+ * Angular Imports
+ */
+import { enableProdMode } from "@angular/core";
+import { platformBrowser } from '@angular/platform-browser';
+
+/*
+ * The app module
+ */
+import { AppModuleNgFactory } from "./app/app.module.ngfactory";
+
+/**
+ * Import styles
+ */
+import "./assets/ecommerce.scss";
+
+if (process.env.NODE_ENV === "production") {
+  enableProdMode();
+}
+
+/*
+ * Bootstrap out application
+ */
+platformBrowser().bootstrapModuleFactory(AppModuleNgFactory);
+--------------
+6.
+"webpack": "webpack --config webpack.config.js"

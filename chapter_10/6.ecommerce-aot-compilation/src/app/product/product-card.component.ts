@@ -10,7 +10,7 @@ import {Product} from "./product.service";
 
 @Component({
     selector: "db-product-card",
-    template: require("./product-card.component.html")
+    template: "./product-card.component.html"
 })
 export class ProductCardComponent {
     @Input() products: Product[];

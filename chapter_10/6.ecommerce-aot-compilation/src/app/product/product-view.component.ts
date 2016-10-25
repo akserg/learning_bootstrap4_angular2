@@ -12,7 +12,7 @@ import {Cart, CartItem, CartService} from "../cart/cart.service";
 
 @Component({
     selector: "db-product-view",
-    template: require("./product-view.component.html")
+    template: "./product-view.component.html"
 })
 export class ProductViewComponent implements OnInit {
 

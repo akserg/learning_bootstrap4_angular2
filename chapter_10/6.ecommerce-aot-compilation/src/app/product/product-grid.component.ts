@@ -17,7 +17,7 @@ import {CartService} from "../cart/cart.service";
 
 @Component({
     selector: "db-product-grid",
-    template: require("./product-grid.component.html")
+    template: "./product-grid.component.html"
 })
 export class ProductGridComponent implements OnInit {
     products: Observable<Product[]>;
