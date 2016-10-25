@@ -23,10 +23,9 @@
     "lint:ts": "tslint './src/**/*.ts'",
     "prebuild": "run-s clean:dist lint",
     "server:dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "start": "npm run server:dev",
-
     "ngc": "ngc -p ./tsconfig.aot.json",
-    "webpack-aot": "webpack --config webpack.config.aot.js"
+    "webpack-aot": "webpack --config webpack.config.aot.js",
+    "start": "npm run ngc && npm run webpack-aot && npm run serve:dev"
   },
   "devDependencies": {
     "@angular/common": "2.1.0",
@@ -45,6 +44,7 @@
     "angular2-template-loader": "^0.5.0",
     "angularfire2": "2.0.0-beta.5",
     "autoprefixer": "~6.4.1",
+    "awesome-typescript-loader": "^2.2.4",
     "core-js": "~2.4.1",
     "cross-env": "~2.0.1",
     "css-loader": "^0.25.0",
