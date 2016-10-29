@@ -1,4 +1,4 @@
-<div class="nav navbar-nav pull-xs-right">
+<div class="nav navbar-nav float-xs-right">
     <div class="nav-item">
         <div dropdown>
             <a href class="nav-link" id="cart-dropdown" dropdownToggle>
@@ -26,16 +26,16 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <div class="total-cart pull-xs-right">
+                            <div class="total-cart float-xs-right">
                                 <b>Total: {{cart.amount | currency:'USD':true:'1.2-2'}}</b>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a [routerLink]="['/cart']" class="btn btn-primary pull-xs-right btn-cart">
+                            <a [routerLink]="['/cart']" class="btn btn-primary float-xs-right btn-cart">
                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a>
-                            <a [routerLink]="['/checkout']" class="btn btn-success pull-xs-right btn-cart">
+                            <a [routerLink]="['/checkout']" class="btn btn-success float-xs-right btn-cart">
                                 <i class="fa fa-credit-card" aria-hidden="true"></i> Checkout</a>
                         </div>
                     </div>
