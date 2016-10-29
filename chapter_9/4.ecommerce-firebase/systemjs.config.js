@@ -17,7 +17,6 @@
       '@angular/http': 'npm:@angular/http/bundles/http.umd.js',
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
-      '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
       // other libraries
       'rxjs':                      'npm:rxjs',
       'firebase':                  'npm:firebase',
@@ -30,10 +29,6 @@
         defaultExtension: 'js'
       },
       rxjs: {
-        defaultExtension: 'js'
-      },
-      'angular-in-memory-web-api': {
-        main: './index.js',
         defaultExtension: 'js'
       },
       'firebase': { 

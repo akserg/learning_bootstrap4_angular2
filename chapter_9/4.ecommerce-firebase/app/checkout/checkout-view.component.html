@@ -6,30 +6,42 @@
                     <label for="firstName" class="col-xs-3 col-form-label">First Name:</label>
                     <div class="col-xs-9">
                         <input class="form-control" type="text" value="" id="firstName" formControlName="firstName">
+                        <p [hidden]="form.controls.firstName.valid || form.controls.firstName.pristine" class="form-text alert-danger">
+                            The First Name is required
+                        </p>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="lastName" class="col-xs-3 col-form-label">Last Name:</label>
                     <div class="col-xs-9">
                         <input class="form-control" type="text" value="" id="lastName" formControlName="lastName">
+                        <p [hidden]="form.controls.lastName.valid || form.controls.lastName.pristine" class="form-text alert-danger">
+                            The Last Name is required
+                        </p>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="email" class="col-xs-3 col-form-label">Email:</label>
                     <div class="col-xs-9">
-                        <input class="form-control" type="email" value="" id="email">
+                        <input class="form-control" type="email" value="" id="email" formControlName="email">
+                        <p [hidden]="form.controls.email.valid || form.controls.email.pristine" class="form-text alert-danger">
+                            The Email is required
+                        </p>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="phone" class="col-xs-3 col-form-label">Phone:</label>
                     <div class="col-xs-9">
-                        <input class="form-control" type="email" value="" id="phone">
+                        <input class="form-control" type="phone" value="" id="phone" formControlName="phone">
+                        <p [hidden]="form.controls.phone.valid || form.controls.phone.pristine" class="form-text alert-danger">
+                            The Phone is required
+                        </p>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="address" class="col-xs-3 col-form-label">Address:</label>
                     <div class="col-xs-9">
-                        <input class="form-control" type="text" value="" id="address">
+                        <input class="form-control" type="text" value="" id="address" formControlName="address">
                     </div>
                 </div>
             </form>
@@ -37,13 +49,13 @@
         <div class="col-md-6">
             <form class="form-horizontal">
                 <div class="form-group row">
-                    <label class="col-xs-3 col-form-label">Order</label>
+                    <label for="last_name" class="col-xs-3 form-control-label">Order</label>
                     <div class="col-xs-9">
                         <h4 class="form-control-static">1002</h4>
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-xs-3 col-form-label">Amount</label>
+                    <label for="last_name" class="col-xs-3 form-control-label">Amount</label>
                     <div class="col-xs-9">
                         <h4 class="form-control-static">{{cart.amount | currency:'USD':true:'1.2-2'}}</h4>
                     </div>
@@ -67,7 +79,7 @@
                         </div>
                     </div>
                     <div class="col-xs-9">
-                        <button class="btn btn-primary" (click)="submit()">Submit</button>
+                        <button class="btn btn-primary" (click)="submit()" [disabled]="!form.valid">Submit</button>
                         <button class="btn btn-secondary" [routerLink]="['/products']">Continue Shopping</button>
                     </div>
                 </div>

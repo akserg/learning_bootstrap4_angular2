@@ -1,4 +1,4 @@
-import {InMemoryDbService} from 'angular2-in-memory-web-api';
+import {InMemoryDbService} from 'angular-in-memory-web-api';
 
 import {Category} from './category/category.service';
 import {Product} from './product/product.service';
