@@ -1,24 +1,12 @@
-/*
- * Angular Imports
- */
-import { enableProdMode } from "@angular/core";
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import './polyfills.ts';
 
-/*
- * The app module
- */
-import { AppModule } from "./app/app.module";
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
+import { AppModule } from './app';
 
-/**
- * Import styles
- */
-import "./assets/ecommerce.scss";
-
-if (process.env.NODE_ENV === "production") {
+if (environment.production) {
   enableProdMode();
 }
 
-/*
- * Bootstrap out application
- */
 platformBrowserDynamic().bootstrapModule(AppModule);

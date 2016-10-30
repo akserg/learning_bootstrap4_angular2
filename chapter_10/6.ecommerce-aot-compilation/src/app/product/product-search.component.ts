@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
 
 @Component({
     selector: "db-product-search",
-    template: "./product-search.component.html"
+    templateUrl: "./product-search.component.html"
 })
 export class ProductSearchComponent {
 

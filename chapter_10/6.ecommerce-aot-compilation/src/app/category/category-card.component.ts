@@ -11,7 +11,7 @@ import {Category} from "./category.service";
 
 @Component({
     selector: "db-category-card",
-    template: "./category-card.component.html"
+    templateUrl: "./category-card.component.html"
 })
 export class CategoryCardComponent {
     @Input() category: Category;

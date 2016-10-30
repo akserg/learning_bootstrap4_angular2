@@ -12,8 +12,8 @@ import { AuthService } from "./auth.service";
 
 @Component({
     selector: "db-signin",
-    template: "./sign-in.component.html",
-    styles: ["./auth.scss"]
+    templateUrl: "./sign-in.component.html",
+    styleUrls: ["./auth.scss"]
 })
 export class SignInComponent {
     public form: FormGroup;

@@ -11,7 +11,7 @@ import {CartItemCountComponent} from "./cart-item-count.component";
 
 @Component({
     selector: "db-cart-view",
-    template: "./cart-view.component.html"
+    templateUrl: "./cart-view.component.html"
 })
 export class CartViewComponent {
 

@@ -11,7 +11,7 @@ import { AuthService } from "../auth/auth.service";
 
 @Component({
   selector: "db-navbar",
-  template: "./navbar.component.html"
+  templateUrl: "./navbar.component.html"
 })
 export class NavbarComponent {
 

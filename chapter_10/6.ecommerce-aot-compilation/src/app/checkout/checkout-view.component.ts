@@ -12,7 +12,7 @@ import {CartItemCountComponent} from "../cart/cart-item-count.component";
 
 @Component({
     selector: "db-checkout-view",
-    template: "./checkout-view.component.html"
+    templateUrl: "./checkout-view.component.html"
 })
 export class CheckoutViewComponent {
 

@@ -2,8 +2,8 @@ body {
     padding-top: 60px;
 }
 
-a {
-    cursor: pointer;
+a:hover { 
+    cursor: pointer; 
 }
 
 .product-menu {

@@ -26,23 +26,27 @@
     "start": "npm run server:dev"
   },
   "dependencies": {
-    "@angular/common": "2.0.0",
-    "@angular/compiler": "2.0.0",
-    "@angular/core": "2.0.0",
-    "@angular/forms": "2.0.0",
-    "@angular/platform-browser": "2.0.0",
-    "@angular/platform-browser-dynamic": "2.0.0",
-    "@angular/router": "3.0.0",
+    "@angular/common": "^2.0.0",
+    "@angular/compiler": "^2.0.0",
+    "@angular/core": "^2.0.0",
+    "@angular/forms": "^2.0.0",
+    "@angular/platform-browser": "^2.0.0",
+    "@angular/platform-browser-dynamic": "^2.0.0",
+    "@angular/router": "^3.0.0",
 
-    "angularfire2": "2.0.0-beta.5",
-    "firebase": "3.3.0",
 
-    "bootstrap": "4.0.0-alpha.2",
-    "jquery": "2.2.4",
-    "tether": "1.3.2",
+
+
     "core-js": "~2.4.1",
     "rxjs": "5.0.0-beta.12",
     "zone.js": "~0.6.25",
+
+    "jquery": "2.2.4",
+    "bootstrap": "4.0.0-alpha.2",
+    "tether": "1.3.2",
+
+    "angularfire2": "2.0.0-beta.5",
+    "firebase": "3.3.0",
 
     "bootstrap-loader": "1.0.9"
   },

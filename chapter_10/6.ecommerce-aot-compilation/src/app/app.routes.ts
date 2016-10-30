@@ -21,7 +21,7 @@ import { CheckoutViewComponent } from "./checkout/checkout-view.component";
 /*
  * Routes
  */
-const routes: Routes = [
+export const routes: Routes = [
   { path: "", redirectTo: "welcome", pathMatch: "full" },
   { path: "login", component: SignInComponent },
   { path: "welcome", component: WelcomeComponent, canActivate: [AuthGuard] },
@@ -34,4 +34,4 @@ const routes: Routes = [
 /*
  * Routes Provider
  */
-export const routing = RouterModule.forRoot(routes);
+// export const routing = RouterModule.forRoot(routes);
