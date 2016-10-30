@@ -1,4 +1,4 @@
-Source code for chapter 8 "Communication and Data persistence" 
+Source code for chapter 9 "Communication and Data persistence" 
 ====================================================
 
 This repository contains source code referenced in [Learning Web Development with Bootstrap 4 and Angular 2, Second Edition] (https://www.packtpub.com) book.
