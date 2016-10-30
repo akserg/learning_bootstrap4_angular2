@@ -1,7 +1,7 @@
 Source code for chapter 3 "Advanced Bootstrap Components and Customization" 
 ====================================================
 
-This repository contains source code referenced in [Learning Web Development with Bootstrap and Angular, Second Edition] (https://www.packtpub.com) book.
+This repository contains source code referenced in [Learning Web Development with Bootstrap 4 and Angular 2, Second Edition] (https://www.packtpub.com) book.
 
 ## Overview 
 
