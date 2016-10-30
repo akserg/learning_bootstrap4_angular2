@@ -1,7 +1,7 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { Routes, RouterModule } from "@angular/router";
+import { RouterModule } from "@angular/router";
 
 /**
  * Modules
@@ -24,7 +24,6 @@ import { CheckoutViewComponent } from "./checkout/checkout-view.component";
 /*
  * Routing
  */
-// import { routing } from "./app.routes";
 import { routes } from "./app.routes";
 
 /*
@@ -56,9 +55,9 @@ Ng2BootstrapConfig.theme = Ng2BootstrapTheme.BS4;
 
 @NgModule({
   imports: [
-    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig), RouterModule.forRoot(routes), AuthModule, 
-    BrowserModule, FormsModule, ReactiveFormsModule,
-    CartModule, CategoryModule, ProductModule, SharedModule, Ng2BootstrapModule],
+    AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig), RouterModule.forRoot(routes), 
+    BrowserModule, FormsModule, ReactiveFormsModule, Ng2BootstrapModule,
+    AuthModule, CartModule, CategoryModule, ProductModule, SharedModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent,
     WelcomeComponent, CheckoutViewComponent],
   bootstrap: [AppComponent]

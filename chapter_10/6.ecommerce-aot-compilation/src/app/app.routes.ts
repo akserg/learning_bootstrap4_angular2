@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import { Routes, RouterModule } from "@angular/router";
+import { Routes } from "@angular/router";
 
 /*
  * Guards
@@ -30,8 +30,3 @@ export const routes: Routes = [
   { path: "cart", component: CartViewComponent, canActivate: [AuthGuard] },
   { path: "checkout", component: CheckoutViewComponent, canActivate: [AuthGuard] },
 ];
-
-/*
- * Routes Provider
- */
-// export const routing = RouterModule.forRoot(routes);
