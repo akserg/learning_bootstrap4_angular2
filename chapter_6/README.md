@@ -1,7 +1,7 @@
 Source code for chapter 6 "Dependency Injection" 
 ====================================================
 
-This repository contains source code referenced in [Learning Web Development with Bootstrap 4 and Angular 2, Second Edition] (https://www.packtpub.com) book.
+This repository contains source code referenced in [Learning Web Development with Bootstrap 4 and Angular 2, Second Edition] (https://www.packtpub.com/web-development/web-development-bootstrap-4-and-angular-2-second-edition) book.
 
 ## Overview 
 
