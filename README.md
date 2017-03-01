@@ -8,7 +8,14 @@ This repository contains source code referenced in [Learning Web Development wit
  
 ## Organization
 
-The source code is organized by individual chapters. Code corresponding to each Chapter is found in the ChapterX folder where X represents the Chapter number. Each ChapterX folder further contains several sub folders - each of them referenced from the chapter.
+The source code is organized by individual chapters. 
+Code corresponding to each Chapter is found in the ChapterX folder where X represents the Chapter number. 
+Each ChapterX folder further contains several sub folders - each of them referenced from the chapter.
+
+## Book Errata
+
+There are bound to be some typos and other mistakes that found their way through the writing andediting process. 
+If you come across any, please let to the author Sergey Akopkokhyants ([email](mailto:akserg@gmail.com)) knows.
 
 ## Questions
 
