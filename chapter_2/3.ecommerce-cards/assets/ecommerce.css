@@ -12,3 +12,7 @@
     width: 100%;
     display: block;
 }
+
+.card {
+    margin-bottom: 25px;
+}
