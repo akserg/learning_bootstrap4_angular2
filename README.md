@@ -5,7 +5,10 @@ Source code for "Learning Web Development with Bootstrap 4 and Angular 2, Second
 
 This repository contains source code referenced in [Learning Web Development with Bootstrap 4 and Angular 2, Second Edition] (https://www.packtpub.com/web-development/web-development-bootstrap-4-and-angular-2-second-edition) book. 
 
- 
+## Angular and Bootstrap Versions
+
+I used Angular 2.4.x and Bootstrap 4.0.0-alpha.5 at the moment of writing this book.
+
 ## Organization
 
 The source code is organized by individual chapters. 
