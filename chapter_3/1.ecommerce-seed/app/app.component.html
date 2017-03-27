@@ -1,23 +1,28 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-inverse">
   <div class="container">
-    <button class="navbar-toggler hidden-sm-up" 
-            type="button" data-toggle="collapse" 
-            data-target="#exCollapsingNavbar">
-      &#9776;
+    <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" 
+      aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
-      <a class="navbar-brand" href="#">Dream Bean</a>
-
-      <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">
-          Home <span class="sr-only">(current)</span>
-        </a>
-        <a class="nav-item nav-link" href="#">Products</a>
-        <a class="nav-item nav-link" href="#">Checkout</a>
-        <a class="nav-item nav-link" href="#">Sign out</a>
-      </div>
-
-      <ul class="nav navbar-nav float-xs-right">
+    <a class="navbar-brand" href="#">Dream Bean</a>
+    
+    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Checkout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Sign out</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cart</a>
           <div class="dropdown-menu">
@@ -32,14 +37,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <img class="img-fluid img-rounded center-block product-slide-item" src="http://placehold.it/1110x480" alt="">
+      <img class="img-fluid rounded mx-auto d-block product-slide-item" src="http://placehold.it/1110x480" alt="">
     </div>
   </div>
   <!-- /.row -->
   <div class="row">
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-        <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Bakery">
+        <img class="card-img-top mx-auto d-block product-item" src="http://placehold.it/270x171" alt="Bakery">
         <div class="card-block">
           <h4 class="card-title">Bakery</h4>
           <p class="card-text">The best cupcakes, cookies, cakes, pies, cheesecakes, fresh bread, biscotti, muffins, bagels, fresh coffee and
@@ -52,7 +57,7 @@
     <!-- /.col -->
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-        <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Takeaway">
+        <img class="card-img-top mx-auto d-block product-item" src="http://placehold.it/270x171" alt="Takeaway">
         <div class="card-block">
           <h4 class="card-title">Takeaway</h4>
           <p class="card-text">It's consistently excellent, dishes are superb and healthily cooked with high quality ingredients.</p>
@@ -63,7 +68,7 @@
     <!-- /.col -->
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-        <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Dairy">
+        <img class="card-img-top mx-auto d-block product-item" src="http://placehold.it/270x171" alt="Dairy">
         <div class="card-block">
           <h4 class="card-title">Dairy</h4>
           <p class="card-text">A dairy product is food produced from the milk of mammals.<br><br></p>
@@ -74,10 +79,10 @@
     <!-- /.col -->
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-        <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Meat">
+        <img class="card-img-top mx-auto d-block product-item" src="http://placehold.it/270x171" alt="Meat">
         <div class="card-block">
           <h4 class="card-title">Meat</h4>
-          <p class="card-text">Only superior quality beef, lamb, and pork.<br><br><br></p>
+          <p class="card-text">Only superior quality beef, lamb, and pork.<br><br></p>
           <a href="#" class="btn btn-primary">Browse</a>
         </div>
       </div>
@@ -85,7 +90,7 @@
     <!-- /.col -->
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-        <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Seafood">
+        <img class="card-img-top mx-auto d-block product-item" src="http://placehold.it/270x171" alt="Seafood">
         <div class="card-block">
           <h4 class="card-title">Seafood</h4>
           <p class="card-text">Great place to buy fresh and organic seafood at reasonable prices!<br><br></p>
@@ -96,7 +101,7 @@
     <!-- /.col -->
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-        <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Fruit & Veg">
+        <img class="card-img-top mx-auto d-block product-item" src="http://placehold.it/270x171" alt="Fruit & Veg">
         <div class="card-block">
           <h4 class="card-title">Fruit & Veg</h4>
           <p class="card-text">A variety of fresh fruits and vegetables.<br><br><br></p>

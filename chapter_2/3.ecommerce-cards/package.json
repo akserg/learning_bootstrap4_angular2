@@ -1,7 +1,7 @@
 {
-  "name": "hello-world",
+  "name": "ecommerce-seed",
   "version": "1.0.0",
-  "description": "The Hello World",
+  "description": "The E-commerce seed project",
   "author": "",
   "license": "MIT",
   "scripts": {

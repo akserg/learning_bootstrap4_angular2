@@ -1,3 +1,7 @@
+body {
+    padding-top: 66px;
+}
+
 .product-menu {
     height: 50px;
     margin-top: 22px;
@@ -15,8 +19,4 @@
 
 .card {
     margin-bottom: 25px;
-}
-
-body {
-    padding-top: 66px;
 }
