@@ -1,20 +1,28 @@
 <nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-inverse">
   <div class="container">
-    <button class="navbar-toggler navbar-toggler-right" 
-            type="button" data-toggle="collapse" 
-            data-target="#exCollapsingNavbar" aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      &#9776;
+    <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" 
+      aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" href="#">Dream Bean</a>
-
+    
     <div class="collapse navbar-collapse" id="exCollapsingNavbar">
-      <a class="nav-item nav-link active" href="#">
-        Home <span class="sr-only">(current)</span>
-      </a>
-      <a class="nav-item nav-link" href="#">Products</a>
-      <a class="nav-item nav-link" href="#">Checkout</a>
-      <a class="nav-item nav-link" href="#">Sign out</a>
-      <ul class="nav navbar-nav float-xs-right">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Checkout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Sign out</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cart</a>
           <div class="dropdown-menu">
