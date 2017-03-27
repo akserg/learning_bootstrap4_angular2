@@ -3,8 +3,9 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 import {Category} from './category';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-category-card',
-    templateUrl: 'app/category/category-card.component.html'
+    templateUrl: './category-card.component.html'
 })
 export class CategoryCardComponent {
     @Input() category: Category;

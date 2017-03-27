@@ -1,21 +1,28 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-inverse">
   <div class="container">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      &#9776;
+    <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" 
+      aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
-      <a class="navbar-brand" href="#">Dream Bean</a>
-
-      <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">
-          Home <span class="sr-only">(current)</span>
-        </a>
-        <a class="nav-item nav-link" href="#">Products</a>
-        <a class="nav-item nav-link" href="#">Checkout</a>
-        <a class="nav-item nav-link" href="#">Sign out</a>
-      </div>
-
-      <ul class="nav navbar-nav float-xs-right">
+    <a class="navbar-brand" href="#">Dream Bean</a>
+    
+    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Checkout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Sign out</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item dropdown">
           <button class="btn btn-primary dropdown-toggle" type="button" id="cartDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Cart: 2 item(s) - $20.00
@@ -167,7 +174,7 @@
         <img class="card-img-top center-block product-item" src="http://placehold.it/270x171" alt="Meat">
         <div class="card-block">
           <h4 class="card-title">Meat</h4>
-          <p class="card-text">Only superior quality beef, lamb, and pork.<br><br><br></p>
+          <p class="card-text">Only superior quality beef, lamb, and pork.<br><br></p>
           <a href="#" class="btn btn-primary">Browse</a>
         </div>
       </div>
