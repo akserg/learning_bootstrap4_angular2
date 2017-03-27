@@ -10,8 +10,9 @@ import {Router} from '@angular/router';
 import {Category, getCategories} from './category';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-category-list',
-    templateUrl: 'app/category/category-list.component.html'
+    templateUrl: './category-list.component.html'
 })
 export class CategoryListComponent {
 

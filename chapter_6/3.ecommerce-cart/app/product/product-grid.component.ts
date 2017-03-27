@@ -12,8 +12,9 @@ import {ProductCardComponent} from './product-card.component';
 import {CartService} from '../cart/cart.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-product-grid',
-    templateUrl: 'app/product/product-grid.component.html'
+    templateUrl: './product-grid.component.html'
 })
 export class ProductGridComponent {
     products: any = [];

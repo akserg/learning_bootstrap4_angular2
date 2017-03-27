@@ -22,14 +22,14 @@ import {FooterComponent} from './footer/footer.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 
 /*
- * Routing
+ * Routes
  */
-import {routing}  from './app.routes';
+import { routes } from './app.routes';
 
 @NgModule({
   imports: [
-            BrowserModule, FormsModule, 
-            routing, CartModule, CategoryModule, ProductModule],
+            BrowserModule, FormsModule, RouterModule.forRoot(routes),
+            CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent],
   bootstrap: [AppComponent]

@@ -9,8 +9,9 @@ import {Component} from '@angular/core';
 import {Category, getCategories, getCategory} from '../category/category';
 
 @Component({
+  moduleId: module.id,
   selector: 'db-welcome',
-  templateUrl: 'app/welcome/welcome.component.html'
+  templateUrl: './welcome.component.html'
 })
 export class WelcomeComponent {
   // Slide Categories

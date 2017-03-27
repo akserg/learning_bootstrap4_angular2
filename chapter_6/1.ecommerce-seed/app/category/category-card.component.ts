@@ -10,8 +10,9 @@ import {Router} from '@angular/router';
 import {Category} from './category';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-category-card',
-    templateUrl: 'app/category/category-card.component.html'
+    templateUrl: './category-card.component.html'
 })
 export class CategoryCardComponent {
     @Input() category: Category;
