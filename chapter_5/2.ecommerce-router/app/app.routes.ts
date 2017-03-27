@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Routes, RouterModule} from '@angular/router';
+import {Routes} from '@angular/router';
 
 /*
  * Components
@@ -12,14 +12,9 @@ import {ProductListComponent} from './product/product-list.component';
 /*
  * Routes
  */
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
   //{ path: 'products/:id', component: ProductComponent }
 ];
-
-/*
- * Routes Provider
- */
-export const routing = RouterModule.forRoot(routes);

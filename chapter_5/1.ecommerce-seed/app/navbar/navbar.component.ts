@@ -13,8 +13,9 @@ export interface NavItem {
 }
 
 @Component({
+  moduleId: module.id,
   selector: 'db-navbar',
-  templateUrl: 'app/navbar/navbar.component.html'
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent { 
   // App name

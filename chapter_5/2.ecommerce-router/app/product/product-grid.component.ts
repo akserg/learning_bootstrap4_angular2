@@ -9,8 +9,9 @@ import {Component} from '@angular/core';
 import {Product, getProducts} from './product';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-product-grid',
-    templateUrl: 'app/product/product-grid.component.html'
+    templateUrl: './product-grid.component.html'
 })
 export class ProductGridComponent {
     products: any = [];

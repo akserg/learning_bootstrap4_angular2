@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 import {LocationStrategy, HashLocationStrategy , PathLocationStrategy} from '@angular/common';
 
 /**
@@ -18,13 +19,13 @@ import {FooterComponent} from './footer/footer.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 
 /*
- * Routing
+ * Routes
  */
-import {routing}  from './app.routes';
+import {routes}  from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, 
-            routing, CategoryModule, ProductModule],
+  imports: [BrowserModule, FormsModule, RouterModule.forRoot(routes),
+            CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent],
   providers: [{provide: LocationStrategy, useClass: PathLocationStrategy }],

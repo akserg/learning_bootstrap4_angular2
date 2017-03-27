@@ -1,25 +1,60 @@
-<nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-dark bg-inverse">
   <div class="container">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      &#9776;
+    <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" 
+      aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar">
-      <a class="navbar-brand" href="">Dream Bean</a>
-
-      <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="#">
-          Home <span class="sr-only">(current)</span>
-        </a>
-        <a class="nav-item nav-link" href="#">Products</a>
-        <a class="nav-item nav-link" href="#">Checkout</a>
-        <a class="nav-item nav-link" href="#">Sign out</a>
-      </div>
-
-      <ul class="nav navbar-nav float-xs-right">
+    <a class="navbar-brand" href="#" [innerHTML]="appName"></a>
+    
+    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{active: navItem.active}"
+          *ngFor="let navItem of navItems">
+          <a class="nav-link" [href]="navItem.href">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
+        </li>
+        </ul>
+      <ul class="nav navbar-nav pull-xs-right">
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cart</a>
-          <div class="dropdown-menu">
-            <span>The Cart Placeholder</span>
+          <button class="btn btn-primary dropdown-toggle" type="button" id="cartDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cart: 2 item(s) - $20.00
+          </button>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="cartDropdownMenu">
+            <table class="table table-bordered table-inverse">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Amount</th>
+                    <th>Qty</th>
+                    <th>Sum</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="4" style="text-align:center">
+                      Total:<strong>$20.00</strong><br>
+                      <div class="btn-group">
+                        <button class="btn btn-primary">View Cart</button>
+                        <button class="btn btn-success">Checkout</button>
+                      </div>
+                    </td>
+                  </tr>
+                </tfoot>
+								<tbody>
+                  <tr>
+									  <td >Product 1</td>
+									  <td >$10</td>
+									  <td >x1<br><span class="delete-cart">Del</span></td>
+									  <td >$10.00</td>
+                  </tr>
+                  <tr>
+                    <td >Product 2</td>
+                    <td >$5.00</td>
+                    <td >x2<br><span class="delete-cart">Del</span></td>
+                    <td >$10.00</td>
+                  </tr>
+                </tbody>
+              </table>
           </div>
         </li>
       </ul>
