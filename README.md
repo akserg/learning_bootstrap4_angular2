@@ -7,7 +7,7 @@ This repository contains source code referenced in [Learning Web Development wit
 
 ## Angular and Bootstrap Versions
 
-I used Angular 2.4.x and Bootstrap 4.0.0-alpha.5 at the moment of writing this book.
+The source code based on Angular 4.0.x and Bootstrap 4.0.0-alpha.6.
 
 ## Organization
 
