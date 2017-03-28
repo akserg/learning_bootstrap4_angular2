@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
 import {HttpModule} from '@angular/http';
 
 // Imports for loading & configuring the in-memory web api
@@ -26,13 +27,13 @@ import {CheckoutViewComponent} from './checkout/checkout-view.component';
 /*
  * Routing
  */
-import {routing}  from './app.routes';
+import {routes}  from './app.routes';
 
 @NgModule({
   imports: [HttpModule,
             InMemoryWebApiModule.forRoot(InMemoryDataService),
             BrowserModule, FormsModule, ReactiveFormsModule, 
-            routing, CartModule, CategoryModule, ProductModule],
+            RouterModule.forRoot(routes), CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent, CheckoutViewComponent],
   bootstrap: [AppComponent]

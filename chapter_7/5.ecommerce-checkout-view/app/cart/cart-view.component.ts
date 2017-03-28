@@ -9,8 +9,9 @@ import {Component, Input} from '@angular/core';
 import {Cart, CartItem, CartService} from './cart.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-cart-view',
-    templateUrl: 'app/cart/cart-view.component.html'
+    templateUrl: './cart-view.component.html'
 })
 export class CartViewComponent {
 

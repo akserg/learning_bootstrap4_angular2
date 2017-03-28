@@ -11,8 +11,9 @@ import {Product, ProductService} from './product.service';
 import {Cart, CartItem, CartService} from '../cart/cart.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-product-view',
-    templateUrl: 'app/product/product-view.component.html'
+    templateUrl: './product-view.component.html'
 })
 export class ProductViewComponent implements OnInit {
 
@@ -44,12 +45,14 @@ export class ProductViewComponent implements OnInit {
             });
     }
 
-    addToCart() {
+    addToCart($event: Event) {
         this.cartItem = this.cartService.addProduct(this.product);
+        $event.preventDefault();
     }
 
-    removeFromCart() {
+    removeFromCart($event: Event) {
         this.cartItem = this.cartService.removeProduct(this.product);
+        $event.preventDefault();
     }
 }
 

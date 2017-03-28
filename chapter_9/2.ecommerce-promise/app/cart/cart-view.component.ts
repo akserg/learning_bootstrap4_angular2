@@ -10,8 +10,9 @@ import {Cart, CartItem, CartService} from './cart.service';
 import {CartItemCountComponent} from './cart-item-count.component';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-cart-view',
-    templateUrl: 'app/cart/cart-view.component.html'
+    templateUrl: './cart-view.component.html'
 })
 export class CartViewComponent {
 
@@ -25,8 +26,8 @@ export class CartViewComponent {
         this.cartService.clearCart();
     }
 
-    update(value, item: CartItem) {
-        let res = value - item.count;
+    update(value: number, item: CartItem) {
+        let res: number = value - item.count;
         if (res > 0) {
             for (let i = 0; i < res; i++) {
                 this.cartService.addProduct(item.product);

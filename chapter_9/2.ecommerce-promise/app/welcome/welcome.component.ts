@@ -9,8 +9,9 @@ import {Component, OnInit} from '@angular/core';
 import {Category, CategoryService} from '../category/category.service';
 
 @Component({
+  moduleId: module.id,
   selector: 'db-welcome',
-  templateUrl: 'app/welcome/welcome.component.html'
+  templateUrl: './welcome.component.html'
 })
 export class WelcomeComponent implements OnInit {
   // Slide Categories

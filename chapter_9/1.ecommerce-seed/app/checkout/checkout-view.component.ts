@@ -10,8 +10,9 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Cart, CartItem, CartService} from '../cart/cart.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-checkout-view',
-    templateUrl: 'app/checkout/checkout-view.component.html'
+    templateUrl: './checkout-view.component.html'
 })
 export class CheckoutViewComponent {
 

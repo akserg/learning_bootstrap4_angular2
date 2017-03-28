@@ -2,6 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import {RouterModule} from '@angular/router';
 
 /**
  * Modules
@@ -20,9 +21,9 @@ import {WelcomeComponent} from './welcome/welcome.component';
 import {CheckoutViewComponent} from './checkout/checkout-view.component';
 
 /*
- * Routing
+ * Routes
  */
-import {routing}  from './app.routes';
+import {routes}  from './app.routes';
 
 /*
  * Angular Firebase
@@ -42,7 +43,7 @@ export var firebaseConfig = {
   imports: [HttpModule,
             AngularFireModule.initializeApp(firebaseConfig),
             BrowserModule, FormsModule, ReactiveFormsModule, 
-            routing, CartModule, CategoryModule, ProductModule],
+            RouterModule.forRoot(routes), CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent, CheckoutViewComponent],
   bootstrap: [AppComponent]

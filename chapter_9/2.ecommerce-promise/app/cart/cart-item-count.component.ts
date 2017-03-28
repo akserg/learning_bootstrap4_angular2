@@ -5,8 +5,9 @@ import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 
 @Component({
+    moduleId: module.id,
     selector: 'db-cart-item-count',
-    templateUrl: 'app/cart/cart-item-count.component.html'
+    templateUrl: './cart-item-count.component.html'
 })
 export class CartItemCountComponent {
 

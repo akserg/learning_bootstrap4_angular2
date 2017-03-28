@@ -9,8 +9,9 @@ import {Component, Input} from '@angular/core';
 import {Cart, CartService} from './cart.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-cart-menu',
-    templateUrl: 'app/cart/cart-menu.component.html'
+    templateUrl: './cart-menu.component.html'
 })
 export class CartMenuComponent {
 

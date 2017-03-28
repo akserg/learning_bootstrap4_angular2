@@ -6,7 +6,22 @@
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
     "removeComments": false,
-    "noImplicitAny": false
-  }
+    "noImplicitAny": true,
+    "declaration": true,
+    "types": [
+      "hammerjs",
+      "jasmine",
+      "node"
+    ],
+    "lib": ["es2015", "dom"],
+    "typeRoots": [
+			"./node_modules/@types",
+			"./node_modules"
+		]
+  },
+  "exclude": [
+    "node_modules"
+  ]
 }
