@@ -24,7 +24,7 @@ export class ChildComponent implements OnDestroy{
 
   constructor(private common: CommonService) {
     this.subscription = this.common.childQueue.subscribe(
-      message => {
+      (message: string) => {
         this.desc = message;
       }
     );

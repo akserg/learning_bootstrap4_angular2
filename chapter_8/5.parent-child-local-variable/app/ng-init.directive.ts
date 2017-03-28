@@ -4,7 +4,7 @@ import {Directive, Input} from '@angular/core';
   selector: '[ngInit]'
 })
 export class NgInit {
-  @Input() ngInit;
+  @Input() ngInit: any;
 
   ngOnInit() {
     if(this.ngInit) { 

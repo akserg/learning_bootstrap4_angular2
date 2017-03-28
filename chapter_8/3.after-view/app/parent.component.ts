@@ -4,7 +4,6 @@ import {ChildComponent} from './child.component';
 
 @Component({
   selector: 'my-parent',
-  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
   <div class="parent">
     <div class="parent__title">
@@ -39,7 +38,9 @@ export class ParentComponent implements AfterViewInit, AfterViewChecked {
     if (this.viewChild.status == 'Ready') {
       console.log('AfterViewChecked (no change)');
     } else {
-      this.viewChild.status = 'Ready';
+      setTimeout(() => {
+        this.viewChild.status = 'Ready';
+      });
     }
   }
 }
