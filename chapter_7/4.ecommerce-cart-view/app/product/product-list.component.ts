@@ -8,7 +8,8 @@ import {Component} from '@angular/core';
  */
 
 @Component({
+  moduleId: module.id,
   selector: 'db-products',
-  templateUrl: 'app/product/product-list.component.html',
+  templateUrl: './product-list.component.html',
 })
 export class ProductListComponent {}

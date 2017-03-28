@@ -1,5 +1,10 @@
-import {NgModule} from '@angular/core';
-import {BrowserModule} from '@angular/platform-browser';
+/*
+ * Angular Imports
+ */
+import { NgModule }      from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule }   from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 /**
  * Modules
@@ -17,12 +22,14 @@ import {FooterComponent} from './footer/footer.component';
 import {WelcomeComponent} from './welcome/welcome.component';
 
 /*
- * Routing
+ * Routes
  */
-import {routing}  from './app.routes';
+import { routes } from './app.routes';
 
 @NgModule({
-  imports: [BrowserModule, routing, CartModule, CategoryModule, ProductModule],
+  imports: [
+            BrowserModule, FormsModule, RouterModule.forRoot(routes),
+            CartModule, CategoryModule, ProductModule],
   declarations: [AppComponent, NavbarComponent, FooterComponent, 
                 WelcomeComponent],
   bootstrap: [AppComponent]

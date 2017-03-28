@@ -42,12 +42,14 @@ export class ProductViewComponent {
             });
     }
 
-    addToCart() {
+    addToCart($event: Event) {
         this.cartItem = this.cartService.addProduct(this.product);
+        $event.preventDefault();
     }
 
-    removeFromCart() {
+    removeFromCart($event: Event) {
         this.cartItem = this.cartService.removeProduct(this.product);
+        $event.preventDefault();
     }
 }
 

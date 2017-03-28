@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Routes, RouterModule} from '@angular/router';
+import {Routes} from '@angular/router';
 
 /*
  * Components
@@ -14,7 +14,7 @@ import {CartViewComponent} from './cart/cart-view.component';
 /*
  * Routes
  */
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
   { path: 'welcome', component: WelcomeComponent },
   { path: 'products', component: ProductListComponent },
@@ -22,7 +22,3 @@ const routes: Routes = [
   { path: 'cart', component: CartViewComponent }
 ];
 
-/*
- * Routes Provider
- */
-export const routing = RouterModule.forRoot(routes);

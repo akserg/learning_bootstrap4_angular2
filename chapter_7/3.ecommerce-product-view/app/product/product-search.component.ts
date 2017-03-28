@@ -5,8 +5,9 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-product-search',
-    templateUrl: 'app/product/product-search.component.html'
+    templateUrl: './product-search.component.html'
 })
 export class ProductSearchComponent {
 
