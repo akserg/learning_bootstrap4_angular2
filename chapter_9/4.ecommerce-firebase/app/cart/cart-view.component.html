@@ -41,13 +41,13 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-12">
-                                <a class="btn btn-primary btn-block" [routerLink]="['/checkout']">Checkout</a>
-                                <a class="btn btn-secondary btn-block" [routerLink]="['/products']">Continue Shopping</a>
+                                <button class="btn btn-primary btn-block" [routerLink]="['/checkout']">Checkout</button>
+                                <button class="btn btn-secondary btn-block" [routerLink]="['/products']" [queryParams]="{ category: 1 }">Continue Shopping</button>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-12">
-                                <a class="btn btn-danger btn-block" (click)="clearCart()">Clear Cart</a>
+                                <button class="btn btn-danger btn-block" (click)="clearCart()">Clear Cart</button>
                             </div>
                         </div>
                     </form>

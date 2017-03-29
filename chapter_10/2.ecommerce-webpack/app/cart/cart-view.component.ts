@@ -25,8 +25,8 @@ export class CartViewComponent {
         this.cartService.clearCart();
     }
 
-    update(value, item: CartItem) {
-        let res = value - item.count;
+    update(value: number, item: CartItem) {
+        let res: number = value - item.count;
         if (res > 0) {
             for (let i = 0; i < res; i++) {
                 this.cartService.addProduct(item.product);

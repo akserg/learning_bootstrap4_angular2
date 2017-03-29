@@ -20,7 +20,7 @@ import {CartService} from '../cart/cart.service';
     templateUrl: 'app/product/product-grid.component.html'
 })
 export class ProductGridComponent implements OnInit {
-    products: Observable<Product[]>;
+    products: Observable<Product[][]>;
 
     constructor(private route: ActivatedRoute, private productService: ProductService, private cartService: CartService) {}
 
@@ -29,7 +29,7 @@ export class ProductGridComponent implements OnInit {
             .queryParams
             .debounceTime(300) // wait for 300ms pause in events
             .distinctUntilChanged() // only changed values pass
-            .subscribe(params => {
+            .subscribe((params: any) => {
                 let category: string = params['category'];
                 let search: string = params['search'];
                 this.products = this.productService.getProducts(category, search).map(this.transform);

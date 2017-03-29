@@ -34,7 +34,7 @@ export class ProductViewComponent implements OnInit {
     ngOnInit(): void {
         this.route
             .params
-            .subscribe(params => {
+            .subscribe((params: any) => {
                 // Get the product id
                 let id: string = params['id'];
                 // Return the product from ProductService
@@ -44,12 +44,14 @@ export class ProductViewComponent implements OnInit {
             });
     }
 
-    addToCart() {
+    addToCart($event: Event) {
         this.cartItem = this.cartService.addProduct(this.product);
+        $event.preventDefault();
     }
 
-    removeFromCart() {
+    removeFromCart($event: Event) {
         this.cartItem = this.cartService.removeProduct(this.product);
+        $event.preventDefault();
     }
 }
 
