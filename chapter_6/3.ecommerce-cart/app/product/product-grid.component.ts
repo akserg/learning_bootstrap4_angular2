@@ -24,7 +24,7 @@ export class ProductGridComponent {
             .routerState
             .root
             .queryParams
-            .subscribe(params => {
+            .subscribe((params: any) => {
                 let category: string = params['category'];
                 let search: string = params['search'];
                 // Return filtered data from getProducts function

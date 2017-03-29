@@ -33,7 +33,7 @@ export class ProductViewComponent {
                 private cartService: CartService) {
         this.route
             .params
-            .subscribe(params => {
+            .subscribe((params: any) => {
                 // Get the product id
                 let id: string = params['id'];
                 // Return the product from ProductService

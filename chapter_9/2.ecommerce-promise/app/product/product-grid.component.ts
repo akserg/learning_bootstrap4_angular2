@@ -23,7 +23,7 @@ export class ProductGridComponent implements OnInit {
     ngOnInit(): void {
         this.route
             .queryParams
-            .subscribe(params => {
+            .subscribe((params: any) => {
                 let category: string = params['category'];
                 let search: string = params['search'];
                 // Clear view before request
