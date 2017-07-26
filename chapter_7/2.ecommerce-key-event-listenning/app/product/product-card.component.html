@@ -4,7 +4,7 @@
             <div class="card-header text-xs-center">
                 {{product.title}}
             </div>
-            <img class="card-img-top center-block product-item" src="{{product.imageS}}" alt="{{product.title}}">
+            <img class="card-img-top mx-auto d-block product-item" src="{{product.imageS}}" alt="{{product.title}}">
             <div class="card-block text-xs-center" [ngClass]="setClasses(product)">
                 <h4 class="card-text">Price: ${{product.price}}</h4>
             </div>
