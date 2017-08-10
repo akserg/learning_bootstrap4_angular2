@@ -1,9 +1,9 @@
-import {Directive, Input} from '@angular/core';
+import {Directive, Input, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[ngInit]'
 })
-export class NgInit {
+export class NgInit implements OnInit {
   @Input() ngInit: any;
 
   ngOnInit() {

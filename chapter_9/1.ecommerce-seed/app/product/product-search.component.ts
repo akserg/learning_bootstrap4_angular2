@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {FormControl} from '@angular/forms';
 
@@ -10,7 +10,7 @@ import {FormControl} from '@angular/forms';
     selector: 'db-product-search',
     templateUrl: './product-search.component.html'
 })
-export class ProductSearchComponent {
+export class ProductSearchComponent implements OnInit {
 
     disabled: boolean = true;
     seachControl: FormControl;

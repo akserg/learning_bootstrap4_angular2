@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import {Component, Input} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 
 /*
@@ -14,7 +14,7 @@ import {CartItemCountComponent} from "../cart/cart-item-count.component";
     selector: "db-checkout-view",
     template: require("./checkout-view.component.html")
 })
-export class CheckoutViewComponent {
+export class CheckoutViewComponent implements OnInit {
 
     private cart: Cart;
     form: FormGroup;
