@@ -1,10 +1,10 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
-import {Product} from '../product/product.service';
+import { Product } from '../product/product.service';
 
 export interface CartItem {
     product: Product;
-    count:  number;
+    count: number;
     amount: number;
 }
 
@@ -56,25 +56,25 @@ export class CartService {
      * in the cart or removes the last product.
      * It updates the amount and count of items in the cart.
      */
-removeProduct(product: Product) {
-    // Find CartItem in items
-    let item: CartItem = this.findItem(product.id);
-    // Check is item found?
-    if (item) {
-        // Decrease the count
-        item.count--;
-        // Check was that the last product?
-        if (!item.count) {
-            // It was last product
-            // Delete item from items
-            this.remove(item);
+    removeProduct(product: Product) {
+        // Find CartItem in items
+        let item: CartItem = this.findItem(product.id);
+        // Check is item found?
+        if (item) {
+            // Decrease the count
+            item.count--;
+            // Check was that the last product?
+            if (!item.count) {
+                // It was last product
+                // Delete item from items
+                this.remove(item);
+            }
+            // Decrease count in the cart
+            this.cart.count--;
+            // Decrease amount in the cart
+            this.cart.amount -= product.price;
         }
-        // Decrease count in the cart
-        this.cart.count--;
-        // Decrease amount in the cart
-        this.cart.amount -= product.price;
     }
-}
 
     /**
      * Remove item from the cart.
@@ -104,13 +104,13 @@ removeProduct(product: Product) {
     /**
      * This method removes existing cart item.
      */
-private remove(item: CartItem) {
-    // Find the index of cart item
-    let indx: number = this.cart.items.indexOf(item);
-    // Check was item found
-    if (indx !== -1) {
-        // Remove element from array
-        this.cart.items.splice(indx, 1);
+    private remove(item: CartItem) {
+        // Find the index of cart item
+        let indx: number = this.cart.items.indexOf(item);
+        // Check was item found
+        if (indx !== -1) {
+            // Remove element from array
+            this.cart.items.splice(indx, 1);
+        }
     }
-}
 }
