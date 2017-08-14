@@ -23,8 +23,8 @@ export class NavbarComponent {
   // Navgation items
   navItems: NavItem[] = [
     {href: 'welcome', label: 'Home', active: true},
-    {href: '#', label: 'Products', active: false},
-    {href: '#', label: 'Checkout', active: false},
+    {href: 'products', label: 'Products', active: false},
+    {href: 'checkout', label: 'Checkout', active: false},
     {href: '#', label: 'Sign out', active: false}
   ];
 }
