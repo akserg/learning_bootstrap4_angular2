@@ -2,7 +2,7 @@
   System.config({
     paths: {
       // paths serve as alias
-      'npm:': 'node_modules/'
+      'npm:': 'https://unpkg.com/'
     },
     // map tells the System loader where to look for things
     map: {
@@ -23,9 +23,9 @@
       'firebase': 'npm:firebase',
       'promise-polyfill':'npm:promise-polyfill',
                                        
-      'angularfire2': 'npm:angularfire2/bundles/core.umd.js',
-      'angularfire2/database': 'npm:angularfire2/bundles/database.umd.js',
-      'angularfire2/auth': 'npm:angularfire2/bundles/auth.umd.js'
+      'angularfire2': 'npm:angularfire2@4.0.0-rc.2-next.1/bundles/core.umd.js',
+      'angularfire2/database': 'npm:angularfire2@4.0.0-rc.2-next.1/bundles/database.umd.js',
+      'angularfire2/auth': 'npm:angularfire2@4.0.0-rc.2-next.1/bundles/auth.umd.js'
     },
     // packages tells the System loader how to load when no filename and/or no extension
     packages: {

@@ -1,0 +1,21 @@
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
+  <div class="container">
+    <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" 
+      aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" [routerLink]="['/welcome']" [innerHTML]="appName"></a>
+    
+    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{active: navItem.active}"
+          *ngFor="let navItem of navItems">
+          <a class="nav-link" [routerLink]="navItem.href">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
+        </li>
+      </ul>
+      
+      <db-cart-menu></db-cart-menu>
+    </div>
+  </div>
+</nav>

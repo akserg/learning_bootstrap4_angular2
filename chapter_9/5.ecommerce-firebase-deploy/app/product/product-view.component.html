@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img class="mx-auto d-block product-img" src="{{product?.imageL}}" alt="{{product?.title}}">
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="card-title">{{product?.title}}</h4>
+                    <p class="card-text">{{product?.desc}}</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">ID: {{product?.id}}</li>
+                    <li class="list-group-item">Category: {{product?.categoryId | categoryTitle}}</li>
+                </ul>
+                <div class="card-footer">
+                    <p class="card-text">Availability: In Stock</p>
+                </div>
+            </div>
+            <div class="card" *ngIf="!product?.isSpecial">
+                <div class="card-block">
+                    <h4 class="card-title">Price: {{product?.price | currency:'USD':true:'1.2-2'}}</h4>
+                </div>
+            </div>
+            <div class="card card-inverse card-danger" *ngIf="product?.isSpecial">
+                <div class="card-block">
+                    <h4 class="card-title">Price: {{product?.price | currency:'USD':true:'1.2-2'}}</h4>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <div class="card-block">
+                    <form class="form-horizontal">
+                        <div class="form-group row">
+                            <label for="first_name" class="col-3 form-control-label">Quantity</label>
+                            <div class="col-9">
+                                <h4 class="form-control-static float-right">{{quantity}}</h4>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="last_name" class="col-3 form-control-label">Amount</label>
+                            <div class="col-9">
+                                <h4 class="form-control-static float-right">{{amount | currency:'USD':true:'1.2-2'}}</h4>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <button class="btn btn-primary btn-block" (click)="addToCart($event)">Add to Cart</button>
+                                <button class="btn btn-warning btn-block" (click)="removeFromCart($event)">Remove from Cart</button>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-12">
+                                <button class="btn btn-secondary btn-block" [routerLink]="['/products']" [queryParams]="{ category: 1 }">Continue Shopping</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
