@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="exCollapsingNavbar">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" [ngClass]="{active: navItem.active}" *ngFor="let navItem of navItems">
-          <a class="nav-link" [href]="navItem.href">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
+          <a class="nav-link" [routerLink]="navItem.href">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
         </li>
       </ul>
       <ul class="nav navbar-nav float-right">
