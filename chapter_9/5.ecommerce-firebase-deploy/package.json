@@ -20,7 +20,7 @@
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.0.0",
     "@angular/upgrade": "^4.0.0",
-    "angularfire2": "^4.0.0-rc.2-next.1",
+    "angularfire2": "^4.0.0-rc.2",
     "bootstrap": "4.0.0-alpha.6",
     "core-js": "^2.4.1",
     "firebase": "^4.2.0",
