@@ -10,8 +10,6 @@ export interface NavItem {
   label: string;
   // Status of Navigation Item
   active: boolean;
-  // queryParams
-  queryParams?: any;
 }
 
 @Component({
@@ -25,7 +23,7 @@ export class NavbarComponent {
   // Navgation items
   navItems: NavItem[] = [
     {href: 'welcome', label: 'Home', active: true},
-    {href: 'products', label: 'Products', active: false, queryParams: { category: 1 }},
+    {href: 'products', label: 'Products', active: false},
     {href: 'checkout', label: 'Checkout', active: false},
     {href: '#', label: 'Sign out', active: false}
   ];

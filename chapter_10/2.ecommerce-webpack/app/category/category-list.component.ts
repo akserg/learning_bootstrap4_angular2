@@ -12,7 +12,7 @@ import {Category, CategoryService} from './category.service';
 
 @Component({
     selector: 'db-category-list',
-    templateUrl: 'app/category/category-list.component.html'
+    templateUrl: './category-list.component.html'
 })
 export class CategoryListComponent implements OnInit {
 

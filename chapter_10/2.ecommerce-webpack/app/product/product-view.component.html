@@ -46,13 +46,13 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-12">
-                                <a class="btn btn-primary btn-block" (click)="addToCart($event)">Add to Cart</a>
-                                <a class="btn btn-warning btn-block" (click)="removeFromCart($event)">Remove from Cart</a>
+                                <button class="btn btn-primary btn-block" (click)="addToCart($event)">Add to Cart</button>
+                                <button class="btn btn-warning btn-block" (click)="removeFromCart($event)">Remove from Cart</button>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-12">
-                                <a class="btn btn-secondary btn-block" [routerLink]="['/products']" [queryParams]="{ category: 1 }">Continue Shopping</a>
+                                <button class="btn btn-secondary btn-block" [routerLink]="['/products']" [queryParams]="{ category: 1 }">Continue Shopping</button>
                             </div>
                         </div>
                     </form>

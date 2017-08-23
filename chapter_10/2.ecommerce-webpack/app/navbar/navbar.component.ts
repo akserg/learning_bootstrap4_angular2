@@ -16,7 +16,7 @@ export interface NavItem {
 
 @Component({
   selector: 'db-navbar',
-  templateUrl: 'app/navbar/navbar.component.html'
+  templateUrl: './navbar.component.html'
 })
 export class NavbarComponent { 
   // App name
@@ -26,7 +26,7 @@ export class NavbarComponent {
     {href: 'welcome', label: 'Home', active: true},
     {href: 'products', label: 'Products', active: false, queryParams: { category: 1 }},
     {href: 'checkout', label: 'Checkout', active: false},
-    {href: '#', label: 'Sign out', active: false}
+    {href: '', label: 'Sign out', active: false}
   ];
 }
 

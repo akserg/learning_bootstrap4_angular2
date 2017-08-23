@@ -3,7 +3,7 @@
     ".read": true,
     ".write": "auth != null",
     "products": {
-      ".indexOn": ["categoryId", "title"]
+      ".indexOn": ["categoryId", "title", "id"]
     }
   }
 }

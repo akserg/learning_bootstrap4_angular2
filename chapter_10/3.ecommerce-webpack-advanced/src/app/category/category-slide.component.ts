@@ -1,16 +1,16 @@
 /*
  * Angular Imports
  */
-import {Component, Input, Output, EventEmitter} from "@angular/core";
+import {Component, Input, Output, EventEmitter} from '@angular/core';
 
 /*
  * Components
  */
-import {Category} from "./category.service";
+import {Category} from './category.service';
 
 @Component({
-    selector: "db-category-slide",
-    template: require("./category-slide.component.html")
+    selector: 'db-category-slide',
+    templateUrl: './category-slide.component.html'
 })
 export class CategorySlideComponent {
     @Input() category: Category;
