@@ -2,37 +2,34 @@
  * Angular Imports
  */
 import { Injectable } from "@angular/core";
-import { AuthProviders, FirebaseAuth, FirebaseAuthState, AuthMethods } from "angularfire2";
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
-    private authState: FirebaseAuthState = null;
+    user: firebase.User;
 
-constructor(public auth$: FirebaseAuth) {
-    auth$.subscribe((state: FirebaseAuthState) => {
-        this.authState = state;
-    });
-}
-
-    get authenticated(): boolean {
-        return this.authState !== null;
-    }
-
-    get uid(): string {
-        return this.authenticated ? this.authState.uid : "";
-    }
-
-    signIn(email: string, password: string): firebase.Promise<FirebaseAuthState> {
-        return this.auth$.login({
-            email: email,
-            password: password
-        }, {
-            provider: AuthProviders.Password,
-            method: AuthMethods.Password,
+    constructor(public auth$: AngularFireAuth) {
+        auth$.authState.subscribe((user: firebase.User) => {
+            this.user = user;
         });
     }
 
+    get authenticated(): boolean {
+        return this.auth$.auth.currentUser !== null;
+    }
+
+    get uid(): string {
+        return this.authenticated ? this.user.uid : "";
+    }
+
+    signIn(email: string, password: string): firebase.Promise<any> {
+        return this.auth$.auth.signInWithEmailAndPassword(email, password);
+    }
+
     signOut(): void {
-        this.auth$.logout();
+        this.auth$.auth.signOut();
     }
 }

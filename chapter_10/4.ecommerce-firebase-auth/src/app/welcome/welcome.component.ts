@@ -1,17 +1,17 @@
 /*
  * Angular Imports
  */
-import {Component, OnInit} from "@angular/core";
-import {Observable} from "rxjs/Observable";
+import {Component, OnInit} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
 
 /*
  * Components
  */
-import {Category, CategoryService} from "../category/category.service";
+import {Category, CategoryService} from '../category/category.service';
 
 @Component({
-  selector: "db-welcome",
-  template: require("./welcome.component.html")
+  selector: 'db-welcome',
+  templateUrl: './welcome.component.html'
 })
 export class WelcomeComponent implements OnInit {
   // Slide Categories
@@ -20,7 +20,7 @@ export class WelcomeComponent implements OnInit {
   // Card categories
   cardCategories: Observable<Category[]>;
 
-  constructor(private categoryServics: CategoryService) {}
+  constructor(private categoryServics:CategoryService) {}
 
   ngOnInit(): void {
     this.cardCategories = this.categoryServics.getCategories();
