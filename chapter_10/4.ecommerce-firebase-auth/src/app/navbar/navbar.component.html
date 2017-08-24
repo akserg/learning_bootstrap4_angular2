@@ -14,9 +14,12 @@
           <a class="nav-link" [routerLink]="navItem.href" [queryParams]="navItem.queryParams"
           (click)="self[navItem.fun]()">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" (click)="logout()" *ngIf="authService.authenticated">Sign out</a>
+      </li>
       </ul>
       
-      <db-cart-menu></db-cart-menu>
+      <db-cart-menu *ngIf="authService.authenticated"></db-cart-menu>
     </div>
   </div>
 </nav>

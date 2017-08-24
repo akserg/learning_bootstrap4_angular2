@@ -43,6 +43,8 @@ export class SignInComponent {
     }
 
     private postSignIn(): void {
+        this.email.setValue('');
+        this.password.setValue('');
         this.router.navigate(["/welcome"]);
     }
 }

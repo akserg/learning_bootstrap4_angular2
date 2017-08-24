@@ -17,8 +17,6 @@ export interface NavItem {
   active: boolean;
   // queryParams
   queryParams?: any;
-  //
-  fun?: Function;
 }
 
 @Component({
@@ -30,18 +28,13 @@ export class NavbarComponent {
   appName: string = 'Dream Bean';
   // Navgation items
   navItems: NavItem[] = [
-    {href: 'welcome', label: 'Home', active: true, fun: this.noop},
-    {href: 'products', label: 'Products', active: false, queryParams: { category: 1 }, fun: this.noop},
-    {href: 'checkout', label: 'Checkout', active: false, fun: this.noop},
-    {href: '', label: 'Sign out', active: false, fun: this.logout}
+    {href: 'welcome', label: 'Home', active: true},
+    {href: 'products', label: 'Products', active: false, queryParams: { category: 1 }},
+    {href: 'checkout', label: 'Checkout', active: false},
   ];
  
-  get self() { return this; }
+  constructor(public authService: AuthService, private router: Router) { }
 
-  constructor(private authService: AuthService, private router: Router) { }
-
-  noop() { }
-  
   logout() {
     this.authService.signOut();
     this.router.navigateByUrl("/login");
