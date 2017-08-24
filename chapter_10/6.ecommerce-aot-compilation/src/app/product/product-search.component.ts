@@ -1,19 +1,19 @@
 /*
  * Angular Imports
  */
-import {Component} from "@angular/core";
-import {Router} from "@angular/router";
+import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
-    selector: "db-product-search",
-    templateUrl: "./product-search.component.html"
+    selector: 'db-product-search',
+    templateUrl: './product-search.component.html'
 })
 export class ProductSearchComponent {
 
     constructor(private router: Router) {}
 
     searchProduct(value: string) {
-        this.router.navigate(["/products"], { queryParams: { search: value} });
+        this.router.navigate(['/products'], { queryParams: { search: value} });
     }
 }
 

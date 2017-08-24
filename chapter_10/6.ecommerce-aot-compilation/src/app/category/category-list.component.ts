@@ -1,18 +1,18 @@
 /*
  * Angular Imports
  */
-import {Component, OnInit} from "@angular/core";
-import {Router} from "@angular/router";
-import {Observable} from "rxjs/Observable";
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs/Observable';
 
 /*
  * Components
  */
-import {Category, CategoryService} from "./category.service";
+import {Category, CategoryService} from './category.service';
 
 @Component({
-    selector: "db-category-list",
-    templateUrl: "./category-list.component.html"
+    selector: 'db-category-list',
+    templateUrl: './category-list.component.html'
 })
 export class CategoryListComponent implements OnInit {
 
@@ -25,7 +25,7 @@ export class CategoryListComponent implements OnInit {
     }
 
     filterProducts(category: Category) {
-        this.router.navigate(["/products"], { queryParams: { category: category.id} });
+        this.router.navigate(['/products'], { queryParams: { category: category.id} });
     }
 }
 

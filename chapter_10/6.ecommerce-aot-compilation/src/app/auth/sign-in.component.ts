@@ -37,12 +37,14 @@ export class SignInComponent {
         this.auth.signIn(values.email, values.password)
             .then(() => this.postSignIn())
             .catch((error) => {
-                this.error = "Username or password is incorrect";
+                this.error = error.toString();
                 this.submitted = false;
             });
     }
 
     private postSignIn(): void {
+        this.email.setValue('');
+        this.password.setValue('');
         this.router.navigate(["/welcome"]);
     }
 }

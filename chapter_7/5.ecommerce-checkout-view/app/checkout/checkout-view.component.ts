@@ -16,7 +16,7 @@ import {Cart, CartItem, CartService} from '../cart/cart.service';
 })
 export class CheckoutViewComponent {
 
-    private cart: Cart;
+    cart: Cart;
     form: FormGroup;
 
     constructor(private cartService: CartService, private fb: FormBuilder) {

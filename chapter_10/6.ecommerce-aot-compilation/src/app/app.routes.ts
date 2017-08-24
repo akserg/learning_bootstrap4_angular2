@@ -1,7 +1,7 @@
 /*
  * Angular Imports
  */
-import { Routes } from "@angular/router";
+import { Routes, RouterModule } from "@angular/router";
 
 /*
  * Guards

@@ -17,7 +17,7 @@ import {CartItemCountComponent} from '../cart/cart-item-count.component';
 })
 export class CheckoutViewComponent implements OnInit {
 
-    private cart: Cart;
+    cart: Cart;
     form: FormGroup;
 
     constructor(private cartService: CartService, private fb: FormBuilder) {

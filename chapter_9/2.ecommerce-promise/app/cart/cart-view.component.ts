@@ -16,7 +16,7 @@ import {CartItemCountComponent} from './cart-item-count.component';
 })
 export class CartViewComponent {
 
-    private cart: Cart;
+    cart: Cart;
 
     constructor(private cartService: CartService) {
         this.cart = this.cartService.cart;

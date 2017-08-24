@@ -1,0 +1,230 @@
+Hash: [1mf10342cffd74f704da5a[39m[22m
+Version: webpack [1m2.4.1[39m[22m
+Time: [1m14351[39m[22mms
+                                   [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+[1m[32mpolyfills.880fa9476b454ec3a0b4.bundle.js[39m[22m    66.3 kB       [1m0[39m[22m  [1m[32m[39m[22mpolyfills
+  [1m[32mscripts.f2fda4b1ee71cf48992c.bundle.js[39m[22m     686 kB       [1m1[39m[22m  [1m[32m[39m[22mscripts
+     [1m[32mmain.a36d7d84cd68eb0def72.bundle.js[39m[22m  478 bytes       [1m2[39m[22m  [1m[32m[39m[22mmain
+   [1m[32mvendor.d9800c734c7708c02954.bundle.js[39m[22m     222 kB       [1m4[39m[22m  [1m[32m[39m[22mvendor
+   [1m[32minline.48689264863b64a5b65e.bundle.js[39m[22m    1.49 kB       [1m5[39m[22m  [1m[32m[39m[22minline
+  [1m[32mstyles.820bc74834c84353b75e.bundle.css[39m[22m     136 kB       [1m3[39m[22m  [1m[32m[39m[22mstyles
+chunk    {[1m[33m0[39m[22m} [1m[32mpolyfills.880fa9476b454ec3a0b4.bundle.js[39m[22m (polyfills) 184 kB {[1m[33m5[39m[22m}[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+chunk    {[1m[33m1[39m[22m} [1m[32mscripts.f2fda4b1ee71cf48992c.bundle.js[39m[22m (scripts) 689 kB {[1m[33m5[39m[22m}[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+chunk    {[1m[33m2[39m[22m} [1m[32mmain.a36d7d84cd68eb0def72.bundle.js[39m[22m (main) 1.09 kB {[1m[33m4[39m[22m}[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+chunk    {[1m[33m3[39m[22m} [1m[32mstyles.820bc74834c84353b75e.bundle.css[39m[22m (styles) 122 bytes {[1m[33m5[39m[22m}[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+chunk    {[1m[33m4[39m[22m} [1m[32mvendor.d9800c734c7708c02954.bundle.js[39m[22m (vendor) 851 kB[1m[33m [initial][39m[22m[1m[32m [rendered][39m[22m
+chunk    {[1m[33m5[39m[22m} [1m[32minline.48689264863b64a5b65e.bundle.js[39m[22m (inline) 0 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+
+[1m[33mWARNING in polyfills.880fa9476b454ec3a0b4.bundle.js from UglifyJs
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_0_core_js_es6_reflect___default [polyfills.880fa9476b454ec3a0b4.bundle.js:1022,25]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_1_core_js_es7_reflect___default [polyfills.880fa9476b454ec3a0b4.bundle.js:1024,25]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_2_zone_js_dist_zone___default [polyfills.880fa9476b454ec3a0b4.bundle.js:1026,25]
+Condition always true [polyfills.880fa9476b454ec3a0b4.bundle.js:1827,2]
+Side effects in initialization of unused variable msie [polyfills.880fa9476b454ec3a0b4.bundle.js:3135,12]
+Side effects in initialization of unused variable targetZone [polyfills.880fa9476b454ec3a0b4.bundle.js:3423,20]
+Dropping unused variable typeOfDelegate [polyfills.880fa9476b454ec3a0b4.bundle.js:3578,24]
+Side effects in initialization of unused variable showError [polyfills.880fa9476b454ec3a0b4.bundle.js:2427,16]
+Condition left of || always false [polyfills.880fa9476b454ec3a0b4.bundle.js:2702,38]
+Condition left of || always false [polyfills.880fa9476b454ec3a0b4.bundle.js:2705,38]
+Non-strict equality against boolean: == false [polyfills.880fa9476b454ec3a0b4.bundle.js:4575,29]
+Side effects in initialization of unused variable Zone$1 [polyfills.880fa9476b454ec3a0b4.bundle.js:1839,4]
+Side effects in initialization of unused variable ON_PROPERTY_HANDLER_SYMBOL [polyfills.880fa9476b454ec3a0b4.bundle.js:2885,4][39m[22m
+
+[1m[33mWARNING in main.a36d7d84cd68eb0def72.bundle.js from UglifyJs
+Dropping unreachable code [main.a36d7d84cd68eb0def72.bundle.js:19,21]
+Declarations in unreachable code! [main.a36d7d84cd68eb0def72.bundle.js:19,21]
+Dropping unreachable code [main.a36d7d84cd68eb0def72.bundle.js:24,0]
+Dropping unreachable code [main.a36d7d84cd68eb0def72.bundle.js:27,0]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_0__angular_core__ [main.a36d7d84cd68eb0def72.bundle.js:16,25]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_1__environments_environment__ [main.a36d7d84cd68eb0def72.bundle.js:17,25][39m[22m
+
+[1m[33mWARNING in vendor.d9800c734c7708c02954.bundle.js from UglifyJs
+Dropping unreachable code [vendor.d9800c734c7708c02954.bundle.js:9361,4]
+Declarations in unreachable code! [vendor.d9800c734c7708c02954.bundle.js:9361,4]
+Dropping unreachable code [vendor.d9800c734c7708c02954.bundle.js:13622,12]
+Declarations in unreachable code! [vendor.d9800c734c7708c02954.bundle.js:13622,12]
+Dropping unused function isDefaultChangeDetectionStrategy [vendor.d9800c734c7708c02954.bundle.js:813,9]
+Dropping unused function destroyPlatform [vendor.d9800c734c7708c02954.bundle.js:4503,9]
+Dropping unused function registerModuleFactory [vendor.d9800c734c7708c02954.bundle.js:5607,9]
+Dropping unused function getModuleFactory [vendor.d9800c734c7708c02954.bundle.js:5625,9]
+Dropping unused function asNativeElements [vendor.d9800c734c7708c02954.bundle.js:6627,9]
+Dropping unused function unwrapValue [vendor.d9800c734c7708c02954.bundle.js:8690,9]
+Dropping unused function createRendererType2 [vendor.d9800c734c7708c02954.bundle.js:8708,9]
+Dropping unused function interpolate [vendor.d9800c734c7708c02954.bundle.js:9138,9]
+Dropping unused function inlineInterpolate [vendor.d9800c734c7708c02954.bundle.js:9168,9]
+Dropping unused function anchorDef [vendor.d9800c734c7708c02954.bundle.js:9227,9]
+Dropping unused function elementDef [vendor.d9800c734c7708c02954.bundle.js:9277,9]
+Dropping unused function moduleProvideDef [vendor.d9800c734c7708c02954.bundle.js:9619,9]
+Dropping unused function moduleDef [vendor.d9800c734c7708c02954.bundle.js:9631,9]
+Dropping unused function createComponentFactory [vendor.d9800c734c7708c02954.bundle.js:9995,9]
+Dropping unused function getComponentViewDefinitionFactory [vendor.d9800c734c7708c02954.bundle.js:10002,9]
+Dropping unused function nodeValue [vendor.d9800c734c7708c02954.bundle.js:10528,9]
+Dropping unused function directiveDef [vendor.d9800c734c7708c02954.bundle.js:10847,9]
+Dropping unused function pipeDef [vendor.d9800c734c7708c02954.bundle.js:10876,9]
+Dropping unused function providerDef [vendor.d9800c734c7708c02954.bundle.js:10888,9]
+Dropping unused function queryDef [vendor.d9800c734c7708c02954.bundle.js:11425,9]
+Dropping unused function ngContentDef [vendor.d9800c734c7708c02954.bundle.js:11636,9]
+Dropping unused function purePipeDef [vendor.d9800c734c7708c02954.bundle.js:11689,9]
+Dropping unused function pureArrayDef [vendor.d9800c734c7708c02954.bundle.js:11697,9]
+Dropping unused function pureObjectDef [vendor.d9800c734c7708c02954.bundle.js:11704,9]
+Dropping unused function textDef [vendor.d9800c734c7708c02954.bundle.js:11947,9]
+Dropping unused function viewDef [vendor.d9800c734c7708c02954.bundle.js:12117,9]
+Dropping unused function overrideProvider [vendor.d9800c734c7708c02954.bundle.js:14003,9]
+Dropping unused function clearProviderOverrides [vendor.d9800c734c7708c02954.bundle.js:14010,9]
+Dropping unused function createNgModuleFactory [vendor.d9800c734c7708c02954.bundle.js:14020,9]
+Dropping unused function trigger$$1 [vendor.d9800c734c7708c02954.bundle.js:14929,9]
+Dropping unused function animate$$1 [vendor.d9800c734c7708c02954.bundle.js:14938,9]
+Dropping unused function group$$1 [vendor.d9800c734c7708c02954.bundle.js:14946,9]
+Dropping unused function sequence$$1 [vendor.d9800c734c7708c02954.bundle.js:14954,9]
+Dropping unused function style$$1 [vendor.d9800c734c7708c02954.bundle.js:14962,9]
+Dropping unused function state$$1 [vendor.d9800c734c7708c02954.bundle.js:14971,9]
+Dropping unused function keyframes$$1 [vendor.d9800c734c7708c02954.bundle.js:14979,9]
+Dropping unused function transition$$1 [vendor.d9800c734c7708c02954.bundle.js:14988,9]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_1_rxjs_Observable___default [vendor.d9800c734c7708c02954.bundle.js:9,25]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_2_rxjs_observable_merge___default [vendor.d9800c734c7708c02954.bundle.js:11,25]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_3_rxjs_operator_share___default [vendor.d9800c734c7708c02954.bundle.js:13,25]
+Side effects in initialization of unused variable __WEBPACK_IMPORTED_MODULE_4_rxjs_Subject___default [vendor.d9800c734c7708c02954.bundle.js:15,25]
+Side effects in initialization of unused variable ANALYZE_FOR_ENTRY_COMPONENTS [vendor.d9800c734c7708c02954.bundle.js:732,4]
+Side effects in initialization of unused variable ContentChildren [vendor.d9800c734c7708c02954.bundle.js:760,4]
+Side effects in initialization of unused variable ContentChild [vendor.d9800c734c7708c02954.bundle.js:770,4]
+Side effects in initialization of unused variable ViewChildren [vendor.d9800c734c7708c02954.bundle.js:780,4]
+Side effects in initialization of unused variable ViewChild [vendor.d9800c734c7708c02954.bundle.js:790,4]
+Side effects in initialization of unused variable Component [vendor.d9800c734c7708c02954.bundle.js:840,4]
+Side effects in initialization of unused variable Output [vendor.d9800c734c7708c02954.bundle.js:864,4]
+Side effects in initialization of unused variable HostBinding [vendor.d9800c734c7708c02954.bundle.js:871,4]
+Side effects in initialization of unused variable HostListener [vendor.d9800c734c7708c02954.bundle.js:878,4]
+Dropping unused variable CUSTOM_ELEMENTS_SCHEMA [vendor.d9800c734c7708c02954.bundle.js:894,4]
+Dropping unused variable NO_ERRORS_SCHEMA [vendor.d9800c734c7708c02954.bundle.js:902,4]
+Side effects in initialization of unused variable ViewMetadata [vendor.d9800c734c7708c02954.bundle.js:944,4]
+Dropping unused variable ERROR_COMPONENT_TYPE [vendor.d9800c734c7708c02954.bundle.js:1190,4]
+Side effects in initialization of unused variable PACKAGE_ROOT_URL [vendor.d9800c734c7708c02954.bundle.js:3117,4]
+Side effects in initialization of unused variable ModuleWithComponentFactories [vendor.d9800c734c7708c02954.bundle.js:3165,4]
+Side effects in initialization of unused variable COMPILER_OPTIONS [vendor.d9800c734c7708c02954.bundle.js:3264,4]
+Side effects in initialization of unused variable CodegenComponentFactoryResolver [vendor.d9800c734c7708c02954.bundle.js:3450,4]
+Dropping unused variable wtfStartTimeRange [vendor.d9800c734c7708c02954.bundle.js:3749,4]
+Dropping unused variable wtfEndTimeRange [vendor.d9800c734c7708c02954.bundle.js:3756,4]
+Side effects in initialization of unused variable RenderComponentType [vendor.d9800c734c7708c02954.bundle.js:5124,4]
+Side effects in initialization of unused variable RenderDebugInfo [vendor.d9800c734c7708c02954.bundle.js:5147,4]
+Side effects in initialization of unused variable Renderer2Interceptor [vendor.d9800c734c7708c02954.bundle.js:5338,4]
+Side effects in initialization of unused variable RootRenderer [vendor.d9800c734c7708c02954.bundle.js:5355,4]
+Side effects in initialization of unused variable NgModuleFactoryLoader [vendor.d9800c734c7708c02954.bundle.js:5588,4]
+Side effects in initialization of unused variable moduleFactories [vendor.d9800c734c7708c02954.bundle.js:5599,4]
+Side effects in initialization of unused variable EmbeddedViewRef [vendor.d9800c734c7708c02954.bundle.js:6379,4]
+Side effects in initialization of unused variable ValueUnwrapper [vendor.d9800c734c7708c02954.bundle.js:6756,4]
+Side effects in initialization of unused variable TRANSLATIONS [vendor.d9800c734c7708c02954.bundle.js:8335,4]
+Side effects in initialization of unused variable TRANSLATIONS_FORMAT [vendor.d9800c734c7708c02954.bundle.js:8339,4]
+Side effects in initialization of unused variable DebugContext [vendor.d9800c734c7708c02954.bundle.js:8508,4]
+Dropping unused variable EMPTY_ARRAY [vendor.d9800c734c7708c02954.bundle.js:9209,4]
+Dropping unused variable EMPTY_MAP [vendor.d9800c734c7708c02954.bundle.js:9210,4]
+Side effects in initialization of unused variable ComponentFactory_ [vendor.d9800c734c7708c02954.bundle.js:10005,4]
+Side effects in initialization of unused variable NgModuleFactory_ [vendor.d9800c734c7708c02954.bundle.js:14023,4]
+Dropping unused variable AUTO_STYLE$$1 [vendor.d9800c734c7708c02954.bundle.js:14922,4]
+Dropping unused function __rest [vendor.d9800c734c7708c02954.bundle.js:15125,9]
+Dropping unused function __decorate [vendor.d9800c734c7708c02954.bundle.js:15135,9]
+Dropping unused function __param [vendor.d9800c734c7708c02954.bundle.js:15142,9]
+Dropping unused function __metadata [vendor.d9800c734c7708c02954.bundle.js:15146,9]
+Dropping unused function __awaiter [vendor.d9800c734c7708c02954.bundle.js:15150,9]
+Dropping unused function __generator [vendor.d9800c734c7708c02954.bundle.js:15159,9]
+Dropping unused function __exportStar [vendor.d9800c734c7708c02954.bundle.js:15187,9]
+Dropping unused function __spread [vendor.d9800c734c7708c02954.bundle.js:15219,9]
+Dropping unused function __asyncGenerator [vendor.d9800c734c7708c02954.bundle.js:15229,9]
+Dropping unused function __asyncDelegator [vendor.d9800c734c7708c02954.bundle.js:15241,9]
+Dropping unused function __asyncValues [vendor.d9800c734c7708c02954.bundle.js:15247,9]
+Side effects in initialization of unused variable __assign [vendor.d9800c734c7708c02954.bundle.js:15117,4]
+Dropping unused function enableDebugTools [vendor.d9800c734c7708c02954.bundle.js:20769,9]
+Dropping unused function disableDebugTools [vendor.d9800c734c7708c02954.bundle.js:20779,9]
+Side effects in initialization of unused variable AngularProfiler [vendor.d9800c734c7708c02954.bundle.js:20691,4]
+Side effects in initialization of unused variable By [vendor.d9800c734c7708c02954.bundle.js:20794,4]
+Side effects in initialization of unused variable VERSION [vendor.d9800c734c7708c02954.bundle.js:20858,4]
+Dropping unused function isPlatformBrowser [vendor.d9800c734c7708c02954.bundle.js:25231,9]
+Dropping unused function isPlatformServer [vendor.d9800c734c7708c02954.bundle.js:25240,9]
+Dropping unused function isPlatformWorkerApp [vendor.d9800c734c7708c02954.bundle.js:25249,9]
+Dropping unused function isPlatformWorkerUi [vendor.d9800c734c7708c02954.bundle.js:25258,9]
+Side effects in initialization of unused variable LOCATION_INITIALIZED [vendor.d9800c734c7708c02954.bundle.js:21411,4]
+Dropping unused variable NgFor [vendor.d9800c734c7708c02954.bundle.js:23078,4]
+Side effects in initialization of unused variable VERSION [vendor.d9800c734c7708c02954.bundle.js:25276,4][39m[22m
+
+[1m[31mERROR in ./src/main.ts
+Module not found: Error: Can't resolve './$$_gendir/app/app.module.ngfactory' in '/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src'
+ @ ./src/main.ts 3:0-74
+ @ multi ./src/main.ts[39m[22m
+Child [1msrc/app/app.component.html[39m[22m:
+                                                                                                                               [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/app.component.html[39m[22m  2.75 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/app.component.html[39m[22m 100 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/auth/sign-in.component.html[39m[22m:
+                                                                                                                                        [1mAsset[39m[22m    [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/auth/sign-in.component.html[39m[22m  4.6 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/auth/sign-in.component.html[39m[22m 1.95 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/cart/cart-item-count.component.html[39m[22m:
+                                                                                                                                                [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/cart/cart-item-count.component.html[39m[22m  2.78 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/cart/cart-item-count.component.html[39m[22m 134 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/cart/cart-menu.component.html[39m[22m:
+                                                                                                                                          [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/cart/cart-menu.component.html[39m[22m  5.18 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/cart/cart-menu.component.html[39m[22m 2.53 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/cart/cart-view.component.html[39m[22m:
+                                                                                                                                          [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/cart/cart-view.component.html[39m[22m  5.83 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/cart/cart-view.component.html[39m[22m 3.18 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/category/category-list.component.html[39m[22m:
+                                                                                                                                                  [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/category/category-list.component.html[39m[22m  2.96 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/category/category-list.component.html[39m[22m 313 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/category/category-card.component.html[39m[22m:
+                                                                                                                                                  [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/category/category-card.component.html[39m[22m  3.08 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/category/category-card.component.html[39m[22m 433 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/category/category-slide.component.html[39m[22m:
+                                                                                                                                                   [1mAsset[39m[22m    [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/category/category-slide.component.html[39m[22m  2.8 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/category/category-slide.component.html[39m[22m 154 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/product/product-list.component.html[39m[22m:
+                                                                                                                                                [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-list.component.html[39m[22m  2.99 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-list.component.html[39m[22m 342 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/product/product-view.component.html[39m[22m:
+                                                                                                                                                [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-view.component.html[39m[22m  5.98 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-view.component.html[39m[22m 3.33 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/product/product-card.component.html[39m[22m:
+                                                                                                                                                [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-card.component.html[39m[22m  3.63 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-card.component.html[39m[22m 986 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/product/product-search.component.html[39m[22m:
+                                                                                                                                                  [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-search.component.html[39m[22m  2.89 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-search.component.html[39m[22m 238 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/product/product-grid.component.html[39m[22m:
+                                                                                                                                                [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-grid.component.html[39m[22m  2.79 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/product/product-grid.component.html[39m[22m 146 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/navbar/navbar.component.html[39m[22m:
+                                                                                                                                         [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/navbar/navbar.component.html[39m[22m  3.91 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/navbar/navbar.component.html[39m[22m 1.26 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/footer/footer.component.html[39m[22m:
+                                                                                                                                         [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/footer/footer.component.html[39m[22m  2.94 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/footer/footer.component.html[39m[22m 289 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/welcome/welcome.component.html[39m[22m:
+                                                                                                                                           [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/welcome/welcome.component.html[39m[22m  4.39 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/welcome/welcome.component.html[39m[22m 1.74 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/checkout/checkout-view.component.html[39m[22m:
+                                                                                                                                                  [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/checkout/checkout-view.component.html[39m[22m  7.61 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/checkout/checkout-view.component.html[39m[22m 4.96 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1mhtml-webpack-plugin for "index.html"[39m[22m:
+         [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32mindex.html[39m[22m  3.11 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32mindex.html[39m[22m 426 bytes[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1msrc/app/auth/auth.scss[39m[22m:
+                                                                                                                           [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m[1m[39m[22m[1mChunk Names[39m[22m
+    [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/auth/auth.scss[39m[22m  5.99 kB       [1m0[39m[22m  [1m[32m[39m[22m
+    chunk    {[1m[33m0[39m[22m} [1m[32m/Users/sergey/Documents/Coursware/learning_bootstrap4_angular2/chapter_10/6.ecommerce-aot-compilation/src/app/auth/auth.scss[39m[22m 3.29 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1mextract-text-webpack-plugin[39m[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mextract-text-webpack-plugin-output-filename[39m[22m 138 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m
+Child [1mextract-text-webpack-plugin[39m[22m:
+    chunk    {[1m[33m0[39m[22m} [1m[32mextract-text-webpack-plugin-output-filename[39m[22m 3.21 kB[1m[33m [entry][39m[22m[1m[32m [rendered][39m[22m

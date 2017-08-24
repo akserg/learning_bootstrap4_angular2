@@ -15,7 +15,7 @@ import {Cart, CartItem, CartService} from './cart.service';
 })
 export class CartViewComponent {
 
-    private cart: Cart;
+    cart: Cart;
 
     constructor(private cartService: CartService) {
         this.cart = this.cartService.cart;

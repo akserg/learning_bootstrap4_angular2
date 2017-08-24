@@ -1,22 +1,22 @@
 /*
  * Angular Imports
  */
-import {Component, Input, OnInit} from "@angular/core";
-import {FormGroup, FormBuilder, Validators} from "@angular/forms";
+import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 
 /*
  * Components
  */
-import {Cart, CartItem, CartService} from "../cart/cart.service";
-import {CartItemCountComponent} from "../cart/cart-item-count.component";
+import {Cart, CartItem, CartService} from '../cart/cart.service';
+import {CartItemCountComponent} from '../cart/cart-item-count.component';
 
 @Component({
-    selector: "db-checkout-view",
-    templateUrl: "./checkout-view.component.html"
+    selector: 'db-checkout-view',
+    templateUrl: './checkout-view.component.html'
 })
 export class CheckoutViewComponent implements OnInit {
 
-    private cart: Cart;
+    cart: Cart;
     form: FormGroup;
 
     constructor(private cartService: CartService, private fb: FormBuilder) {
@@ -25,16 +25,16 @@ export class CheckoutViewComponent implements OnInit {
 
     ngOnInit() {
         this.form = this.fb.group({
-            firstName: ["", Validators.required],
-            lastName: ["", Validators.required],
-            email: ["", Validators.required],
-            phone: ["", Validators.required],
+            firstName: ['', Validators.required],
+            lastName: ['', Validators.required],
+            email: ['', Validators.required],
+            phone: ['', Validators.required],
             address: []
-        });
+        }); 
     }
 
     submit() {
-        alert("Submitted");
+        alert('Submitted');
         this.cartService.clearCart();
     }
 }
