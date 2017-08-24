@@ -1,20 +1,24 @@
-<nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
+<nav class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse">
   <div class="container">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar">
-      &#9776;
+    <button class="navbar-toggler" 
+      type="button" data-toggle="collapse" data-target="#exCollapsingNavbar" 
+      aria-controls="exCollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-toggleable" id="exCollapsingNavbar">
-      <a class="navbar-brand" [routerLink]="['/welcome']">Dream Bean</a>
-
-      <div class="nav navbar-nav">
-        <a class="nav-item nav-link active" [routerLink]="['/welcome']">
-          Home <span class="sr-only">(current)</span>
-        </a>
-        <a class="nav-item nav-link" [routerLink]="['/products']" [queryParams]="{ category: 1 }">Products</a>
-        <a class="nav-item nav-link" [routerLink]="['/checkout']">Checkout</a>
-        <a class="nav-item nav-link" (click)="logout()" *ngIf="authService.authenticated">Sign out</a>
-      </div>
-
+    <a class="navbar-brand" [routerLink]="['/welcome']" [innerHTML]="appName"></a>
+    
+    <div class="collapse navbar-collapse" id="exCollapsingNavbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item" [ngClass]="{active: navItem.active}"
+          *ngFor="let navItem of navItems">
+          <a class="nav-link" [routerLink]="navItem.href" [queryParams]="navItem.queryParams"
+          (click)="self[navItem.fun]()">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" (click)="logout()" *ngIf="authService.authenticated">Sign out</a>
+      </li>
+      </ul>
+      
       <db-cart-menu *ngIf="authService.authenticated"></db-cart-menu>
     </div>
   </div>

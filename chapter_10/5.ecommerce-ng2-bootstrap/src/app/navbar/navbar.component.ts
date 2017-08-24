@@ -1,4 +1,3 @@
-
 /*
  * Angular Imports
  */
@@ -9,13 +8,32 @@ import { Router } from "@angular/router";
  */
 import { AuthService } from "../auth/auth.service";
 
-@Component({
-  selector: "db-navbar",
-  template: require("./navbar.component.html")
-})
-export class NavbarComponent {
+export interface NavItem {
+  // Navigation link
+  href: string;
+  // Navigation Label
+  label: string;
+  // Status of Navigation Item
+  active: boolean;
+  // queryParams
+  queryParams?: any;
+}
 
-  constructor(private authService: AuthService, private router: Router) { }
+@Component({
+  selector: 'db-navbar',
+  templateUrl: './navbar.component.html'
+})
+export class NavbarComponent { 
+  // App name
+  appName: string = 'Dream Bean';
+  // Navgation items
+  navItems: NavItem[] = [
+    {href: 'welcome', label: 'Home', active: true},
+    {href: 'products', label: 'Products', active: false, queryParams: { category: 1 }},
+    {href: 'checkout', label: 'Checkout', active: false},
+  ];
+ 
+  constructor(public authService: AuthService, private router: Router) { }
 
   logout() {
     this.authService.signOut();

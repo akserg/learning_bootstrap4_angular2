@@ -1,8 +1,9 @@
-import {Injectable} from "@angular/core";
-import {AngularFire, FirebaseListObservable} from "angularfire2";
-import {Observable} from "rxjs/Observable";
-import "rxjs/add/operator/catch";
-import "rxjs/add/observable/empty";
+import {Injectable} from '@angular/core';
+import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
+import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/observable/empty';
+import 'rxjs/add/observable/throw';
 
 export interface Product {
     // Unique Id
@@ -25,24 +26,23 @@ export interface Product {
 
 @Injectable()
 export class ProductService {
-
     // URL to Products web api
-    private productsUrl = "products";
+    private productsUrl = 'products';
 
-    constructor(private af: AngularFire) {}
+    constructor(private db: AngularFireDatabase) { }
 
     getProducts(category?: string, search?: string): Observable<Product[]> {
         if (category || search) {
             let query = <any>{};
             if (category) {
-                query.orderByChild = "categoryId";
+                query.orderByChild = 'categoryId';
                 query.equalTo = category;
             } else {
-                query.orderByChild = "title";
+                query.orderByChild = 'title';
                 query.startAt = search.toUpperCase();
-                query.endAt = query.startAt + "\uf8ff";
+                query.endAt = query.startAt + '\uf8ff';
             }
-            return this.af.database
+            return this.db
                 .list(this.productsUrl, {
                     query: query
                 })
@@ -53,14 +53,23 @@ export class ProductService {
     }
 
     getProduct(id: string): Observable<Product> {
-        return this.af.database
-            .object(this.productsUrl + `/${id}`)
+        return this.db
+            .list(this.productsUrl, {
+                query: {
+                    orderByChild: 'id',
+                    equalTo: id
+                }
+            })
+            .map((products: Product[]) => {
+                return products[0];
+            })
             .catch(this.handleError);
     }
 
     private handleError(error: any): Observable<any> {
         let errMsg = (error.message) ? error.message : error.status ?
-            `${error.status} - ${error.statusText}` : "Server error";
+            `${error.status} - ${error.statusText}` : 'Server error';
+        window.alert(`An error occurred: ${errMsg}`);
         return Observable.throw(errMsg);
     }
 }
