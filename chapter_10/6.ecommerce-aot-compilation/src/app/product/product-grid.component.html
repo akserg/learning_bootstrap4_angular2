@@ -1,1 +1,2 @@
 <db-product-card *ngFor="let row of products | async" [products]="row" (addToCart)="addToCart($event)"></db-product-card>
+<div *ngIf="showEmptySearch" class="alert alert-info" role="alert">Nothing to search. Type in Quick Shop or Choose a Category.</div>
