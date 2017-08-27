@@ -10,6 +10,7 @@ build.xml
 **/npm-debug.log
 coverage
 *.js
+!**/config/*
 !systemjs.config.js
 !webpack.config.js
 !karma.conf.js

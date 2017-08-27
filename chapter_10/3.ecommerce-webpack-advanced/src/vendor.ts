@@ -15,6 +15,6 @@ import "rxjs/add/operator/take";
 
 // Bootstrap 4
 import "jquery";
-import 'bootstrap';
+require('bootstrap-loader');
 import 'firebase';
 import 'angularfire2';
