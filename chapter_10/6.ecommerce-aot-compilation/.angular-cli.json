@@ -22,9 +22,7 @@
         "../node_modules/bootstrap/dist/css/bootstrap.css",
         "assets/ecommerce.scss"
       ],
-      "scripts": [
-        "../node_modules/ngx-bootstrap/bundles/ngx-bootstrap.umd.js"
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

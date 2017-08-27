@@ -11,8 +11,9 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item" [ngClass]="{active: navItem.active}"
           *ngFor="let navItem of navItems">
-          <a class="nav-link" [routerLink]="navItem.href" [queryParams]="navItem.queryParams"
-          (click)="self[navItem.fun]()">{{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span></a>
+          <a class="nav-link" [routerLink]="navItem.href" [queryParams]="navItem.queryParams">
+            {{navItem.label}} <span class="sr-only" *ngIf="navItem.active">(current)</span>
+          </a>
         </li>
         <li class="nav-item">
         <a class="nav-link" (click)="logout()" *ngIf="authService.authenticated">Sign out</a>
