@@ -11,8 +11,9 @@ import {Cart, CartItem, CartService} from '../cart/cart.service';
 import {CartItemCountComponent} from '../cart/cart-item-count.component';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-checkout-view',
-    templateUrl: 'app/checkout/checkout-view.component.html'
+    templateUrl: './checkout-view.component.html'
 })
 export class CheckoutViewComponent implements OnInit {
 

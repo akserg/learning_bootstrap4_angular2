@@ -10,8 +10,9 @@ import {Cart, CartItem, CartService} from './cart.service';
 import {CartItemCountComponent} from './cart-item-count.component';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-cart-view',
-    templateUrl: 'app/cart/cart-view.component.html'
+    templateUrl: './cart-view.component.html'
 })
 export class CartViewComponent {
 

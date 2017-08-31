@@ -11,8 +11,9 @@ import {Observable} from 'rxjs/Observable';
 import {Category, CategoryService} from './category.service';
 
 @Component({
+    moduleId: module.id,
     selector: 'db-category-list',
-    templateUrl: 'app/category/category-list.component.html'
+    templateUrl: './category-list.component.html'
 })
 export class CategoryListComponent implements OnInit {
 
